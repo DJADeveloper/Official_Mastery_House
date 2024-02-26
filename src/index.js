@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Router, Routes, Switch } from "react-router-dom";
 import About from "./about";
 import Home from "./home";
 import Blog from "./blog";
+import Blogs from "./blogs";
 
 const root = document.getElementById("root");
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
+          <Route path="/blogs" element={<Blogs />} />
         </Routes>
       </BrowserRouter>
     </>
