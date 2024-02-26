@@ -121,7 +121,7 @@ header {
   width: 100%;
   height: 7rem;
   padding: 5rem 0;
-  z-index: 1;
+  z-index: 3;
   position: relative;
 }
 .header_cont {
@@ -150,8 +150,22 @@ header {
 .hero-section {
   width: 100%;
   padding: 15rem 0 10rem 0;
+  position: relative;
+}
+.main-home-circle {
+  background: var(--color-slate-900);
+  filter: blur(250px);
+  width: 1336px;
+  height: 1336px;
+  position: absolute;
+  top: -80%;
+  left: -24%;
+  z-index: 0;
+  border-radius: 50%;
 }
 .hero-content {
+  z-index: 1;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 12rem;
@@ -1143,6 +1157,17 @@ footer {
   bottom: -5%;
   z-index: -1;
 }
+.main-about-circle {
+  background: var(--color-slate-900);
+  filter: blur(250px);
+  width: 1336px;
+  height: 1336px;
+  position: absolute;
+  top: -25%;
+  left: -24%;
+  z-index: 1;
+  border-radius: 50%;
+}
 .about-content {
   display: flex;
   flex-direction: column;
@@ -1150,6 +1175,8 @@ footer {
   justify-content: flex-start;
   gap: 8rem;
   width: 100%;
+  z-index: 1;
+  position: relative;
 }
 .about-c-top {
   display: flex;
