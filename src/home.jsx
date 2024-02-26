@@ -92,6 +92,7 @@ function Home(props) {
           </div>
         </header>
         <section className="hero-section">
+          <div className="main-home-circle"></div>
           <div className="box">
             <div className="hero-content">
               <div className="hero-cont-left">

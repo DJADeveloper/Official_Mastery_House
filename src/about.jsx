@@ -85,6 +85,7 @@ function About() {
           </div>
         </header>
         <section className="about-section">
+          <div className="main-about-circle"></div>
           <div className="about-circle-2"></div>
           <div className="about-circle-3"></div>
           <div className="box">
