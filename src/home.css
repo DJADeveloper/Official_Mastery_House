@@ -1399,3 +1399,26 @@ footer {
   font-weight: 300;
   line-height: 150%;
 }
+
+/* BLOGS PAGE  */
+
+.about-section.blogs-main-section {
+  padding: 15rem 0 0rem 0;
+}
+.blogs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2rem;
+  width: 100%;
+}
+.blogs-grid .blog-main-cont img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+.blogs-grid .blog-main-cont div h4 {
+  font-size: 2.2rem;
+  line-height: 150%;
+  display: block;
+  width: 100%;
+}
