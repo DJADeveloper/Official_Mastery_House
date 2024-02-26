@@ -24,6 +24,7 @@ import {
   BsArrowRight,
   BsArrowUpRight,
 } from "react-icons/bs";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
 
@@ -190,11 +191,11 @@ function About() {
               }}
               breakpoints={{
                 750: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 2.5,
                   spaceBetween: 25,
                 },
                 1000: {
-                  slidesPerView: 3.15,
+                  slidesPerView: 4.15,
                 },
               }}
             >
@@ -203,12 +204,16 @@ function About() {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -218,12 +223,16 @@ function About() {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -233,12 +242,16 @@ function About() {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -248,12 +261,73 @@ function About() {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -336,9 +410,13 @@ function About() {
             <div className="footer-content">
               <img src={Logo} alt="" />
               <h5>© 2023 The Mastery House. All rights reserved</h5>
-              <div>
-                <img src={LinkedIn} alt="" />
-                <img src={Twitter} alt="" />
+              <div className="tb-social">
+                <div>
+                  <FaLinkedinIn />
+                </div>
+                <div>
+                  <FaXTwitter />
+                </div>
               </div>
             </div>
           </div>
