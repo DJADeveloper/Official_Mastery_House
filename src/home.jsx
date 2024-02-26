@@ -2,10 +2,10 @@ import React from "react";
 import "./home.css";
 import Logo from "./assets/img/logo.png";
 import HeroImg from "./assets/img/hero-img.png";
-import Blockchain from "./assets/img/blockchain.png";
-import Consulting from "./assets/img/consulting.png";
-import Development from "./assets/img/ai-development.png";
-import Software from "./assets/img/software.png";
+import Blockchain from "./assets/img/blockchain.svg";
+import Consulting from "./assets/img/consulting.svg";
+import Development from "./assets/img/ai-development.svg";
+import Software from "./assets/img/software.svg";
 import Rectangle from "./assets/img/Rectangle-Purple.png";
 import Circle from "./assets/img/Circle-Green.png";
 import Team1 from "./assets/img/team-1.png";
@@ -23,6 +23,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Route, Switch } from "react-router-dom";
 
 import {
@@ -118,11 +119,11 @@ function Home(props) {
         <section className="service-section">
           <div className="box">
             <div className="service-content">
-              <h4>
+              <h2>
                 Discover our comprehensive suite of services designed to{" "}
                 <span className="gradient-text">elevate your business</span> in
                 the digital era
-              </h4>
+              </h2>
               <div className="service-grid-cont">
                 <div className="service-grid-box">
                   <div className="circle-sm-1"></div>
@@ -195,6 +196,9 @@ function Home(props) {
                   only meet but exceed your expectations.
                 </h3>
               </div>
+              <h6>
+                View All <BsArrowRight />
+              </h6>
             </div>
           </div>
         </section>
@@ -223,11 +227,11 @@ function Home(props) {
               }}
               breakpoints={{
                 750: {
-                  slidesPerView: 1.5,
+                  slidesPerView: 2.5,
                   spaceBetween: 25,
                 },
                 1000: {
-                  slidesPerView: 3.15,
+                  slidesPerView: 4.15,
                 },
               }}
             >
@@ -236,12 +240,16 @@ function Home(props) {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -251,12 +259,16 @@ function Home(props) {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -266,12 +278,16 @@ function Home(props) {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -281,12 +297,73 @@ function Home(props) {
                   <img src={Team1} />
                   <div className="team-bottom">
                     <h5>
-                      Emilia Clark <br />
+                      Emilia Clark
                       <span>CEO, Founder</span>
                     </h5>
                     <div className="tb-social">
-                      <img src={LinkedIn} alt="" />
-                      <img src={Twitter} alt="" />
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="team-card">
+                  <img src={Team1} />
+                  <div className="team-bottom">
+                    <h5>
+                      Emilia Clark
+                      <span>CEO, Founder</span>
+                    </h5>
+                    <div className="tb-social">
+                      <div>
+                        <FaLinkedinIn />
+                      </div>
+                      <div>
+                        <FaXTwitter />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -698,9 +775,13 @@ function Home(props) {
             <div className="footer-content">
               <img src={Logo} alt="" />
               <h5>© 2023 The Mastery House. All rights reserved</h5>
-              <div>
-                <img src={LinkedIn} alt="" />
-                <img src={Twitter} alt="" />
+              <div className="tb-social">
+                <div>
+                  <FaLinkedinIn />
+                </div>
+                <div>
+                  <FaXTwitter />
+                </div>
               </div>
             </div>
           </div>
