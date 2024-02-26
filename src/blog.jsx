@@ -13,6 +13,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
+import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Blog1 from "./assets/img/blog1.png";
 
 import {
@@ -93,7 +94,6 @@ function Blog() {
                 Navigating the Future: How AI is Redefining Our <br /> Approach
                 to Problem-Solving
               </h1>
-              <br />
               <p>
                 Navigating the future through the lens of artificial
                 intelligence (AI) reveals a landscape where the very fabric of
@@ -322,9 +322,13 @@ function Blog() {
             <div className="footer-content">
               <img src={Logo} alt="" />
               <h5>© 2023 The Mastery House. All rights reserved</h5>
-              <div>
-                <img src={LinkedIn} alt="" />
-                <img src={Twitter} alt="" />
+              <div className="tb-social">
+                <div>
+                  <FaLinkedinIn />
+                </div>
+                <div>
+                  <FaXTwitter />
+                </div>
               </div>
             </div>
           </div>
