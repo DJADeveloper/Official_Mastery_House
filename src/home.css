@@ -115,6 +115,21 @@ img {
   right: -36%;
   top: -2%;
 }
+
+.hp-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  padding: 5rem;
+}
+.hp-links a {
+  font-size: 2rem;
+  color: var(--white);
+  font-family: "Lato";
+  font-weight: 400;
+}
 /* Header  */
 
 header {
@@ -929,12 +944,13 @@ header {
   border-radius: 1rem;
   border-top-left-radius: 1rem !important;
   border-top-right-radius: 1rem !important;
-  background: linear-gradient(
+  /* background: linear-gradient(
     99deg,
     rgba(0, 255, 170, 0.15) 0%,
     rgba(69, 121, 245, 0.15) 50.53%,
     rgba(156, 66, 245, 0.15) 94.44%
-  );
+  ); */
+  background-color: var(--color-slate-800);
   border: unset;
   margin-bottom: 2rem;
 }
@@ -1542,4 +1558,263 @@ footer {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 150%;
+}
+
+/* CASE STUDY PAGE  */
+.casestudy-section.cs-section-2 {
+  padding: 0 0 5rem 0;
+}
+.casestudy-cont.main-cs-page {
+  z-index: 3;
+  position: relative;
+  padding-top: 10rem;
+}
+.main-cs-circle {
+  width: 75rem;
+  height: 75rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: -40%;
+  bottom: 1%;
+  z-index: 0;
+}
+.casestudy-cont.main-cs-page .cs-main-grid {
+  display: flex;
+  flex-direction: column;
+}
+.casestudy-cont.main-cs-page .cs-main-grid .cs-main-right img {
+  height: 441px;
+  border-radius: 1.5rem;
+}
+.casestudy-cont.main-cs-page .cs-main-btn {
+  justify-content: space-between;
+  width: 100%;
+}
+.casestudy-cont.main-cs-page .cs-main-btn h4 {
+  color: var(--white);
+  font-family: "Lato";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.steps-to-follow-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 10rem 0 5rem 0;
+  width: 100%;
+}
+.steps-to-follow-box img {
+  width: 552px;
+  height: auto;
+  object-fit: contain;
+}
+.main-steps-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+}
+.ms-box-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2rem;
+  border-top: 1px solid var(--color-slate-500);
+  border-right: 1px solid var(--color-slate-500);
+  z-index: 3;
+  padding: 2rem 2rem 8rem 2rem;
+}
+.ms-box-content.msbc-2 {
+  border-left: 1px solid var(--color-slate-500);
+  border-right: 0;
+}
+.ms-box-content.msbc-3 {
+  border-top: 0;
+  padding: 8rem 2rem 2rem 2rem;
+  border-bottom: 1px solid var(--color-slate-500);
+}
+.ms-box-content.msbc-2.msbc-4 {
+  border-top: 0;
+  padding: 8rem 2rem 2rem 2rem;
+  border-bottom: 1px solid var(--color-slate-500);
+}
+.ms-box-content h4 {
+  font-family: "Lato";
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 150%;
+}
+.ms-box-content p {
+  color: var(--white);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+.testimonial-cs-box {
+  padding: 3.5rem;
+  background-color: #0f172a;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  width: 865px;
+  margin: 0 auto;
+}
+.testimonial-cs-box p {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-cs-box p img {
+  position: absolute;
+  z-index: -2;
+  top: -15%;
+  left: 0%;
+}
+.testimonial-cs-box div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.testimonial-cs-box div img {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border-image-source: 2px solid
+    linear-gradient(180deg, #00ffaa 0%, #4579f5 53.5%, #9c42f5 100%);
+}
+.testimonial-cs-box div h6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+}
+.testimonial-cs-box div h6 span {
+  color: var(--color-slate-400);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* CONTACT PAGE  */
+.about-section.contact-section {
+  padding: 15rem 0 0 0;
+}
+.contact-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5rem;
+}
+.cg-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+  padding: 3.5rem;
+  background-color: var(--color-slate-900);
+  border-radius: 1rem;
+}
+.cg-left h4 {
+  color: var(--white);
+  font-family: "Lato";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.cg-left button {
+  width: 100%;
+}
+.cg-left-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
+}
+.cg-left-form input,
+.cg-left-form textarea {
+  border: unset;
+  border-radius: 1rem;
+  background-color: var(--color-slate-800);
+  padding: 1.75rem 2rem;
+  color: var(--color-slate-500);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: "Lato";
+  width: 100%;
+}
+.cg-left-form input::placeholder,
+.cg-left-form textarea::placeholder {
+  color: var(--color-slate-500);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.cg-left-form input:focus,
+.cg-left-form textarea:focus {
+  outline: unset;
+  box-shadow: unset;
+  border: unset;
+}
+.cg-right {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5rem;
+}
+.cg-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  object-fit: contain;
+  margin: 0 !important;
+}
+.contact-info-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+.contact-info-box h5 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  color: var(--color-slate-300);
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-family: "Lato";
+}
+.contact-info-box h5 span {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--color-slate-800);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info-box h5 span svg {
+  font-size: 1.95rem;
+  color: var(--color-slate-300);
 }
