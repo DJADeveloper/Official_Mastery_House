@@ -82,11 +82,11 @@ function Home(props) {
             <div className="header_cont">
               <img src={Logo} alt="" />
               <div className="header_right">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
                 <a href="/about">About</a>
-                <a href="#">Case Studies</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="/casestudy">Case Studies</a>
+                <a href="/service">Services</a>
+                <a href="/contact">Contact</a>
               </div>
             </div>
           </div>
