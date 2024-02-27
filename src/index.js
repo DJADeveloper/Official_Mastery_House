@@ -6,6 +6,9 @@ import Home from "./home";
 import Blog from "./blog";
 import Blogs from "./blogs";
 import Service from "./service";
+import CaseStudy from "./casestudy";
+import Contact from "./contact";
+import Links from "./link";
 
 const root = document.getElementById("root");
 const App = () => {
@@ -18,6 +21,9 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/service" element={<Service />} />
+          <Route path="/casestudy" element={<CaseStudy />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* <Route path="/link" element={<Links />} /> */}
         </Routes>
       </BrowserRouter>
     </>
