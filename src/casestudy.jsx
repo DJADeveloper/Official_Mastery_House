@@ -94,7 +94,7 @@ const casestudy = () => {
           </div>
         </header>
         <section className="casestudy-section hero-section cs-section-2">
-          <div className="main-home-circle"></div>
+          {/* <div className="main-home-circle"></div> */}
           <div className="box">
             <div className="casestudy-cont main-cs-page">
               <div className="main-cs-circle"></div>
