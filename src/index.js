@@ -5,6 +5,7 @@ import About from "./about";
 import Home from "./home";
 import Blog from "./blog";
 import Blogs from "./blogs";
+import Service from "./service";
 
 const root = document.getElementById("root");
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/service" element={<Service />} />
         </Routes>
       </BrowserRouter>
     </>
