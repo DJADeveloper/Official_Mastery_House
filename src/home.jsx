@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import Logo from "./assets/img/logo.png";
 import HeroImg from "./assets/img/hero-img.png";
@@ -32,6 +32,7 @@ import {
   BsArrowRight,
   BsArrowUpRight,
   BsList,
+  BsXLg,
 } from "react-icons/bs";
 import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
@@ -72,6 +73,15 @@ const items = [
 ];
 
 function Home(props) {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <div className="masteryhouse">
       <main className="homepage" id="home_page">
@@ -89,9 +99,24 @@ function Home(props) {
                 <a href="/service">Services</a>
                 <a href="/contact">Contact</a>
               </div>
-              <div className="hr-mob-icon">
+              <div className="hr-mob-icon" onClick={toggleMobileMenu}>
                 <BsList />
               </div>
+              {isMobileMenuOpen && (
+                <div className="mobile-menu">
+                  <div className="mobile-menu-top">
+                    <img src={Logo} alt="" />
+                    <BsXLg onClick={closeMobileMenu} />
+                  </div>
+                  <div className="mobile-menu-bottom">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/casestudy">Case Studies</a>
+                    <a href="/service">Services</a>
+                    <a href="/contact">Contact</a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </header>
