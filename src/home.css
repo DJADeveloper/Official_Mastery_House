@@ -673,7 +673,7 @@ header {
 .cs-main-right img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   border-radius: 1rem;
 }
 .cs-main-left {
@@ -1418,6 +1418,7 @@ footer h6 {
   justify-content: flex-start;
   gap: 5rem;
   z-index: 1;
+  border-radius: 1.5rem;
   position: relative;
 }
 .blog-page-cont img {
@@ -1547,6 +1548,7 @@ footer h6 {
   max-width: 100%;
   width: 875px;
   margin: 0 auto;
+  flex-wrap: wrap;
 }
 .tb-box-img {
   display: flex;
@@ -1911,6 +1913,23 @@ footer h6 {
     gap: 2rem;
   }
 }
+@media only screen and (max-width: 1150px) {
+  .booking-section {
+    padding: 7.5rem 2.5rem;
+  }
+  .booking-img {
+    display: none;
+  }
+  .git-box {
+    transform: unset;
+    padding: 3rem 2rem;
+    gap: 3rem;
+    border-radius: 1rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1.35fr 1fr;
+  }
+}
 @media only screen and (max-width: 1100px) {
   .hero-cont-left h1 {
     font-size: 4rem;
@@ -1926,6 +1945,51 @@ footer h6 {
   }
   .blog-grid {
     grid-template-columns: 1fr;
+  }
+  .blog-page-cont img {
+    height: 400px;
+  }
+  .main-blog-section {
+    width: 100%;
+    padding: 10rem 0;
+    position: relative;
+  }
+  .blog-page-cont h1 {
+    font-size: 3.5rem;
+  }
+  .blogs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-section.blogs-main-section {
+    padding: 10rem 0 0rem 0;
+  }
+  .about-c-top h1 {
+    font-size: 4.5rem;
+  }
+  .about-section.contact-section {
+    padding: 10rem 0 0 0;
+  }
+  .about-content {
+    gap: 5rem;
+  }
+  .about-section {
+    padding: 10rem 0;
+  }
+  .about-content img {
+    width: 100%;
+    margin: 4rem 0;
+  }
+  .about-flex.service-flex .about-circle {
+    top: -40%;
+  }
+  .about-c-top p {
+    width: 85%;
+  }
+  .about-flex-box h3 {
+    font-size: 2.25rem;
+  }
+  .technologies-tabs .nav.nav-tabs .nav-link {
+    padding: 1.25rem 2rem;
   }
 }
 
@@ -1948,6 +2012,44 @@ footer h6 {
   .service-graphic-text {
     width: 100%;
   }
+  .blogs-grid .blog-main-cont div h4 {
+    font-size: 1.75rem;
+  }
+  .testimonial-cs-box {
+    width: 100%;
+    max-width: 100%;
+    z-index: 5;
+  }
+  .casestudy-cont.main-cs-page .cs-main-btn h4 {
+    font-size: 2.25rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-circle {
+    left: -14px;
+    top: -21%;
+  }
+  .about-circle2 {
+    left: -14px;
+    top: -21%;
+  }
+  .about-circle3 {
+    left: -14px;
+    top: -21%;
+  }
+  .technologies-box {
+    width: 100%;
+  }
+  .about-flex.service-flex {
+    gap: 8rem;
+  }
+  .technologies-tabContent {
+    margin-top: 5rem;
+  }
+  .technologies-tabContent p {
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 800px) {
   .header_right {
@@ -1956,22 +2058,14 @@ footer h6 {
   .hr-mob-icon {
     display: flex;
   }
-}
-@media only screen and (max-width: 1150px) {
-  .booking-section {
-    padding: 7.5rem 2.5rem;
+  .contact-grid {
+    grid-template-columns: 1fr;
   }
-  .booking-img {
-    display: none;
-  }
-  .git-box {
-    transform: unset;
-    padding: 2rem;
-    /* max-width: 550px; */
-    gap: 3rem;
-    border-radius: 1rem;
+  .technologies-box {
+    grid-template-columns: 1fr 1fr;
   }
 }
+
 @media only screen and (max-width: 650px) {
   .box {
     padding: 0 2.5rem;
@@ -2121,7 +2215,7 @@ footer h6 {
   }
   .git-box {
     transform: unset;
-    padding: 2rem;
+    padding: 3rem 2rem;
     max-width: 100%;
     gap: 3rem;
     border-radius: 1rem;
@@ -2144,9 +2238,187 @@ footer h6 {
   .gitsvg-box div span {
     font-size: 1.6rem;
   }
+  .blog-page-cont img {
+    height: 100%;
+  }
+  .blog-page-cont {
+    gap: 3rem;
+  }
+  .blog-page-cont h1 {
+    font-size: 2.5rem;
+  }
+  .blog-page-cont h1 br {
+    display: none;
+  }
+  .blog-page-cont p {
+    font-size: 1.75rem;
+  }
+  .about-section.blogs-main-section {
+    padding: 7.5rem 0 0rem 0;
+  }
+  .main-blog-section {
+    padding: 7.5rem 0;
+  }
+  .about-c-top h4 {
+    font-size: 1.8rem;
+  }
+  .about-c-top h1 {
+    font-size: 2.75rem;
+  }
+  .blogs-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-section.contact-section {
+    padding: 7.5rem 0 0 0;
+  }
+  .cg-left {
+    padding: 2rem;
+    gap: 2.5rem;
+  }
+  .cg-left-form input,
+  .cg-left-form textarea {
+    padding: 1.25rem 1.65rem;
+  }
+  .casestudy-cont.main-cs-page {
+    padding-top: 7.5rem;
+  }
+  .steps-to-follow-box {
+    padding: 7.5rem 0 2.5rem 0;
+  }
+  .casestudy-cont.main-cs-page .cs-main-grid .cs-main-right img {
+    height: 100%;
+  }
+  .casestudy-cont.main-cs-page .cs-main-btn {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .casestudy-cont.main-cs-page .cs-main-btn h4 {
+    font-size: 2rem;
+    line-height: 150%;
+  }
+  .main-steps-box {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+  .steps-to-follow-box img {
+    width: 100%;
+  }
+  .ms-box-content {
+    padding: 2rem 2rem 4rem 2rem;
+  }
+  .ms-box-content.msbc-1 {
+    border-top: 0;
+  }
+  .ms-box-content.msbc-3 {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .ms-box-content.msbc-2.msbc-4 {
+    padding: 4rem 2rem 2rem 2rem;
+    border-bottom: 0;
+  }
+  .testimonial-cs-box {
+    padding: 2.5rem;
+  }
+  .testimonial-cs-box p {
+    font-size: 1.65rem;
+  }
+  .testimonial-cs-box p img {
+    top: -5%;
+  }
+  .about-section {
+    padding: 7.5rem 0;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-grid-content {
+    padding: 2.5rem;
+    gap: 1rem;
+  }
+  .about-grid-content h5 {
+    font-size: 2.2rem;
+  }
+  .about-content img {
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
+  .about-flex-box {
+    grid-template-columns: 1fr;
+  }
+  .about-circle {
+    left: -15px;
+    top: -10%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-circle2 {
+    left: -15px;
+    top: -10%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-circle3 {
+    left: -15px;
+    top: -10%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-c-top p {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .about-content.service-content img {
+    margin: 0 auto 2rem auto;
+  }
+  .about-flex.service-flex .about-circle {
+    left: -15px;
+    top: -16%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-flex.service-flex .about-circle2 {
+    left: -15px;
+    top: -16%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-flex.service-flex .about-circle3 {
+    left: -15px;
+    top: -16%;
+    width: 94px;
+    height: 94px;
+  }
+  .about-flex-box h3 {
+    font-size: 2rem;
+  }
+  .technologies-content h3 {
+    font-size: 2.5rem;
+  }
+  .technologies-tabContent {
+    margin-top: 3rem;
+  }
+  .technologies-tabContent p {
+    width: 100%;
+    font-size: 1.6rem;
+  }
+  .technologies-tabs .nav.nav-tabs .nav-link {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.6rem;
+  }
+  .technologies-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .technologies-section {
+    padding: 0 0 7.5rem 0;
+  }
+  .about-flex-box p {
+    font-size: 1.6rem;
+  }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 550px) {
   .footer-content h5 {
     display: none;
   }
@@ -2157,5 +2429,14 @@ footer h6 {
     margin: 4rem 0 0 0;
     display: block;
     text-align: center;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .technologies-box {
+    grid-template-columns: 1fr;
+  }
+  .tb-box-img {
+    width: 100%;
+    max-width: 100%;
   }
 }

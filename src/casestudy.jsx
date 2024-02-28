@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import Logo from "./assets/img/logo.png";
 import HeroImg from "./assets/img/hero-img.png";
@@ -34,6 +34,8 @@ import {
   BsChevronLeft,
   BsArrowRight,
   BsArrowUpRight,
+  BsList,
+  BsXLg,
 } from "react-icons/bs";
 import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
@@ -72,7 +74,16 @@ const items = [
     color: "#F43F5E",
   },
 ];
-const casestudy = () => {
+const Casestudy = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <div className="masteryhouse">
       <main className="homepage" id="home_page">
@@ -84,12 +95,30 @@ const casestudy = () => {
             <div className="header_cont">
               <img src={Logo} alt="" />
               <div className="header_right">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
                 <a href="/about">About</a>
-                <a href="#">Case Studies</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="/casestudy">Case Studies</a>
+                <a href="/service">Services</a>
+                <a href="/contact">Contact</a>
               </div>
+              <div className="hr-mob-icon" onClick={toggleMobileMenu}>
+                <BsList />
+              </div>
+              {isMobileMenuOpen && (
+                <div className="mobile-menu">
+                  <div className="mobile-menu-top">
+                    <img src={Logo} alt="" />
+                    <BsXLg onClick={closeMobileMenu} />
+                  </div>
+                  <div className="mobile-menu-bottom">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/casestudy">Case Studies</a>
+                    <a href="/service">Services</a>
+                    <a href="/contact">Contact</a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </header>
@@ -135,7 +164,7 @@ const casestudy = () => {
               </div>
               <div className="steps-to-follow-box">
                 <div className="main-steps-box">
-                  <div className="ms-box-content">
+                  <div className="ms-box-content msbc-1">
                     <h4 className="gradient-text">
                       1. Conceptualization of the project
                     </h4>
@@ -294,6 +323,7 @@ const casestudy = () => {
                 </div>
               </div>
             </div>
+            <h6>© 2023 The Mastery House. All rights reserved</h6>
           </div>
         </footer>
       </main>
@@ -301,4 +331,4 @@ const casestudy = () => {
   );
 };
 
-export default casestudy;
+export default Casestudy;
