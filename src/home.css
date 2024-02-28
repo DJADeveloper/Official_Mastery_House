@@ -213,6 +213,11 @@ header {
   color: var(--white);
   margin: 5rem 0 5.5rem 0;
 }
+.hero-cont-right img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
 /* Service Section  */
 .service-section {
@@ -251,7 +256,7 @@ header {
   gap: 1.5rem;
   padding: 2.5rem 3rem;
   border-radius: 1.25rem;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-slate-900);
   backdrop-filter: blur(10px);
   position: relative;
 }
@@ -659,14 +664,17 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-gap: 8rem;
   width: 100%;
+  height: 100%;
 }
 .cs-main-right {
   width: 100%;
+  height: 100%;
 }
 .cs-main-right img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 1rem;
 }
 .cs-main-left {
   display: flex;
@@ -825,6 +833,7 @@ header {
   align-items: flex-start;
   flex-direction: column;
   width: 100%;
+  height: 100%;
   background-color: var(--color-slate-800);
   border-radius: 1rem;
 }
@@ -843,6 +852,7 @@ header {
   flex-direction: column;
   gap: 9rem;
   width: 100%;
+  height: 100%;
 }
 .blog-main-cont div h4 {
   color: var(--white);
@@ -1123,6 +1133,9 @@ footer {
   font-size: 1.8rem;
   font-weight: 400;
   margin: 0;
+}
+footer h6 {
+  display: none;
 }
 .footer-content .tb-social {
   display: flex;
@@ -1818,4 +1831,290 @@ footer {
 .contact-info-box h5 span svg {
   font-size: 1.95rem;
   color: var(--color-slate-300);
+}
+
+/* MOBILE HEADER  */
+.hr-mob-icon {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+}
+.hr-mob-icon svg {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+/* RESPONSIVENESS  */
+@media only screen and (max-width: 1350px) {
+  .box {
+    padding: 0 5rem;
+  }
+  .booking-cont {
+    height: unset;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .hero-content {
+    grid-template-columns: 1.35fr 1fr;
+  }
+  .hero-cont-left h1 {
+    font-size: 4.5rem;
+  }
+  .hero-cont-left p {
+    margin: 2rem 0 3rem 0;
+  }
+  .cs-main-grid {
+    grid-gap: 4rem;
+  }
+  .cs-main-left {
+    gap: 2rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .hero-cont-left h1 {
+    font-size: 4rem;
+  }
+  .hero-content {
+    grid-gap: 5rem;
+  }
+  .service-content h2 {
+    width: 90%;
+  }
+  .service-graphic-text {
+    width: 85%;
+  }
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+  }
+  .hero-cont-right {
+    margin: 0 auto;
+  }
+  .cs-main-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-grid-cont {
+    grid-template-columns: 1fr;
+  }
+  .service-content h2 {
+    width: 100%;
+  }
+  .service-graphic-text {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .header_right {
+    display: none;
+  }
+  .hr-mob-icon {
+    display: flex;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .booking-section {
+    padding: 7.5rem 2.5rem;
+  }
+  .booking-img {
+    display: none;
+  }
+  .git-box {
+    transform: unset;
+    padding: 2rem;
+    /* max-width: 550px; */
+    gap: 3rem;
+    border-radius: 1rem;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .box {
+    padding: 0 2.5rem;
+  }
+  header {
+    padding: 2.5rem 0;
+  }
+  .hero-section {
+    padding: 7.5rem 0;
+  }
+  .hero-cont-left {
+    text-align: center;
+  }
+  .hero-cont-left span {
+    width: 100%;
+  }
+  .hero-cont-left h1 {
+    font-size: 2.75rem;
+  }
+  .hero-cont-left span {
+    font-size: 1.75rem;
+  }
+  .hero-cont-left button {
+    margin: 0 auto;
+  }
+  .service-section {
+    padding: 7.5rem 0;
+  }
+  .service-grid-cont {
+    margin: 7.5rem 0;
+  }
+  .service-content h2 {
+    font-size: 2.5rem;
+  }
+  .service-grid-box {
+    gap: 1.25rem;
+    padding: 2.5rem;
+  }
+  .service-grid-box h5 {
+    font-size: 2.5rem;
+  }
+  .service-graphic-text h3 {
+    font-size: 2rem;
+  }
+  .service-graphic-text .rect-img {
+    width: 60px;
+  }
+  .service-graphic-text .cir-img {
+    width: 64px;
+  }
+  .team-section {
+    padding: 7.5rem 0;
+  }
+  .swiper-head h2 {
+    font-size: 2.5rem;
+  }
+  .sh-right svg {
+    font-size: 1.65rem;
+  }
+  .Marquee-Card h3 {
+    font-size: 2.8rem;
+  }
+  .Marquee-Card div {
+    width: 50px;
+  }
+  .getintouch-section {
+    padding: 7.5rem 0;
+  }
+  .casestudy-section {
+    padding: 0 0 7.5rem 0;
+  }
+  .casestudy-head h3 {
+    font-size: 2.5rem;
+  }
+  .casestudy-head h6 {
+    font-size: 1.6rem;
+  }
+  .ind-serv-box {
+    flex-direction: column;
+  }
+  .cs-main-btn .inner-service-btn {
+    padding: 1.25rem 2rem;
+  }
+  .cs-main-btn h5 {
+    font-size: 1.6rem;
+  }
+  .cs-main-btn {
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .cs-main-grid.middle-main-grid {
+    padding: 2rem;
+  }
+  .cs-main-left p {
+    font-size: 1.6rem;
+  }
+  .blog-grid-right {
+    grid-template-columns: 1fr;
+  }
+  .blog-main-cont div h4 {
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    font-family: "Roboto";
+    font-size: 1.6rem;
+    line-height: 125%;
+    width: 267px;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+  .blog-main-cont div {
+    gap: 2rem;
+    padding: 1.75rem;
+  }
+  .blogcircle-1 {
+    width: 80px;
+    height: 80px;
+  }
+  .blog-section {
+    padding: 7.5rem 0;
+  }
+  .faq-section {
+    padding: 7.5rem 0;
+  }
+  .faq-content h3 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .faq-accordian-box .accordion-item {
+    padding: 2rem;
+  }
+  .faq-accordian-box .accordion-header h5 {
+    font-size: 1.75rem;
+  }
+  .faq-accordian-box .accordion-body {
+    font-size: 1.6rem;
+  }
+  .footer-content h5 {
+    font-size: 1.5rem;
+  }
+  .booking-section {
+    padding: 7.5rem 2.5rem;
+  }
+  .booking-img {
+    display: none;
+  }
+  .git-box {
+    transform: unset;
+    padding: 2rem;
+    max-width: 100%;
+    gap: 3rem;
+    border-radius: 1rem;
+  }
+  .gitsvg-box {
+    gap: 2rem;
+  }
+  .git-b-top h3 {
+    font-size: 2.5rem;
+  }
+  .booking-cont button {
+    margin: 0 auto;
+  }
+  .faqrectangle {
+    top: -4%;
+  }
+  .service-content h6 {
+    font-size: 1.6rem;
+  }
+  .gitsvg-box div span {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .footer-content h5 {
+    display: none;
+  }
+  footer h6 {
+    color: var(--color-slate-300);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin: 4rem 0 0 0;
+    display: block;
+    text-align: center;
+  }
 }

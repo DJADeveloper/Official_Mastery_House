@@ -31,6 +31,7 @@ import {
   BsChevronLeft,
   BsArrowRight,
   BsArrowUpRight,
+  BsList,
 } from "react-icons/bs";
 import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
@@ -87,6 +88,9 @@ function Home(props) {
                 <a href="/casestudy">Case Studies</a>
                 <a href="/service">Services</a>
                 <a href="/contact">Contact</a>
+              </div>
+              <div className="hr-mob-icon">
+                <BsList />
               </div>
             </div>
           </div>
@@ -232,6 +236,9 @@ function Home(props) {
                   spaceBetween: 25,
                 },
                 1000: {
+                  slidesPerView: 3.15,
+                },
+                1300: {
                   slidesPerView: 4.15,
                 },
               }}
@@ -785,6 +792,7 @@ function Home(props) {
                 </div>
               </div>
             </div>
+            <h6>© 2023 The Mastery House. All rights reserved</h6>
           </div>
         </footer>
       </main>
