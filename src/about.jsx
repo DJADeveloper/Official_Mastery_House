@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./home.css";
 import Logo from "./assets/img/logo.png";
 import Team1 from "./assets/img/team-1.png";
@@ -23,6 +23,8 @@ import {
   BsChevronLeft,
   BsArrowRight,
   BsArrowUpRight,
+  BsList,
+  BsXLg,
 } from "react-icons/bs";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Marquee from "react-fast-marquee";
@@ -64,6 +66,15 @@ const items = [
 ];
 
 function About() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
   return (
     <div className="masteryhouse">
       <main className="homepage" id="home_page">
@@ -75,12 +86,30 @@ function About() {
             <div className="header_cont">
               <img src={Logo} alt="" />
               <div className="header_right">
-                <a href="#">Home</a>
+                <a href="/">Home</a>
                 <a href="/about">About</a>
-                <a href="#">Case Studies</a>
-                <a href="#">Services</a>
-                <a href="#">Contact</a>
+                <a href="/casestudy">Case Studies</a>
+                <a href="/service">Services</a>
+                <a href="/contact">Contact</a>
               </div>
+              <div className="hr-mob-icon" onClick={toggleMobileMenu}>
+                <BsList />
+              </div>
+              {isMobileMenuOpen && (
+                <div className="mobile-menu">
+                  <div className="mobile-menu-top">
+                    <img src={Logo} alt="" />
+                    <BsXLg onClick={closeMobileMenu} />
+                  </div>
+                  <div className="mobile-menu-bottom">
+                    <a href="/">Home</a>
+                    <a href="/about">About</a>
+                    <a href="/casestudy">Case Studies</a>
+                    <a href="/service">Services</a>
+                    <a href="/contact">Contact</a>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </header>
@@ -196,6 +225,9 @@ function About() {
                   spaceBetween: 25,
                 },
                 1000: {
+                  slidesPerView: 3.15,
+                },
+                1300: {
                   slidesPerView: 4.15,
                 },
               }}
@@ -420,6 +452,7 @@ function About() {
                 </div>
               </div>
             </div>
+            <h6>© 2023 The Mastery House. All rights reserved</h6>
           </div>
         </footer>
       </main>
