@@ -1843,6 +1843,47 @@ footer h6 {
   font-size: 3rem;
   color: var(--white);
 }
+.mobile-menu {
+  padding: 2.5rem;
+  background-color: var(--color-slate-900);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.mobile-menu-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.mobile-menu-top img {
+  width: 50px;
+  height: auto;
+}
+.mobile-menu-top svg {
+  font-size: 3rem;
+  color: var(--white);
+}
+.mobile-menu-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 3rem;
+}
+.mobile-menu-bottom a {
+  font-size: 2.2rem;
+  color: var(--white);
+  font-weight: 500;
+  margin: 0;
+}
 
 /* RESPONSIVENESS  */
 @media only screen and (max-width: 1350px) {
