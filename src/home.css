@@ -2153,6 +2153,7 @@ footer h6 {
     font-size: 1.6rem;
   }
   .cs-main-btn {
+    margin-top: 2rem;
     gap: 1rem;
     width: 100%;
     justify-content: space-between;
@@ -2192,7 +2193,7 @@ footer h6 {
     padding: 7.5rem 0;
   }
   .faq-content h3 {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     text-align: center;
   }
   .faq-accordian-box .accordion-item {
@@ -2203,6 +2204,7 @@ footer h6 {
   }
   .faq-accordian-box .accordion-body {
     font-size: 1.6rem;
+    padding-right: 0;
   }
   .footer-content h5 {
     font-size: 1.5rem;
@@ -2245,13 +2247,13 @@ footer h6 {
     gap: 3rem;
   }
   .blog-page-cont h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .blog-page-cont h1 br {
     display: none;
   }
   .blog-page-cont p {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
   .about-section.blogs-main-section {
     padding: 7.5rem 0 0rem 0;
@@ -2294,7 +2296,7 @@ footer h6 {
     gap: 2rem;
   }
   .casestudy-cont.main-cs-page .cs-main-btn h4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     line-height: 150%;
   }
   .main-steps-box {
@@ -2321,7 +2323,7 @@ footer h6 {
     padding: 2.5rem;
   }
   .testimonial-cs-box p {
-    font-size: 1.65rem;
+    font-size: 1.6rem;
   }
   .testimonial-cs-box p img {
     top: -5%;
@@ -2415,6 +2417,36 @@ footer h6 {
   }
   .about-flex-box p {
     font-size: 1.6rem;
+  }
+  .hero-cont-left p {
+    font-size: 1.6rem;
+  }
+  .gradient-btn {
+    font-size: 1.6rem;
+  }
+  .service-grid-box p {
+    font-size: 1.6rem;
+  }
+  .inner-service-btn span {
+    font-size: 1.6rem;
+  }
+  .ind-serv-box span h6 {
+    font-size: 1.6rem;
+  }
+  .ind-serv-box span {
+    font-size: 1.6rem;
+  }
+  .cs-main-left {
+    gap: 1rem;
+  }
+  .cs-main-btn .inner-service-btn span {
+    font-size: 1.6rem;
+  }
+  .git-b-top p {
+    font-size: 1.6rem;
+  }
+  .ms-box-content h4 {
+    font-size: 1.8rem;
   }
 }
 
