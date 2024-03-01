@@ -103,6 +103,8 @@ const Service = () => {
               </div>
               {isMobileMenuOpen && (
                 <div className="mobile-menu">
+                  <div className="mob-circle-1"></div>
+                  <div className="mob-circle-2"></div>
                   <div className="mobile-menu-top">
                     <img src={Logo} alt="" />
                     <BsXLg onClick={closeMobileMenu} />

@@ -104,6 +104,8 @@ function Home(props) {
               </div>
               {isMobileMenuOpen && (
                 <div className="mobile-menu">
+                  <div className="mob-circle-1"></div>
+                  <div className="mob-circle-2"></div>
                   <div className="mobile-menu-top">
                     <img src={Logo} alt="" />
                     <BsXLg onClick={closeMobileMenu} />
@@ -631,7 +633,7 @@ function Home(props) {
                 <Accordion defaultActiveKey={["0"]} alwaysOpen>
                   <Accordion.Item eventKey="0">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>
@@ -651,7 +653,7 @@ function Home(props) {
                   </Accordion.Item>
                   <Accordion.Item eventKey="1">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>
@@ -671,7 +673,7 @@ function Home(props) {
                   </Accordion.Item>
                   <Accordion.Item eventKey="2">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>
@@ -691,7 +693,7 @@ function Home(props) {
                   </Accordion.Item>
                   <Accordion.Item eventKey="3">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>
@@ -711,7 +713,7 @@ function Home(props) {
                   </Accordion.Item>
                   <Accordion.Item eventKey="4">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>
@@ -731,7 +733,7 @@ function Home(props) {
                   </Accordion.Item>
                   <Accordion.Item eventKey="5">
                     <Accordion.Header>
-                      <h5 className="gradient-text">
+                      <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
                     </Accordion.Header>

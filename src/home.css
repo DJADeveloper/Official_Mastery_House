@@ -993,6 +993,7 @@ header {
   font-size: 2rem;
   font-weight: 600;
   line-height: 150%;
+  color: var(--color-slate-200);
 }
 .faq-accordian-box .accordion-body {
   padding: 1.5rem 1.5rem 0 0;
@@ -1845,6 +1846,26 @@ footer h6 {
   font-size: 3rem;
   color: var(--white);
 }
+.mob-circle-1 {
+  position: absolute;
+  bottom: 4%;
+  left: -35%;
+  width: 30rem;
+  height: 30rem;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+.mob-circle-2 {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: rgba(155, 66, 245, 0.2);
+  filter: blur(200px);
+  position: absolute;
+  right: -20%;
+  top: 25%;
+}
 .mobile-menu {
   padding: 2.5rem;
   background-color: var(--color-slate-900);
@@ -1858,6 +1879,7 @@ footer h6 {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .mobile-menu-top {
   display: flex;
@@ -1876,9 +1898,10 @@ footer h6 {
 .mobile-menu-bottom {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   gap: 3rem;
+  width: 100%;
 }
 .mobile-menu-bottom a {
   font-size: 2.2rem;
@@ -2076,6 +2099,9 @@ footer h6 {
   .hero-section {
     padding: 7.5rem 0;
   }
+  .circle-3 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
   .hero-cont-left {
     text-align: center;
   }
@@ -2086,16 +2112,19 @@ footer h6 {
     font-size: 2.75rem;
   }
   .hero-cont-left span {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
   .hero-cont-left button {
     margin: 0 auto;
   }
   .service-section {
-    padding: 7.5rem 0;
+    padding: 5rem 0;
   }
   .service-grid-cont {
-    margin: 7.5rem 0;
+    margin: 5rem 0;
+  }
+  .service-grid-box img {
+    width: 50px;
   }
   .service-content h2 {
     font-size: 2.5rem;
@@ -2117,7 +2146,13 @@ footer h6 {
     width: 64px;
   }
   .team-section {
-    padding: 7.5rem 0;
+    padding: 5rem 0;
+  }
+  .swiper-head {
+    margin: 0 0 2.5rem 0;
+  }
+  .circle-1 {
+    display: none;
   }
   .swiper-head h2 {
     font-size: 2.5rem;
@@ -2132,7 +2167,34 @@ footer h6 {
     width: 50px;
   }
   .getintouch-section {
-    padding: 7.5rem 0;
+    padding: 5rem 0;
+  }
+  .marquee-main-box {
+    padding: 2.5rem 0;
+  }
+  .casestudy-cont {
+    gap: 2.5rem;
+  }
+  .cs-main-left img {
+    width: 123px;
+  }
+  .cs-main-right img {
+    border-radius: 0.5rem;
+  }
+  .blog-cont {
+    gap: 2.5rem;
+  }
+  .casestudy-main {
+    gap: 3rem;
+  }
+  .case-circle1 {
+    display: none;
+  }
+  .case-circle2 {
+    display: none;
+  }
+  .case-circle3 {
+    display: none;
   }
   .casestudy-section {
     padding: 0 0 7.5rem 0;
@@ -2185,19 +2247,38 @@ footer h6 {
   .blogcircle-1 {
     width: 80px;
     height: 80px;
+    z-index: -1;
+    right: -8%;
+    top: 1%;
+  }
+  .blog-main-cont img {
+    border-radius: 0.5rem;
+  }
+  .blog-main-cont {
+    border-radius: 0.5rem;
   }
   .blog-section {
-    padding: 7.5rem 0;
+    padding: 5rem 0;
   }
   .faq-section {
-    padding: 7.5rem 0;
+    padding: 5rem 0;
   }
   .faq-content h3 {
     font-size: 2.5rem;
     text-align: center;
   }
+  .faq-accordian-box {
+    padding-top: 2.5rem;
+  }
   .faq-accordian-box .accordion-item {
     padding: 2rem;
+    border-radius: 0.5rem;
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    margin-bottom: 1.5rem;
+  }
+  .accordion-item:last-of-type {
+    margin-bottom: unset !important;
   }
   .faq-accordian-box .accordion-header h5 {
     font-size: 1.75rem;
@@ -2210,17 +2291,17 @@ footer h6 {
     font-size: 1.5rem;
   }
   .booking-section {
-    padding: 7.5rem 2.5rem;
+    padding: 0;
   }
   .booking-img {
     display: none;
   }
   .git-box {
     transform: unset;
-    padding: 3rem 2rem;
+    padding: 3rem 2.5rem;
     max-width: 100%;
     gap: 3rem;
-    border-radius: 1rem;
+    border-radius: unset;
   }
   .gitsvg-box {
     gap: 2rem;
@@ -2233,6 +2314,8 @@ footer h6 {
   }
   .faqrectangle {
     top: -4%;
+    width: 80px;
+    height: 80px;
   }
   .service-content h6 {
     font-size: 1.6rem;
@@ -2262,7 +2345,10 @@ footer h6 {
     padding: 7.5rem 0;
   }
   .about-c-top h4 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  .about-content {
+    gap: 2.5rem;
   }
   .about-c-top h1 {
     font-size: 2.75rem;
@@ -2320,23 +2406,36 @@ footer h6 {
     border-bottom: 0;
   }
   .testimonial-cs-box {
-    padding: 2.5rem;
+    padding: 3rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0.5rem;
   }
   .testimonial-cs-box p {
     font-size: 1.6rem;
   }
   .testimonial-cs-box p img {
-    top: -5%;
+    top: -20%;
+    left: -5%;
   }
   .about-section {
-    padding: 7.5rem 0;
+    padding: 7.5rem 0 5rem 0;
+  }
+  .testimonial-cs-box div img {
+    width: 60px;
+  }
+  .casestudy-section.cs-section-2 {
+    padding: 0;
   }
   .about-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .contact-info-box {
+    gap: 1.5rem;
   }
   .about-grid-content {
     padding: 2.5rem;
     gap: 1rem;
+    border-radius: 0.5rem;
   }
   .about-grid-content h5 {
     font-size: 2.2rem;
@@ -2350,44 +2449,48 @@ footer h6 {
   }
   .about-circle {
     left: -15px;
-    top: -10%;
+    top: -12%;
     width: 94px;
     height: 94px;
   }
   .about-circle2 {
     left: -15px;
-    top: -10%;
+    top: -12%;
     width: 94px;
     height: 94px;
   }
   .about-circle3 {
     left: -15px;
-    top: -10%;
+    top: -12%;
     width: 94px;
     height: 94px;
+  }
+  .about-circle-3 {
+    display: none;
   }
   .about-c-top p {
     width: 100%;
     font-size: 1.6rem;
+    margin-top: 1.5rem;
   }
   .about-content.service-content img {
     margin: 0 auto 2rem auto;
   }
   .about-flex.service-flex .about-circle {
     left: -15px;
-    top: -16%;
+    top: -18%;
     width: 94px;
     height: 94px;
   }
   .about-flex.service-flex .about-circle2 {
     left: -15px;
-    top: -16%;
+    top: -18%;
     width: 94px;
     height: 94px;
   }
   .about-flex.service-flex .about-circle3 {
     left: -15px;
-    top: -16%;
+    top: -18%;
     width: 94px;
     height: 94px;
   }
@@ -2398,7 +2501,8 @@ footer h6 {
     font-size: 2.5rem;
   }
   .technologies-tabContent {
-    margin-top: 3rem;
+    margin-top: 2.5rem;
+    gap: 2.5rem;
   }
   .technologies-tabContent p {
     width: 100%;
@@ -2411,9 +2515,13 @@ footer h6 {
   .technologies-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
   }
   .technologies-section {
-    padding: 0 0 7.5rem 0;
+    padding: 0 0 0rem 0;
+  }
+  .main-cs-circle {
+    display: none;
   }
   .about-flex-box p {
     font-size: 1.6rem;
@@ -2448,6 +2556,12 @@ footer h6 {
   .ms-box-content h4 {
     font-size: 1.8rem;
   }
+  .tb-box-img {
+    border-radius: 0.5rem;
+  }
+  .tb-box-img img {
+    width: 70px;
+  }
 }
 
 @media only screen and (max-width: 550px) {
@@ -2456,17 +2570,14 @@ footer h6 {
   }
   footer h6 {
     color: var(--color-slate-300);
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
-    margin: 4rem 0 0 0;
+    margin: 3rem 0 0 0;
     display: block;
     text-align: center;
   }
 }
 @media only screen and (max-width: 450px) {
-  .technologies-box {
-    grid-template-columns: 1fr;
-  }
   .tb-box-img {
     width: 100%;
     max-width: 100%;
