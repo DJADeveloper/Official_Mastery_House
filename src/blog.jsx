@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import Logo from "./assets/img/logo.png";
+import Logo from "./assets/img/logo-tms.png";
 import Team1 from "./assets/img/team-1.png";
 import LinkedIn from "./assets/img/linkedin.png";
 import Twitter from "./assets/img/twitter.png";
