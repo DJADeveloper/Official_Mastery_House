@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./home.css";
-import Logo from "./assets/img/logo-tms.png";
 import HeroImg from "./assets/img/hero-img.png";
 import Blockchain from "./assets/img/blockchain.svg";
 import Consulting from "./assets/img/consulting.svg";
@@ -9,15 +8,9 @@ import Software from "./assets/img/software.svg";
 import Rectangle from "./assets/img/Rectangle-Purple.png";
 import Circle from "./assets/img/Circle-Green.png";
 import Team1 from "./assets/img/team-1.png";
-import LinkedIn from "./assets/img/linkedin.png";
-import Twitter from "./assets/img/twitter.png";
 import Blog1 from "./assets/img/blog1.png";
 import Case1 from "./assets/img/case1.png";
 import CaseLogo1 from "./assets/img/ikea.png";
-import Booking from "./assets/img/booking.png";
-import GIT1 from "./assets/img/Capa_1.svg";
-import GIT2 from "./assets/img/asssvg.svg";
-import GIT3 from "./assets/img/epmsvg.svg";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -33,45 +26,14 @@ import {
   BsArrowUpRight,
   BsList,
   BsXLg,
+  BsChevronDown,
 } from "react-icons/bs";
-import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
 import Header from "./components/Header";
-
-const items = [
-  {
-    name: "AI",
-    color: "#9C42F5",
-  },
-  {
-    name: "Blockchain",
-    color: "#0FA",
-  },
-  {
-    name: "Software",
-    color: "#4579F5",
-  },
-  {
-    name: "Consulting",
-    color: "#F43F5E",
-  },
-  {
-    name: "AI",
-    color: "#9C42F5",
-  },
-  {
-    name: "Blockchain",
-    color: "#0FA",
-  },
-  {
-    name: "Software",
-    color: "#4579F5",
-  },
-  {
-    name: "Consulting",
-    color: "#F43F5E",
-  },
-];
+import Footer from "./components/Footer";
+import Booking from "./components/Booking";
+import Marque from "./components/Marque";
+import Teamswiper from "./components/Teamswiper";
 
 function Home(props) {
   return (
@@ -132,6 +94,7 @@ function Home(props) {
                   </div>
                 </div>
                 <div className="service-grid-box sgb-2">
+                  <div className="circle-sm-2"></div>
                   <img src={Development} alt="" />
                   <h5>AI Development</h5>
                   <p>
@@ -187,203 +150,16 @@ function Home(props) {
                   only meet but exceed your expectations.
                 </h3>
               </div>
-              <h6>
-                View All <BsArrowRight />
-              </h6>
+              <a href="/about">
+                Learn More <BsArrowRight />
+              </a>
             </div>
           </div>
         </section>
-        <section className="team-section">
-          <div className="team-circle-1"></div>
-          <div className="team-circle-2"></div>
-          <div className="box">
-            <div className="swiper-head">
-              <h2 className="gradient-text">Our Team</h2>
-              <div className="sh-right">
-                <span className="team-prev">
-                  <BsChevronLeft />
-                </span>
-                <span className="team-next">
-                  <BsChevronRight />
-                </span>
-              </div>
-            </div>
-            <Swiper
-              spaceBetween={15}
-              slidesPerView={1.1}
-              modules={[Navigation]}
-              navigation={{
-                nextEl: ".team-next",
-                prevEl: ".team-prev",
-              }}
-              breakpoints={{
-                750: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 25,
-                },
-                1000: {
-                  slidesPerView: 3.15,
-                },
-                1300: {
-                  slidesPerView: 4.15,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </section>
+        <Teamswiper />
         <section className="getintouch-section">
           <div className="marquee-main-box">
-            <Marquee>
-              {items.map((item, index) => (
-                <div className="Marquee-Card" key={index}>
-                  <h3
-                    style={{
-                      background: `linear-gradient(180deg, ${item.color} 0%, #e8f0ff 100%)`,
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    {item.name}
-                  </h3>
-                  <div></div>
-                </div>
-              ))}
-            </Marquee>
+            <Marque />
           </div>
         </section>
         <section className="casestudy-section">
@@ -394,9 +170,9 @@ function Home(props) {
             <div className="casestudy-cont">
               <div className="casestudy-head">
                 <h3 className="gradient-text">Case Study</h3>
-                <h6>
+                <a href="#">
                   View All <BsArrowRight />
-                </h6>
+                </a>
               </div>
               <div className="casestudy-main">
                 <div className="cs-main-grid">
@@ -421,7 +197,7 @@ function Home(props) {
                     <div className="cs-main-btn">
                       <div className="service-btn">
                         <div className="inner-service-btn">
-                          <span className="gradient-text">
+                          <span>
                             Learn More <BsArrowUpRight />
                           </span>
                         </div>
@@ -509,9 +285,9 @@ function Home(props) {
             <div className="blog-cont">
               <div className="casestudy-head">
                 <h3 className="gradient-text">Read Our Blogs</h3>
-                <h6>
+                <a href="#">
                   View All <BsArrowRight />
-                </h6>
+                </a>
               </div>
               <div className="blog-grid">
                 <div className="blog-grid-left">
@@ -595,6 +371,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -615,6 +392,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -635,6 +413,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -655,6 +434,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -675,6 +455,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -695,6 +476,7 @@ function Home(props) {
                       <h5>
                         How frequently am I supposed to pay for this course?
                       </h5>
+                      <BsChevronDown />
                     </Accordion.Header>
                     <Accordion.Body>
                       Investing in this course is both economical and practical.
@@ -715,72 +497,8 @@ function Home(props) {
             </div>
           </div>
         </section>
-        <section className="booking-section">
-          <div className="booking-cont">
-            <div className="booking-img">
-              <img src={Booking} alt="" />
-            </div>
-            <div className="git-box">
-              <div className="git-circle-1"></div>
-              <div className="git-circle-2"></div>
-              <div className="git-b-top">
-                <h3 className="gradient-text">Book a Call with Us</h3>
-                <p>
-                  Ready to transform your business with blockchain and AI?
-                  Consult with our masters todayand take the first step towards
-                  a future of innovation and success.
-                </p>
-              </div>
-              <div className="gitsvg-box">
-                <div>
-                  <img src={GIT1} alt="" />
-                  <span>
-                    Initial Consultation{" "}
-                    <h6>
-                      Let's discuss how we can redefine the digital narrative
-                      together
-                    </h6>
-                  </span>
-                </div>
-                <div>
-                  <img src={GIT2} alt="" />
-                  <span>
-                    Advanced Strategy Session
-                    <h6>
-                      Deep dive into your digital needs and plot the course
-                      ahead
-                    </h6>
-                  </span>
-                </div>
-                <div>
-                  <img src={GIT3} alt="" />
-                  <span>
-                    Exclusive Partnership Meeting
-                    <h6>Let's collaborate and create digital excellence</h6>
-                  </span>
-                </div>
-              </div>
-              <button className="gradient-btn">Get Started</button>
-            </div>
-          </div>
-        </section>
-        <footer>
-          <div className="box">
-            <div className="footer-content">
-              <img src={Logo} alt="" />
-              <h5>© 2023 The Mastery House. All rights reserved</h5>
-              <div className="tb-social">
-                <div>
-                  <FaLinkedinIn />
-                </div>
-                <div>
-                  <FaXTwitter />
-                </div>
-              </div>
-            </div>
-            <h6>© 2023 The Mastery House. All rights reserved</h6>
-          </div>
-        </footer>
+        <Booking />
+        <Footer />
       </main>
     </div>
   );
