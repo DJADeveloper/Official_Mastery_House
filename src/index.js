@@ -8,7 +8,6 @@ import Blogs from "./blogs";
 import Service from "./service";
 import CaseStudy from "./casestudy";
 import Contact from "./contact";
-import Links from "./link";
 
 const root = document.getElementById("root");
 const App = () => {
@@ -16,14 +15,13 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/service" element={<Service />} />
           <Route path="/casestudy" element={<CaseStudy />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/" element={<Links />} />
         </Routes>
       </BrowserRouter>
     </>

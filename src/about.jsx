@@ -7,10 +7,6 @@ import Twitter from "./assets/img/twitter.png";
 import Blog1 from "./assets/img/blog1.png";
 import Case1 from "./assets/img/case1.png";
 import CaseLogo1 from "./assets/img/ikea.png";
-import Booking from "./assets/img/booking.png";
-import GIT1 from "./assets/img/Capa_1.svg";
-import GIT2 from "./assets/img/asssvg.svg";
-import GIT3 from "./assets/img/asssvg.svg";
 import AboutImg from "./assets/img/aboutimg.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,64 +23,20 @@ import {
   BsXLg,
 } from "react-icons/bs";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import Marquee from "react-fast-marquee";
-import Accordion from "react-bootstrap/Accordion";
 import Header from "./components/Header";
-
-const items = [
-  {
-    name: "AI",
-    color: "#9C42F5",
-  },
-  {
-    name: "Blockchain",
-    color: "#0FA",
-  },
-  {
-    name: "Software",
-    color: "#4579F5",
-  },
-  {
-    name: "Consulting",
-    color: "#F43F5E",
-  },
-  {
-    name: "AI",
-    color: "#9C42F5",
-  },
-  {
-    name: "Blockchain",
-    color: "#0FA",
-  },
-  {
-    name: "Software",
-    color: "#4579F5",
-  },
-  {
-    name: "Consulting",
-    color: "#F43F5E",
-  },
-];
+import Teamswiper from "./components/Teamswiper";
+import Marque from "./components/Marque";
+import Booking from "./components/Booking";
+import Footer from "./components/Footer";
 
 function About() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
   return (
     <div className="masteryhouse">
       <main className="homepage" id="home_page">
         {/* <div className="circle-1"></div>
         <div className="circle-2"></div> */}
         <div className="circle-3"></div>
-        <Header 
-        isActive="about"
-        />
+        <Header isActive="about" />
         <section className="about-section">
           <div className="main-about-circle"></div>
           <div className="about-circle-2"></div>
@@ -168,265 +120,14 @@ function About() {
             </div>
           </div>
         </section>
-        <section className="team-section">
-          <div className="team-circle-1"></div>
-          <div className="team-circle-2"></div>
-          <div className="box">
-            <div className="swiper-head">
-              <h2 className="gradient-text">Our Team</h2>
-              <div className="sh-right">
-                <span className="team-prev">
-                  <BsChevronLeft />
-                </span>
-                <span className="team-next">
-                  <BsChevronRight />
-                </span>
-              </div>
-            </div>
-            <Swiper
-              spaceBetween={15}
-              slidesPerView={1.1}
-              modules={[Navigation]}
-              navigation={{
-                nextEl: ".team-next",
-                prevEl: ".team-prev",
-              }}
-              breakpoints={{
-                750: {
-                  slidesPerView: 2.5,
-                  spaceBetween: 25,
-                },
-                1000: {
-                  slidesPerView: 3.15,
-                },
-                1300: {
-                  slidesPerView: 4.15,
-                },
-              }}
-            >
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className="team-card">
-                  <img src={Team1} />
-                  <div className="team-bottom">
-                    <h5>
-                      Emilia Clark
-                      <span>CEO, Founder</span>
-                    </h5>
-                    <div className="tb-social">
-                      <div>
-                        <FaLinkedinIn />
-                      </div>
-                      <div>
-                        <FaXTwitter />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </section>
+        <Teamswiper />
         <section className="getintouch-section">
           <div className="marquee-main-box">
-            <Marquee>
-              {items.map((item, index) => (
-                <div className="Marquee-Card" key={index}>
-                  <h3
-                    style={{
-                      background: `linear-gradient(180deg, ${item.color} 0%, #e8f0ff 100%)`,
-                      backgroundClip: "text",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                    }}
-                  >
-                    {item.name}
-                  </h3>
-                  <div></div>
-                </div>
-              ))}
-            </Marquee>
+            <Marque />
           </div>
         </section>
-        <section className="booking-section">
-          <div className="booking-cont">
-            <div className="booking-img">
-              <img src={Booking} alt="" />
-            </div>
-            <div className="git-box">
-              <div className="git-circle-1"></div>
-              <div className="git-circle-2"></div>
-              <div className="git-b-top">
-                <h3 className="gradient-text">Book a Call with Us</h3>
-                <p>
-                  Ready to transform your business with blockchain and AI?
-                  Consult with our masters todayand take the first step towards
-                  a future of innovation and success.
-                </p>
-              </div>
-              <div className="gitsvg-box">
-                <div>
-                  <img src={GIT1} alt="" />
-                  <span>
-                    Initial Consultation{" "}
-                    <h6>
-                      Let's discuss how we can redefine the digital narrative
-                      together
-                    </h6>
-                  </span>
-                </div>
-                <div>
-                  <img src={GIT2} alt="" />
-                  <span>
-                    Advanced Strategy Session
-                    <h6>
-                      Deep dive into your digital needs and plot the course
-                      ahead
-                    </h6>
-                  </span>
-                </div>
-                <div>
-                  <img src={GIT3} alt="" />
-                  <span>
-                    Exclusive Partnership Meeting
-                    <h6>Let's collaborate and create digital excellence</h6>
-                  </span>
-                </div>
-              </div>
-              <button className="gradient-btn">Get Started</button>
-            </div>
-          </div>
-        </section>
-        <footer>
-          <div className="box">
-            <div className="footer-content">
-              <img src={Logo} alt="" />
-              <h5>© 2023 The Mastery House. All rights reserved</h5>
-              <div className="tb-social">
-                <div>
-                  <FaLinkedinIn />
-                </div>
-                <div>
-                  <FaXTwitter />
-                </div>
-              </div>
-            </div>
-            <h6>© 2023 The Mastery House. All rights reserved</h6>
-          </div>
-        </footer>
+        <Booking />
+        <Footer />
       </main>
     </div>
   );

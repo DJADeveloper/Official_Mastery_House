@@ -14,13 +14,13 @@ import {
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    // Toggle mobile menu visibility
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-      };
-      const closeMobileMenu = () => {
-        setIsMobileMenuOpen(false);
-      };
+  // Toggle mobile menu visibility
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
 
   return (
     <header>
