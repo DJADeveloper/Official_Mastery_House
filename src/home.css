@@ -111,10 +111,6 @@ img {
 }
 .circle-3 {
   width: 75rem;
-  height: 75rem;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   right: -36%;
   top: -2%;
@@ -162,17 +158,15 @@ header {
   font-size: 1.6rem;
   font-family: "Roboto";
   font-weight: 400;
-  color: var(--color-slate-300);
+  color: var(--color-slate-400);
   transition: 0.35s;
 }
 
 .header_right a:hover {
-  color: var(--color-slate-400);
+  color: var(--color-slate-300);
 }
 .header_right a.active {
-  background: linear-gradient(to right, #00ffaa, #4579f5, #9c42f5);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: var(--white);
 }
 
 /* Hero Section  */
@@ -227,9 +221,9 @@ header {
   color: var(--white);
   margin: 5rem 0 5.5rem 0;
 }
-.hero-cont-right img {
+.hero-cont-right svg {
   width: 100%;
-  height: auto;
+  height: max-content;
   object-fit: contain;
 }
 
@@ -275,6 +269,12 @@ header {
   position: relative;
   overflow: hidden;
 }
+.circle-sm {
+  transition: 0.35s;
+}
+.service-grid-box:hover .circle-sm {
+  scale: 1.5;
+}
 .circle-sm-1 {
   background: rgba(0, 255, 170, 0.5);
   width: 171px;
@@ -311,7 +311,8 @@ header {
   bottom: -25px;
   filter: blur(200px);
 }
-.service-grid-box img {
+.service-grid-box img,
+.service-grid-box svg {
   width: 75px;
   height: auto;
 }
@@ -358,6 +359,7 @@ header {
   background: linear-gradient(to right, #00ffaa, #e8f0ff, #00ffaa);
   border-radius: 0.75rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
 .service-grid-box.sgb-2 .service-btn {
   background: linear-gradient(to right, #9c42f5, #e8f0ff, #9c42f5);
@@ -426,9 +428,9 @@ header {
   font-family: "Lato";
   font-weight: 400;
   line-height: 150%;
-  background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0));
-  -webkit-background-clip: text;
-  color: transparent;
+  /* background: linear-gradient(to bottom, #ffffff, rgba(255, 255, 255, 0)); */
+  /* -webkit-background-clip: text; */
+  color: var(--color-slate-200);
   display: inline-block;
   z-index: 2;
   text-align: center;
@@ -484,6 +486,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 0 5rem 0;
+  position: relative;
+  z-index: 1000;
 }
 .swiper-head h2 {
   font-size: 3.5rem;
@@ -509,7 +513,7 @@ header {
   cursor: auto;
 }
 .sh-right span:not(.swiper-button-disabled):hover svg {
-  color: var(--color-primary-green);
+  opacity: 0.85;
 }
 #home_page .swiper {
   overflow: visible !important;
@@ -829,7 +833,7 @@ header {
   border-radius: 50%;
   position: absolute;
   right: -3%;
-  top: 3%;
+  top: 35%;
 }
 .blogcircle-2 {
   background: rgba(69, 121, 245, 0.2);
@@ -960,7 +964,7 @@ header {
   height: 100.58px;
   transform: rotate(15deg);
   position: absolute;
-  top: -3%;
+  top: -7.5%;
   left: 9%;
   z-index: -1;
 }
@@ -994,7 +998,7 @@ header {
   margin: auto;
 }
 .faq-accordian-box .accordion-item:hover h5 {
-  color: var(--color-slate-400);
+  color: var(--color-slate-300);
 }
 .faq-accordian-box .accordion-item {
   padding: 2.5rem;
@@ -1030,6 +1034,11 @@ header {
 .faq-accordian-box .accordion-header svg {
   color: var(--color-slate-200);
   font-size: 2rem;
+  transform: rotate(180deg);
+  transition: 0.35s;
+}
+.faq-accordian-box .accordion-header .accordion-button.collapsed svg {
+  transform: rotate(0);
 }
 .faq-accordian-box .accordion-header .accordion-button:not(.collapsed) {
   background-color: transparent;
@@ -1053,6 +1062,10 @@ header {
   line-height: 150%;
   transition: 0.35s;
   color: var(--color-slate-200);
+}
+
+.faq-accordian-box .accordion-header .accordion-button.collapsed h5 {
+  color: var(--color-slate-400);
 }
 .faq-accordian-box .accordion-body {
   padding: 1.5rem 1.5rem 0 0;
@@ -1243,7 +1256,6 @@ footer h6 {
 .about-circle-3 {
   width: 75rem;
   height: 75rem;
-  border-radius: 50%;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
