@@ -145,7 +145,7 @@ header {
   align-items: center;
 }
 .header_cont img {
-  width: 50px;
+  width: 125px;
   height: auto;
 }
 .header_right {
@@ -159,6 +159,16 @@ header {
   font-family: "Roboto";
   font-weight: 400;
   color: var(--color-slate-300);
+  transition: 0.35s;
+}
+
+.header_right a:hover{
+  color: var(--color-slate-400);
+}
+.header_right a.active{
+  background: linear-gradient(to right, #00ffaa, #4579f5, #9c42f5);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 /* Hero Section  */

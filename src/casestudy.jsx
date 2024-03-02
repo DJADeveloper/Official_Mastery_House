@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import Logo from "./assets/img/logo.png";
+import Logo from "./assets/img/logo-tms.png";
 import HeroImg from "./assets/img/hero-img.png";
 import Blockchain from "./assets/img/blockchain.svg";
 import Consulting from "./assets/img/consulting.svg";

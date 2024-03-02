@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./home.css";
-import Logo from "./assets/img/logo.png";
+import Logo from "./assets/img/logo-tms.png";
 import HeroImg from "./assets/img/hero-img.png";
 import Blockchain from "./assets/img/blockchain.svg";
 import Consulting from "./assets/img/consulting.svg";
@@ -36,6 +36,7 @@ import {
 } from "react-icons/bs";
 import Marquee from "react-fast-marquee";
 import Accordion from "react-bootstrap/Accordion";
+import Header from "./components/Header";
 
 const items = [
   {
@@ -73,55 +74,13 @@ const items = [
 ];
 
 function Home(props) {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
-  // Toggle mobile menu visibility
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
   return (
     <div className="masteryhouse">
       <main className="homepage" id="home_page">
         <div className="circle-1"></div>
         <div className="circle-2"></div>
         <div className="circle-3"></div>
-        <header>
-          <div className="box">
-            <div className="header_cont">
-              <img src={Logo} alt="" />
-              <div className="header_right">
-                <a href="/">Home</a>
-                <a href="/about">About</a>
-                <a href="/casestudy">Case Studies</a>
-                <a href="/service">Services</a>
-                <a href="/contact">Contact</a>
-              </div>
-              <div className="hr-mob-icon" onClick={toggleMobileMenu}>
-                <BsList />
-              </div>
-              {isMobileMenuOpen && (
-                <div className="mobile-menu">
-                  <div className="mob-circle-1"></div>
-                  <div className="mob-circle-2"></div>
-                  <div className="mobile-menu-top">
-                    <img src={Logo} alt="" />
-                    <BsXLg onClick={closeMobileMenu} />
-                  </div>
-                  <div className="mobile-menu-bottom">
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/casestudy">Case Studies</a>
-                    <a href="/service">Services</a>
-                    <a href="/contact">Contact</a>
-                  </div>
-                </div>
-              )}
-            </div>
-          </div>
-        </header>
+        <Header isActive="home" />
         <section className="hero-section">
           <div className="main-home-circle"></div>
           <div className="box">
