@@ -57,38 +57,23 @@ const Service = () => {
       duration: 3,
       delay: 1,
     });
-
-    let AboutImgScrollAnimation = gsap.timeline({
+    let about3CirclesAnim = gsap.timeline({
       scrollTrigger: {
-        trigger: ".about-img-box",
-        toggleActions: "start pause resume none",
-        start: "top 0%",
-        end: "bottom 30%",
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        markers: false,
+        trigger: ".about-flex-box",
+        start: "top 75%",
       },
     });
-    AboutImgScrollAnimation.fromTo(
-      ".about-img",
+    about3CirclesAnim.fromTo(
+      ".about-circle",
       {
-        width: "88%",
-        height: "80vh",
+        x: "-30px",
+        opacity: 0,
       },
       {
-        width: "100%",
-        height: "100vh",
-      }
-    ).fromTo(
-      ".about-img",
-      {
-        width: "100%",
-        height: "100vh",
-      },
-      {
-        width: "88%",
-        height: "80vh",
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.085,
       }
     );
   }, []);
@@ -137,12 +122,10 @@ const Service = () => {
                       to set you apart in thedigital landscape.
                     </p>
                   </div>
-                  <div className="about-img-box">
-                    <img src={ServiceImg} alt="" className="about-img" />
-                  </div>
+                  <img src={ServiceImg} alt="" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle"></div>
+                      <div className="about-circle about-circle1"></div>
                       <h3>Smart Contract Development</h3>
                       <p>
                         Streamline operations and ensure trust with our smart
@@ -151,7 +134,7 @@ const Service = () => {
                       </p>
                     </div>
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle2"></div>
+                      <div className="about-circle about-circle2"></div>
                       <h3>Decentralized Applications (dApps)</h3>
                       <p>
                         Revolutionize your online presence with dApps that offer
@@ -160,7 +143,7 @@ const Service = () => {
                       </p>
                     </div>
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle3"></div>
+                      <div className="about-circle about-circle3"></div>
                       <h3>Token Development</h3>
                       <p>
                         Expand your digital footprint with custom tokens,

@@ -10,12 +10,12 @@ const Footer = () => {
           <img src={Logo} alt="" />
           <h5>© 2023 The Mastery House. All rights reserved</h5>
           <div className="tb-social">
-            <div>
+            <a href="#">
               <FaLinkedinIn />
-            </div>
-            <div>
+            </a>
+            <a href="#">
               <FaXTwitter />
-            </div>
+            </a>
           </div>
         </div>
         <h6>© 2023 The Mastery House. All rights reserved</h6>

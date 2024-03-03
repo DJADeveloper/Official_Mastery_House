@@ -83,6 +83,7 @@ const Contact = () => {
                   </div>
                   <div className="contact-grid">
                     <div className="cg-left">
+                      <div className="contact-circle"></div>
                       <h4>Contact Us</h4>
                       <div className="cg-left-form">
                         <input type="text" placeholder="Full Name" />
