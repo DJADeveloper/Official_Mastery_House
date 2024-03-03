@@ -65,45 +65,36 @@ function About() {
     gsap.from(".circle-3 circle", {
       drawSVG: 0.1,
       duration: 3,
-      delay: 1,
-    });
-    gsap.from(".about-circle-3 circle", {
-      drawSVG: 0.1,
-      duration: 3,
-      delay: 1,
     });
 
-    let AboutImgScrollAnimation = gsap.timeline({
+    let aboutCircle3Anim = gsap.timeline({
       scrollTrigger: {
-        trigger: ".about-img-box",
-        toggleActions: "start pause resume none",
-        start: "top 0%",
-        end: "bottom 30%",
-        scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        markers: false,
+        trigger: ".about-circle-3 circle",
+        start: "top 75%",
       },
     });
-    AboutImgScrollAnimation.fromTo(
-      ".about-img",
+
+    aboutCircle3Anim.from(".about-circle-3 circle", {
+      drawSVG: 0.1,
+      duration: 3,
+    });
+    let about3CirclesAnim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-flex-box",
+        start: "top 75%",
+      },
+    });
+    about3CirclesAnim.fromTo(
+      ".about-circle",
       {
-        width: "88%",
-        height: "80vh",
+        x: "-30px",
+        opacity: 0,
       },
       {
-        width: "100%",
-        height: "100vh",
-      }
-    ).fromTo(
-      ".about-img",
-      {
-        width: "100%",
-        height: "100vh",
-      },
-      {
-        width: "88%",
-        height: "80vh",
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.085,
       }
     );
   }, []);
@@ -183,12 +174,10 @@ function About() {
                       </p>
                     </div>
                   </div>
-                  <div className="about-img-box">
-                    <img src={AboutImg} alt="" className="about-img" />
-                  </div>
+                  <img src={AboutImg} alt="" />
                   <div className="about-flex">
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle"></div>
+                      <div className="about-circle about-circle1"></div>
                       <h3>What We Stand For</h3>
                       <p>
                         Innovation, Excellence, and Future-Readiness are the
@@ -200,7 +189,7 @@ function About() {
                       </p>
                     </div>
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle2"></div>
+                      <div className="about-circle about-circle2"></div>
                       <h3>Our Mission</h3>
                       <p>
                         Innovation, Excellence, and Future-Readiness are the
@@ -212,7 +201,7 @@ function About() {
                       </p>
                     </div>
                     <div className="about-flex-box">
-                      <div data-speed={0.85} className="about-circle3"></div>
+                      <div className="about-circle about-circle3"></div>
                       <h3>Why Choose Us</h3>
                       <p>
                         Innovation, Excellence, and Future-Readiness are the

@@ -49,15 +49,106 @@ const Casestudy = () => {
       duration: 3,
       delay: 1,
     });
-    gsap.from(".ms-box-content", {
-      duration: 1,
-      css: {
-        borderWidth: "0px",
-        borderColor: "transparent",
+    let caseStudyBorderAnim1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".msb-1",
+        start: "top 75%",
       },
-      ease: "power1.inOut",
-      stagger: 0.5,
     });
+    caseStudyBorderAnim1
+      .fromTo(
+        ".msbc-1 .hor-line",
+        {
+          width: 0,
+        },
+        {
+          width: "100%",
+          duration: 0.5,
+        }
+      )
+      .fromTo(
+        ".msbc-2 .hor-line",
+        {
+          width: 0,
+        },
+        {
+          width: "100%",
+          duration: 0.5,
+        },
+        0
+      )
+      .fromTo(
+        ".msbc-1 .ver-line",
+        {
+          height: 0,
+        },
+        {
+          height: "100%",
+          duration: 0.5,
+        }
+      )
+      .fromTo(
+        ".msbc-2 .ver-line",
+        {
+          height: 0,
+        },
+        {
+          height: "100%",
+          duration: 0.5,
+        },
+        "<0"
+      );
+
+    let caseStudyBorderAnim2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".msb-2",
+        start: "top 75%",
+      },
+    });
+    caseStudyBorderAnim2
+      .fromTo(
+        ".msbc-3 .ver-line",
+        {
+          height: 0,
+        },
+        {
+          height: "100%",
+          duration: 0.5,
+        }
+      )
+      .fromTo(
+        ".msbc-4 .ver-line",
+        {
+          height: 0,
+        },
+        {
+          height: "100%",
+          duration: 0.5,
+        },
+        0
+      )
+
+      .fromTo(
+        ".msbc-3 .hor-line",
+        {
+          width: 0,
+        },
+        {
+          width: "100%",
+          duration: 0.5,
+        }
+      )
+      .fromTo(
+        ".msbc-4 .hor-line",
+        {
+          width: 0,
+        },
+        {
+          width: "100%",
+          duration: 0.5,
+        },
+        "<0"
+      );
   }, []);
   return (
     <div className="masteryhouse">
@@ -123,8 +214,10 @@ const Casestudy = () => {
                     </div>
                   </div>
                   <div className="steps-to-follow-box">
-                    <div className="main-steps-box">
+                    <div className="main-steps-box msb-1">
                       <div className="ms-box-content msbc-1">
+                        <div className="hor-line"></div>
+                        <div className="ver-line"></div>
                         <h4 className="gradient-text">
                           1. Conceptualization of the project
                         </h4>
@@ -137,7 +230,9 @@ const Casestudy = () => {
                           choices.
                         </p>
                       </div>
-                      <div className="ms-box-content msbc-2 ">
+                      <div className="ms-box-content msbc-2">
+                        <div className="hor-line"></div>
+                        <div className="ver-line"></div>
                         <h4 className="gradient-text">
                           2. Creation of an ERP solution
                         </h4>
@@ -152,8 +247,10 @@ const Casestudy = () => {
                       </div>
                     </div>
                     <img src={LaptopMockup} alt="" />
-                    <div className="main-steps-box">
+                    <div className="main-steps-box msb-2">
                       <div className="ms-box-content msbc-3">
+                        <div className="hor-line"></div>
+                        <div className="ver-line"></div>
                         <h4 className="gradient-text">
                           3. Integrate the facility to gather customers’
                           information
@@ -167,7 +264,9 @@ const Casestudy = () => {
                           choices.
                         </p>
                       </div>
-                      <div className="ms-box-content msbc-2 msbc-4 ">
+                      <div className="ms-box-content msbc-4">
+                        <div className="hor-line"></div>
+                        <div className="ver-line"></div>
                         <h4 className="gradient-text">
                           4. Deploy the solution across individual IKEA stores
                         </h4>
