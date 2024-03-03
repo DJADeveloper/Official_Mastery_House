@@ -119,6 +119,26 @@ function Home(props) {
         repeat: -1,
       }
     );
+
+    let caseCircle3Anim = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".case-circle1 circle",
+        start: "top 75%",
+      },
+    });
+
+    caseCircle3Anim.from(".case-circle1 circle", {
+      drawSVG: 0.1,
+      duration: 3,
+    });
+    caseCircle3Anim.from(".case-circle2 circle", {
+      drawSVG: 0.1,
+      duration: 3,
+    });
+    caseCircle3Anim.from(".case-circle3 circle", {
+      drawSVG: 0.1,
+      duration: 3,
+    });
   }, []);
 
   return (
@@ -305,9 +325,51 @@ function Home(props) {
               </div>
             </section>
             <section className="casestudy-section">
-              <div className="case-circle1"></div>
-              <div className="case-circle2"></div>
-              <div className="case-circle3"></div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="774"
+                height="774"
+                fill="none"
+                viewBox="0 0 774 774"
+                className="case-circle1"
+              >
+                <circle
+                  cx="387"
+                  cy="387"
+                  r="386.5"
+                  stroke="rgba(255,255,255,0.25)"
+                ></circle>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="774"
+                height="774"
+                fill="none"
+                viewBox="0 0 774 774"
+                className="case-circle2"
+              >
+                <circle
+                  cx="387"
+                  cy="387"
+                  r="386.5"
+                  stroke="rgba(255,255,255,0.25)"
+                ></circle>
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="774"
+                height="774"
+                fill="none"
+                viewBox="0 0 774 774"
+                className="case-circle3"
+              >
+                <circle
+                  cx="387"
+                  cy="387"
+                  r="386.5"
+                  stroke="rgba(255,255,255,0.25)"
+                ></circle>
+              </svg>
               <div className="box">
                 <div className="casestudy-cont">
                   <div className="casestudy-head">

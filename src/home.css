@@ -415,7 +415,11 @@ header {
   margin-top: 5rem;
   transition: 0.35s;
 }
+.service-content a:hover {
+  color: var(--color-slate-100);
+}
 .service-content a:hover > svg {
+  color: var(--color-slate-100);
   transform: translateX(7px);
 }
 .service-content a svg {
@@ -568,7 +572,7 @@ header {
   align-items: center;
   gap: 1rem;
 }
-.tb-social div {
+.tb-social a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -577,7 +581,7 @@ header {
   border-radius: 50%;
   background-color: var(--white);
 }
-.tb-social div svg {
+.tb-social a svg {
   font-size: 1.85rem;
   color: var(--black);
 }
@@ -620,21 +624,14 @@ header {
 }
 .case-circle1 {
   width: 650px;
-  height: 650px;
-  border-radius: 50%;
   z-index: -1;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   left: -32%;
   top: -3%;
+  transform: rotate(180deg);
 }
 .case-circle2 {
   width: 650px;
-  height: 650px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   right: -30%;
   top: 28%;
@@ -642,13 +639,10 @@ header {
 }
 .case-circle3 {
   width: 650px;
-  height: 650px;
-  border-radius: 50%;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
   position: absolute;
   left: -30%;
   bottom: 3%;
+  transform: rotate(180deg);
   z-index: -1;
 }
 .casestudy-cont {
@@ -681,7 +675,11 @@ header {
   font-weight: 400;
   transition: 0.35s;
 }
+.casestudy-head a:hover {
+  color: var(--color-slate-100) !important;
+}
 .casestudy-head a:hover > svg {
+  color: var(--color-slate-100);
   transform: translateX(7px);
 }
 .casestudy-head a svg {
@@ -804,9 +802,13 @@ header {
   margin: 0;
   cursor: pointer;
 }
-/* .cs-main-btn h5:hover > svg {
-  transform: translatey(-7px);
-} */
+.cs-main-btn h5:hover {
+  color: var(--color-slate-100);
+}
+.cs-main-btn h5:hover > svg {
+  transform: translateX(7px);
+  color: var(--color-slate-100);
+}
 .cs-main-btn h5 svg {
   color: var(--color-slate-400);
   font-size: 2rem;
@@ -1421,7 +1423,7 @@ footer h6 {
   background-color: rgba(0, 255, 170, 0.3);
   position: absolute;
   left: -36px;
-  top: -44%;
+  top: -24%;
   border-radius: 50%;
   z-index: 0;
 }
@@ -1441,7 +1443,7 @@ footer h6 {
   background-color: rgba(69, 121, 245, 0.4);
   position: absolute;
   left: -36px;
-  top: 0%;
+  top: -24%;
   border-radius: 50%;
   z-index: 0;
 }
@@ -1464,13 +1466,13 @@ footer h6 {
   gap: 10rem;
 }
 .about-flex.service-flex .about-circle1 {
-  top: -95%;
+  top: -55%;
 }
 .about-flex.service-flex .about-circle2 {
   top: -40%;
 }
 .about-flex.service-flex .about-circle3 {
-  top: 0%;
+  top: -40%;
 }
 
 /* BLOG PAGE  */
@@ -1591,7 +1593,7 @@ footer h6 {
   background-image: unset;
   border-radius: 0.75rem;
   padding: 1.25rem 3.5rem;
-  color: var(--white);
+  color: var(--color-slate-400);
   font-size: 1.8rem;
   font-family: "Roboto";
   font-weight: 400;
@@ -1599,8 +1601,12 @@ footer h6 {
   cursor: pointer;
   border: unset;
 }
+.technologies-tabs .nav.nav-tabs .nav-link:hover {
+  color: var(--white);
+}
 .technologies-tabs .nav.nav-tabs .nav-link.active {
   background-image: linear-gradient(to bottom right, #00ffaa, #4579f5, #9c42f5);
+  color: var(--white);
 }
 .technologies-tabContent {
   display: flex;
@@ -1835,6 +1841,16 @@ footer h6 {
   font-weight: 400;
   line-height: 150%;
 }
+.testi-circle {
+  background: var(--color-primary-purple);
+  filter: blur(200px);
+  position: absolute;
+  right: -52.333px;
+  bottom: 0%;
+  width: 131px;
+  height: 131px;
+  z-index: 1;
+}
 .testimonial-cs-box {
   padding: 3.5rem;
   background-color: #0f172a;
@@ -1846,6 +1862,7 @@ footer h6 {
   gap: 3rem;
   width: 865px;
   margin: 0 auto;
+  position: relative;
 }
 .testimonial-cs-box p {
   color: var(--white);
@@ -1903,6 +1920,17 @@ footer h6 {
   grid-template-columns: 1fr 1fr;
   grid-gap: 5rem;
 }
+.contact-circle {
+  width: 303px;
+  height: 303px;
+  background: rgba(156, 66, 245, 0.5);
+  filter: blur(200px);
+  border-radius: 50%;
+  position: absolute;
+  top: 65%;
+  left: -6%;
+  z-index: -1;
+}
 .cg-left {
   display: flex;
   flex-direction: column;
@@ -1912,6 +1940,8 @@ footer h6 {
   padding: 3.5rem;
   background-color: var(--color-slate-900);
   border-radius: 1rem;
+  position: relative;
+  z-index: 1;
 }
 .cg-left h4 {
   color: var(--white);
@@ -2576,6 +2606,12 @@ footer h6 {
     padding: 4rem 2rem 2rem 2rem;
     border-bottom: 0;
   } */
+  .msbc-1 .hor-line {
+    display: none;
+  }
+  .msbc-4 .hor-line {
+    display: none;
+  }
   .testimonial-cs-box {
     padding: 3rem 2.5rem 2.5rem 2.5rem;
     border-radius: 0.5rem;

@@ -282,6 +282,7 @@ const Casestudy = () => {
                     </div>
                   </div>
                   <div className="testimonial-cs-box">
+                    <div className="testi-circle"></div>
                     <p>
                       <img src={SemiColon} alt="" />
                       Tackling the Recursion and Dynamic Programming course was

@@ -64,7 +64,7 @@ function About() {
     });
     gsap.from(".circle-3 circle", {
       drawSVG: 0.1,
-      duration: 3,
+      duration: 1,
     });
 
     let aboutCircle3Anim = gsap.timeline({
