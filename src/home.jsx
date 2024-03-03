@@ -90,12 +90,8 @@ function Home(props) {
       scrollTrigger: {
         trigger: ".service-graphic-text",
         toggleActions: "start pause resume none",
-        start: "top 35%",
-        end: "top 0%",
+        start: "top 75%",
         scrub: 1,
-        pin: true,
-        pinSpacing: true,
-        markers: false,
       },
     });
 
@@ -108,6 +104,19 @@ function Home(props) {
         opacity: 1,
         duration: 3,
         stagger: 0.075,
+      }
+    );
+
+    gsap.fromTo(
+      ".gradient-text",
+      {
+        filter: "hue-rotate(0)",
+      },
+      {
+        filter: "hue-rotate(30deg)",
+        duration: 5,
+        yoyo: true,
+        repeat: -1,
       }
     );
   }, []);
