@@ -255,6 +255,8 @@ header {
   grid-gap: 1.5rem;
   margin: 10rem 0 15rem 0;
   width: 100%;
+  position: relative;
+  z-index: 100;
 }
 .service-grid-box {
   display: flex;
@@ -700,7 +702,6 @@ header {
   grid-template-columns: 1fr 1fr;
   grid-gap: 8rem;
   width: 100%;
-  height: 100%;
 }
 .cs-main-right {
   width: 100%;
@@ -2218,6 +2219,9 @@ footer h6 {
 }
 
 @media only screen and (max-width: 950px) {
+  .cs-main-right {
+    height: 20rem;
+  }
   .hero-content {
     grid-template-columns: 1fr;
   }
