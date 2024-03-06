@@ -7,6 +7,7 @@ import { Navigation } from "swiper/modules";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Team1 from "../assets/img/team-1.png";
+import "../home.css";
 
 const Teamswiper = () => {
   return (

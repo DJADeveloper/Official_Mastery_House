@@ -10,6 +10,7 @@ import {
   BsList,
   BsXLg,
 } from "react-icons/bs";
+import gsap from "gsap";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
@@ -42,13 +43,13 @@ const Header = (props) => {
             </Link>
             <Link
               className={`${props.isActive == "casestudy" ? "active" : ""}`}
-              to="/casestudy"
+              to="/"
             >
               Case Studies
             </Link>
             <Link
               className={`${props.isActive == "services" ? "active" : ""}`}
-              to="/service"
+              to="/"
             >
               Services
             </Link>
