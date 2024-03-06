@@ -1,6 +1,12 @@
 import React, { useEffect } from "react";
 import "./home.css";
 import Blog1 from "./assets/img/blog1.png";
+import Blog2 from "./assets/img/blog2.png";
+import Blog3 from "./assets/img/blog3.png";
+import Blog4 from "./assets/img/blog4.png";
+import Blog5 from "./assets/img/blog5.png";
+import Blog6 from "./assets/img/blog6.png";
+import Blog7 from "./assets/img/blog7.png";
 
 import {
   BsChevronRight,
@@ -96,13 +102,13 @@ const Blogs = () => {
                   </div>
                   <div className="blogs-grid">
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog2} alt="" />
                       <div>
                         <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
+                          SEO in the Age of AI: Navigating New Horizons in
+                          Search Engine Optimization
                         </h4>
-                        <a href="#">
+                        <a href="/blog/seo">
                           Read More <BsArrowRight />
                         </a>
                       </div>
@@ -110,95 +116,61 @@ const Blogs = () => {
                     <div className="blog-main-cont bm-r-cont">
                       <img src={Blog1} alt="" />
                       <div>
-                        <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
-                        </h4>
-                        <a href="#">
+                        <h4>The Rise of AI: Transforming Business in 2023</h4>
+                        <a href="/blog/ai">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </div>
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog3} alt="" />
                       <div>
                         <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
+                          Decoding the Success DNA: The Digital Landscape in
+                          2023
                         </h4>
-                        <a href="#">
+                        <a href="/blog/decoding">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </div>
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog4} alt="" />
                       <div>
-                        <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
-                        </h4>
-                        <a href="#">
+                        <h4>Quantum Computing: The Next Frontier in 2023</h4>
+                        <a href="/blog/quantum">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </div>
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog5} alt="" />
                       <div>
                         <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
+                          Augmented Reality: Merging Digital and Physical Realms
                         </h4>
-                        <a href="#">
+                        <a href="/blog/ar-trends">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </div>
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog6} alt="" />
                       <div>
-                        <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
-                        </h4>
-                        <a href="#">
+                        <h4>Cybersecurity: Fortifying the Digital Frontier</h4>
+                        <a href="/blog/cybersecurity">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </div>
                     <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
+                      <img src={Blog7} alt="" />
                       <div>
                         <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
+                          Harnessing Green Innovation: The Sustainable Tech
+                          Revolution
                         </h4>
-                        <a href="#">
-                          Read More <BsArrowRight />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
-                      <div>
-                        <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
-                        </h4>
-                        <a href="#">
-                          Read More <BsArrowRight />
-                        </a>
-                      </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
-                      <img src={Blog1} alt="" />
-                      <div>
-                        <h4>
-                          Navigating the Future: How AI is Redefining Our
-                          Approach to Problem-Solving
-                        </h4>
-                        <a href="#">
+                        <a href="/blog/sustainable-tech">
                           Read More <BsArrowRight />
                         </a>
                       </div>

@@ -9,6 +9,10 @@ import Rectangle from "./assets/img/Rectangle-Purple.png";
 import Circle from "./assets/img/Circle-Green.png";
 import Team1 from "./assets/img/team-1.png";
 import Blog1 from "./assets/img/blog1.png";
+import Blog2 from "./assets/img/blog2.png";
+import Blog3 from "./assets/img/blog3.png";
+import Blog4 from "./assets/img/blog4.png";
+import Blog5 from "./assets/img/blog5.png";
 import Case1 from "./assets/img/case1.png";
 import CaseLogo1 from "./assets/img/ikea.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -17,7 +21,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { Route, Switch } from "react-router-dom";
+import { Link, Route, Switch } from "react-router-dom";
 import {
   BsChevronRight,
   BsChevronLeft,
@@ -191,7 +195,7 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            <section className="service-section">
+            <section className="service-section" id="services">
               <div className="box">
                 <div className="service-content">
                   <h2>
@@ -236,11 +240,14 @@ function Home(props) {
                         decentralised applications (dApps), and token
                         development.
                       </p>
-                      <div className="service-btn">
-                        <div className="inner-service-btn">
-                          <span>Learn More</span>
+
+                      <Link to="/services/service1">
+                        <div className="service-btn">
+                          <div className="inner-service-btn">
+                            <span>Learn More</span>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                     <div className="service-grid-box sgb-2">
                       <div className="circle-sm circle-sm-2"></div>
@@ -252,11 +259,13 @@ function Home(props) {
                         solutions to natural language processing and AI
                         integration.
                       </p>
-                      <div className="service-btn">
-                        <div className="inner-service-btn">
-                          <span>Learn More</span>
+                      <Link to="/services/service2">
+                        <div className="service-btn">
+                          <div className="inner-service-btn">
+                            <span>Learn More</span>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                     <div className="service-grid-box sgb-4">
                       <div className="circle-sm circle-sm-4"></div>
@@ -267,11 +276,13 @@ function Home(props) {
                         development, mobile app creation, and web development
                         services, tailored to meet your unique requirements.
                       </p>
-                      <div className="service-btn">
-                        <div className="inner-service-btn">
-                          <span>Learn More</span>
+                      <Link to="/services/service3">
+                        <div className="service-btn">
+                          <div className="inner-service-btn">
+                            <span>Learn More</span>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                     <div className="service-grid-box sgb-3">
                       <div className="circle-sm circle-sm-3"></div>
@@ -283,11 +294,13 @@ function Home(props) {
                         strategy, ensuring your technology roadmap is robust and
                         future-proof.
                       </p>
-                      <div className="service-btn">
-                        <div className="inner-service-btn">
-                          <span>Learn More</span>
+                      <Link to="/services/service4">
+                        <div className="service-btn">
+                          <div className="inner-service-btn">
+                            <span>Learn More</span>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                   <div className="service-graphic-text">
@@ -324,7 +337,7 @@ function Home(props) {
                 <Marque />
               </div>
             </section>
-            <section className="casestudy-section">
+            <section className="casestudy-section" id="casestudy">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="774"
@@ -496,63 +509,57 @@ function Home(props) {
                   <div className="blog-grid">
                     <div className="blog-grid-left">
                       <div className="blog-main-cont">
-                        <img src={Blog1} alt="" />
+                        <img src={Blog2} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            SEO in the Age of AI: Navigating New Horizons in
+                            Search Engine Optimization
                           </h4>
-                          <a href="#">
+                          <a href="/blog/seo">
                             Read More <BsArrowRight />
                           </a>
                         </div>
                       </div>
                     </div>
-                    <div className="blog-grid-right">
+                    <div className="blog-grid-right bgr-home">
                       <div className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
-                          <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
-                          </h4>
-                          <a href="#">
+                          <h4>The Rise of AI: Transforming Business in 2023</h4>
+                          <a href="/blog/ai">
                             Read More <BsArrowRight />
                           </a>
                         </div>
                       </div>
                       <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                        <img src={Blog3} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            Decoding the Success DNA: The Digital Landscape in
+                            2023
                           </h4>
-                          <a href="#">
+                          <a href="/blog/decoding">
                             Read More <BsArrowRight />
                           </a>
                         </div>
                       </div>
                       <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                        <img src={Blog4} alt="" />
                         <div>
-                          <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
-                          </h4>
-                          <a href="#">
+                          <h4>Quantum Computing: The Next Frontier in 2023</h4>
+                          <a href="/blog/quantum">
                             Read More <BsArrowRight />
                           </a>
                         </div>
                       </div>
                       <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                        <img src={Blog5} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            Augmented Reality: Merging Digital and Physical
+                            Realms
                           </h4>
-                          <a href="#">
+                          <a href="/blog/ar-trends">
                             Read More <BsArrowRight />
                           </a>
                         </div>
