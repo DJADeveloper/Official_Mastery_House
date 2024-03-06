@@ -241,7 +241,7 @@ function Home(props) {
                         development.
                       </p>
 
-                      <Link to="/services/service1">
+                      <Link to="/services/blockchain-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
                             <span>Learn More</span>
@@ -259,7 +259,7 @@ function Home(props) {
                         solutions to natural language processing and AI
                         integration.
                       </p>
-                      <Link to="/services/service2">
+                      <Link to="/services/ai-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
                             <span>Learn More</span>
@@ -276,7 +276,7 @@ function Home(props) {
                         development, mobile app creation, and web development
                         services, tailored to meet your unique requirements.
                       </p>
-                      <Link to="/services/service3">
+                      <Link to="/services/software-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
                             <span>Learn More</span>
@@ -294,7 +294,7 @@ function Home(props) {
                         strategy, ensuring your technology roadmap is robust and
                         future-proof.
                       </p>
-                      <Link to="/services/service4">
+                      <Link to="/services/consulting">
                         <div className="service-btn">
                           <div className="inner-service-btn">
                             <span>Learn More</span>
@@ -387,9 +387,7 @@ function Home(props) {
                 <div className="casestudy-cont">
                   <div className="casestudy-head">
                     <h3 className="gradient-text">Case Study</h3>
-                    <a href="#">
-                      View All <BsArrowRight />
-                    </a>
+                    
                   </div>
                   <div className="casestudy-main">
                     <div className="cs-main-grid">
@@ -502,9 +500,9 @@ function Home(props) {
                 <div className="blog-cont">
                   <div className="casestudy-head">
                     <h3 className="gradient-text">Read Our Blogs</h3>
-                    <a href="#">
+                    <Link to="/blogs">
                       View All <BsArrowRight />
-                    </a>
+                    </Link>
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">

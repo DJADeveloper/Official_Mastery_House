@@ -2135,6 +2135,8 @@ footer h6 {
   justify-content: flex-start;
   gap: 3rem;
   width: 100%;
+  position: relative;
+  z-index: 1000;
 }
 .mobile-menu-bottom a {
   font-size: 2.2rem;
