@@ -87,10 +87,10 @@ function Cybersecurity() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog6} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>Cybersecurity: Fortifying the Digital Frontier</h1>
                   <p>
                     As we delve deeper into 2023, the digital landscape has

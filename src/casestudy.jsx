@@ -28,6 +28,7 @@ import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { Link } from "react-router-dom";
 
 const Casestudy = () => {
   gsap.registerPlugin(
@@ -188,9 +189,11 @@ const Casestudy = () => {
                           <h4>
                             Decentralized Marketplace for Eco-Friendly Products
                           </h4>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                         <p>
                           EcoMarket, an online platform for eco-friendly

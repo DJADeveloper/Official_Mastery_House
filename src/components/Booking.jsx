@@ -3,6 +3,7 @@ import Book from "../assets/img/booking.png";
 import GIT1 from "../assets/img/Capa_1.svg";
 import GIT2 from "../assets/img/asssvg.svg";
 import GIT3 from "../assets/img/epmsvg.svg";
+import { Link } from "react-router-dom";
 
 const Booking = () => {
   return (
@@ -50,7 +51,9 @@ const Booking = () => {
               </span>
             </div>
           </div>
-          <button className="gradient-btn">Get Started</button>
+          <Link to="/contact">
+            <button className="gradient-btn">Get Started</button>
+          </Link>
         </div>
       </div>
     </section>

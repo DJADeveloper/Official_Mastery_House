@@ -142,17 +142,19 @@ const Maincasestudy = () => {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -174,17 +176,19 @@ const Maincasestudy = () => {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                       <div className="cs-main-right">
@@ -212,17 +216,19 @@ const Maincasestudy = () => {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -244,17 +250,19 @@ const Maincasestudy = () => {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                       <div className="cs-main-right">
@@ -282,17 +290,19 @@ const Maincasestudy = () => {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                     </div>

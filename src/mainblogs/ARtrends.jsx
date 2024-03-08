@@ -86,10 +86,10 @@ function ARtrends() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog5} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>
                     Augmented Reality: Merging Digital <br /> and Physical
                     Realms

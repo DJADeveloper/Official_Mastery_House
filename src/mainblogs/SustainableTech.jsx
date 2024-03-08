@@ -87,10 +87,10 @@ function Sustainabletech() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog7} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>
                     Harnessing Green Innovation: The Sustainable <br />
                     Tech Revolution

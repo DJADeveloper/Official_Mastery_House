@@ -186,7 +186,9 @@ function Home(props) {
                       community where every client is not just valued but
                       celebrated as a respected guest."
                     </p>
-                    <button className="gradient-btn">Get Started</button>
+                    <Link to="/contact">
+                      <button className="gradient-btn">Get Started</button>
+                    </Link>
                   </div>
                   <div className="hero-cont-right">
                     {/* <img src={HeroImg} alt="" /> */}
@@ -410,17 +412,19 @@ function Home(props) {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -442,17 +446,19 @@ function Home(props) {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                       <div className="cs-main-right">
@@ -480,17 +486,19 @@ function Home(props) {
                         </div>
                         <div className="cs-main-btn">
                           <div className="service-btn">
-                            <div className="inner-service-btn">
-                              <Link to="/casestudy1">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
                                 <span>
                                   Learn More <BsArrowUpRight />
                                 </span>
-                              </Link>
-                            </div>
+                              </div>
+                            </Link>
                           </div>
-                          <h5>
-                            Visit Website <BsArrowUpRight />
-                          </h5>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
                         </div>
                       </div>
                     </div>

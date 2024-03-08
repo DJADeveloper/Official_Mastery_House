@@ -27,7 +27,10 @@ const Header = (props) => {
     <header>
       <div className="box">
         <div className="header_cont">
-          <img src={Logo} alt="" />
+          <Link to="/">
+            <img src={Logo} alt="" />
+          </Link>
+
           <div className="header_right">
             <Link
               className={`${props.isActive == "home" ? "active" : ""}`}
@@ -49,7 +52,7 @@ const Header = (props) => {
             </Link>
             <Link
               className={`${props.isActive == "services" ? "active" : ""}`}
-              to="/"
+              to="/service"
             >
               Services
             </Link>
@@ -68,7 +71,9 @@ const Header = (props) => {
               <div className="mob-circle-1"></div>
               <div className="mob-circle-2"></div>
               <div className="mobile-menu-top">
-                <img src={Logo} alt="" />
+                <Link to="/">
+                  <img src={Logo} alt="" />
+                </Link>
                 <BsXLg onClick={closeMobileMenu} />
               </div>
               <div className="mobile-menu-bottom">

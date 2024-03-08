@@ -86,10 +86,10 @@ function Quantum() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog4} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>Quantum Computing: The Next Frontier in 2023</h1>
                   <p>
                     As we step into 2023, quantum computing emerges as the most
