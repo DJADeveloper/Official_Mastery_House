@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter, Route, Router, Routes, Switch } from "react-router-dom";
 import About from "./about";
 import Home from "./home";
-import Blog from "./blog";
 import Blogs from "./blogs";
 import Service from "./service";
 import CaseStudy1 from "./casestudy";
@@ -30,7 +29,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/service" element={<Service />} />
           <Route path="/casestudy1" element={<CaseStudy1 />} />

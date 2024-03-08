@@ -1546,7 +1546,7 @@ footer h6 {
 }
 .blog-page-cont img {
   width: 100%;
-  height: 620px;
+  height: 500px;
   object-fit: cover;
   border-radius: 1.5rem;
 }
