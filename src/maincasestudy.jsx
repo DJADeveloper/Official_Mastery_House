@@ -23,6 +23,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import Header from "./components/Header";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
+import { Link } from "react-router-dom";
 
 const Maincasestudy = () => {
   gsap.registerPlugin(
@@ -142,9 +143,11 @@ const Maincasestudy = () => {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span>
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -172,9 +175,11 @@ const Maincasestudy = () => {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -208,9 +213,11 @@ const Maincasestudy = () => {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -238,9 +245,11 @@ const Maincasestudy = () => {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -274,9 +283,11 @@ const Maincasestudy = () => {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
