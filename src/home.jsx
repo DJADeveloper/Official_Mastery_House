@@ -191,7 +191,6 @@ function Home(props) {
                     </Link>
                   </div>
                   <div className="hero-cont-right">
-                    {/* <img src={HeroImg} alt="" /> */}
                     <HeroImg />
                   </div>
                 </div>
@@ -327,9 +326,9 @@ function Home(props) {
                       expectations.
                     </h3>
                   </div>
-                  <a href="/about">
+                  <Link to="/about">
                     Learn More <BsArrowRight />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </section>

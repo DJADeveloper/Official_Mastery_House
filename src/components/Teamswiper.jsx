@@ -8,6 +8,7 @@ import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Team1 from "../assets/img/team-1.png";
 import "../home.css";
+import { Link } from "react-router-dom";
 
 const Teamswiper = () => {
   return (
@@ -56,12 +57,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -75,12 +76,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -94,12 +95,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -113,12 +114,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -132,12 +133,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -151,12 +152,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -170,12 +171,12 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <div className="tbs-social-icon">
+                  <Link to="#" className="tbs-social-icon">
                     <FaLinkedinIn />
-                  </div>
-                  <div className="tbs-social-icon">
+                  </Link>
+                  <Link to="#" className="tbs-social-icon">
                     <FaXTwitter />
-                  </div>
+                  </Link>
                 </div>
               </div>
             </div>
