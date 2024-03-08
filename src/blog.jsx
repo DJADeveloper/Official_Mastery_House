@@ -185,7 +185,7 @@ function Blog() {
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <a href="/blogs/seo" className="blog-main-cont">
+                      <Link to="/blogs/seo" className="blog-main-cont">
                         <img src={Blog2} alt="" />
                         <div>
                           <h4>
@@ -196,10 +196,10 @@ function Blog() {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                     <div className="blog-grid-right bgr-home">
-                      <a href="/blog/ai" className="blog-main-cont bm-r-cont">
+                      <Link to="/blogs/ai" className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
                           <h4>The Rise of AI: Transforming Business in 2023</h4>
@@ -207,9 +207,9 @@ function Blog() {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </a>
-                      <a
-                        href="/blogs/decoding"
+                      </Link>
+                      <Link
+                        to="/blogs/decoding"
                         className="blog-main-cont bm-r-cont"
                       >
                         <img src={Blog3} alt="" />
@@ -222,21 +222,21 @@ function Blog() {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </a>
-                      <a
-                        href="/blogs/quantum"
+                      </Link>
+                      <Link
+                        to="/blogs/quantum"
                         className="blog-main-cont bm-r-cont"
                       >
                         <img src={Blog4} alt="" />
                         <div>
                           <h4>Quantum Computing: The Next Frontier in 2023</h4>
-                          <a href="/blog/quantum">
+                          <a href="/blogs/quantum">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </a>
-                      <a
-                        href="/blogs/ar-trends"
+                      </Link>
+                      <Link
+                        to="/blogs/ar-trends"
                         className="blog-main-cont bm-r-cont"
                       >
                         <img src={Blog5} alt="" />
@@ -249,7 +249,7 @@ function Blog() {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>
