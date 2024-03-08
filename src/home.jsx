@@ -387,7 +387,6 @@ function Home(props) {
                 <div className="casestudy-cont">
                   <div className="casestudy-head">
                     <h3 className="gradient-text">Case Study</h3>
-                    
                   </div>
                   <div className="casestudy-main">
                     <div className="cs-main-grid">
@@ -412,9 +411,11 @@ function Home(props) {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span>
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -442,9 +443,11 @@ function Home(props) {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -478,9 +481,11 @@ function Home(props) {
                         <div className="cs-main-btn">
                           <div className="service-btn">
                             <div className="inner-service-btn">
-                              <span className="gradient-text">
-                                Learn More <BsArrowUpRight />
-                              </span>
+                              <Link to="/casestudy1">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </Link>
                             </div>
                           </div>
                           <h5>
@@ -506,7 +511,7 @@ function Home(props) {
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <div className="blog-main-cont">
+                      <a href="/blog/seo" className="blog-main-cont">
                         <img src={Blog2} alt="" />
                         <div>
                           <h4>
@@ -517,10 +522,10 @@ function Home(props) {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </a>
                     </div>
                     <div className="blog-grid-right bgr-home">
-                      <div className="blog-main-cont bm-r-cont">
+                      <a href="/blog/ai" className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
                           <h4>The Rise of AI: Transforming Business in 2023</h4>
@@ -528,8 +533,11 @@ function Home(props) {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </a>
+                      <a
+                        href="/blog/decoding"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog3} alt="" />
                         <div>
                           <h4>
@@ -540,8 +548,11 @@ function Home(props) {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </a>
+                      <a
+                        href="/blog/quantum"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog4} alt="" />
                         <div>
                           <h4>Quantum Computing: The Next Frontier in 2023</h4>
@@ -549,8 +560,11 @@ function Home(props) {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
+                      </a>
+                      <a
+                        href="/blog/ar-trends"
+                        className="blog-main-cont bm-r-cont"
+                      >
                         <img src={Blog5} alt="" />
                         <div>
                           <h4>
@@ -561,7 +575,7 @@ function Home(props) {
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>

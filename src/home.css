@@ -627,6 +627,9 @@ header {
   z-index: 1;
   position: relative;
 }
+.casestudy-section.casestudy-main-page {
+  padding: 15rem 0;
+}
 .case-circle1 {
   width: 650px;
   z-index: -1;
@@ -1256,6 +1259,25 @@ footer h6 {
   background-color: var(--white);
 }
 .footer-content .tb-social div svg {
+  font-size: 1.85rem;
+  color: var(--black);
+}
+.tb-social-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+}
+.tb-social-box .tbs-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+.tb-social-box .tbs-social-icon svg {
   font-size: 1.85rem;
   color: var(--black);
 }

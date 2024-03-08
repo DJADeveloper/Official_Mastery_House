@@ -101,7 +101,7 @@ const Blogs = () => {
                     </h1>
                   </div>
                   <div className="blogs-grid">
-                    <div className="blog-main-cont bm-r-cont">
+                    <a href="/blog/seo" className="blog-main-cont bm-r-cont">
                       <img src={Blog2} alt="" />
                       <div>
                         <h4>
@@ -112,8 +112,8 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a href="/blog/ai" className="blog-main-cont bm-r-cont">
                       <img src={Blog1} alt="" />
                       <div>
                         <h4>The Rise of AI: Transforming Business in 2023</h4>
@@ -121,8 +121,11 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a
+                      href="/blog/decoding"
+                      className="blog-main-cont bm-r-cont"
+                    >
                       <img src={Blog3} alt="" />
                       <div>
                         <h4>
@@ -133,8 +136,11 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a
+                      href="/blog/quantum"
+                      className="blog-main-cont bm-r-cont"
+                    >
                       <img src={Blog4} alt="" />
                       <div>
                         <h4>Quantum Computing: The Next Frontier in 2023</h4>
@@ -142,8 +148,11 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a
+                      href="/blog/ar-trends"
+                      className="blog-main-cont bm-r-cont"
+                    >
                       <img src={Blog5} alt="" />
                       <div>
                         <h4>
@@ -153,8 +162,11 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a
+                      href="/blog/cybersecurity"
+                      className="blog-main-cont bm-r-cont"
+                    >
                       <img src={Blog6} alt="" />
                       <div>
                         <h4>Cybersecurity: Fortifying the Digital Frontier</h4>
@@ -162,8 +174,11 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
-                    <div className="blog-main-cont bm-r-cont">
+                    </a>
+                    <a
+                      href="/blog/sustainable-tech"
+                      className="blog-main-cont bm-r-cont"
+                    >
                       <img src={Blog7} alt="" />
                       <div>
                         <h4>
@@ -174,7 +189,7 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
