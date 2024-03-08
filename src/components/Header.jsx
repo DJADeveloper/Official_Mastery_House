@@ -43,7 +43,7 @@ const Header = (props) => {
             </Link>
             <Link
               className={`${props.isActive == "casestudy" ? "active" : ""}`}
-              to="/"
+              to="/casestudy"
             >
               Case Studies
             </Link>

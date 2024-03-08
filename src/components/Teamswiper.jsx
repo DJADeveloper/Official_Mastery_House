@@ -55,11 +55,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -74,11 +74,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -93,11 +93,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -112,11 +112,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -131,11 +131,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -150,11 +150,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>
@@ -169,11 +169,11 @@ const Teamswiper = () => {
                   Emilia Clark
                   <span>CEO, Founder</span>
                 </h5>
-                <div className="tb-social">
-                  <div>
+                <div className="tb-social-box">
+                  <div className="tbs-social-icon">
                     <FaLinkedinIn />
                   </div>
-                  <div>
+                  <div className="tbs-social-icon">
                     <FaXTwitter />
                   </div>
                 </div>

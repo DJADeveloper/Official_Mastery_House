@@ -2,6 +2,12 @@ import React, { useEffect } from "react";
 import "./home.css";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Blog1 from "./assets/img/blog1.png";
+import Blog2 from "./assets/img/blog2.png";
+import Blog3 from "./assets/img/blog3.png";
+import Blog4 from "./assets/img/blog4.png";
+import Blog5 from "./assets/img/blog5.png";
+import Blog6 from "./assets/img/blog6.png";
+import Blog7 from "./assets/img/blog7.png";
 
 import {
   BsChevronRight,
@@ -33,6 +39,7 @@ import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { Link } from "react-router-dom";
 
 function Blog() {
   gsap.registerPlugin(
@@ -171,75 +178,78 @@ function Blog() {
               <div className="box">
                 <div className="blog-cont">
                   <div className="casestudy-head">
-                    <h3 className="gradient-text">You May Also Like</h3>
-                    <h6>
+                    <h3 className="gradient-text">Read Our Blogs</h3>
+                    <Link to="/blogs">
                       View All <BsArrowRight />
-                    </h6>
+                    </Link>
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <div className="blog-main-cont">
-                        <img src={Blog1} alt="" />
+                      <a href="/blog/seo" className="blog-main-cont">
+                        <img src={Blog2} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            SEO in the Age of AI: Navigating New Horizons in
+                            Search Engine Optimization
                           </h4>
-                          <a href="#">
+                          <a href="/blog/seo">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </a>
                     </div>
-                    <div className="blog-grid-right">
-                      <div className="blog-main-cont bm-r-cont">
+                    <div className="blog-grid-right bgr-home">
+                      <a href="/blog/ai" className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
-                          <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
-                          </h4>
-                          <a href="#">
+                          <h4>The Rise of AI: Transforming Business in 2023</h4>
+                          <a href="/blog/ai">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                      </a>
+                      <a
+                        href="/blog/decoding"
+                        className="blog-main-cont bm-r-cont"
+                      >
+                        <img src={Blog3} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            Decoding the Success DNA: The Digital Landscape in
+                            2023
                           </h4>
-                          <a href="#">
+                          <a href="/blog/decoding">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                      </a>
+                      <a
+                        href="/blog/quantum"
+                        className="blog-main-cont bm-r-cont"
+                      >
+                        <img src={Blog4} alt="" />
                         <div>
-                          <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
-                          </h4>
-                          <a href="#">
+                          <h4>Quantum Computing: The Next Frontier in 2023</h4>
+                          <a href="/blog/quantum">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
-                      <div className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
+                      </a>
+                      <a
+                        href="/blog/ar-trends"
+                        className="blog-main-cont bm-r-cont"
+                      >
+                        <img src={Blog5} alt="" />
                         <div>
                           <h4>
-                            Navigating the Future: How AI is Redefining Our
-                            Approach to Problem-Solving
+                            Augmented Reality: Merging Digital and Physical
+                            Realms
                           </h4>
-                          <a href="#">
+                          <a href="/blog/ar-trends">
                             Read More <BsArrowRight />
                           </a>
                         </div>
-                      </div>
+                      </a>
                     </div>
                   </div>
                 </div>
