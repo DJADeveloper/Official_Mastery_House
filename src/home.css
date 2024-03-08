@@ -815,7 +815,6 @@ header {
   color: var(--color-slate-100);
 }
 .cs-main-btn h5:hover > svg {
-  transform: translateX(7px);
   color: var(--color-slate-100);
 }
 .cs-main-btn h5 svg {

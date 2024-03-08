@@ -86,10 +86,10 @@ function Decoding() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog3} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>
                     Navigating the Digital Transformation: <br />
                     The 2023 Landscape

@@ -86,10 +86,10 @@ function RiseAI() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog1} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>The Rise of AI: Transforming Business in 2023</h1>
                   <h3>
                     Embracing the New Collaborator: Artificial Intelligence

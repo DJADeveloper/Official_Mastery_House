@@ -86,10 +86,10 @@ function Seo() {
               <div className="box">
                 <div className="blog-page-cont">
                   <img src={Blog2} alt="" />
-                  <a href="#">
+                  <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
-                  </a>
+                  </Link>
                   <h1>
                     SEO in the Age of AI: Navigating New Horizons <br />
                     in Search Engine Optimization
