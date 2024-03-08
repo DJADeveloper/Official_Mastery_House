@@ -101,29 +101,29 @@ const Blogs = () => {
                     </h1>
                   </div>
                   <div className="blogs-grid">
-                    <a href="/blog/seo" className="blog-main-cont bm-r-cont">
+                    <a href="/blogs/seo" className="blog-main-cont bm-r-cont">
                       <img src={Blog2} alt="" />
                       <div>
                         <h4>
                           SEO in the Age of AI: Navigating New Horizons in
                           Search Engine Optimization
                         </h4>
-                        <a href="/blog/seo">
+                        <a href="/blogs/seo">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
-                    <a href="/blog/ai" className="blog-main-cont bm-r-cont">
+                    <a href="/blogs/ai" className="blog-main-cont bm-r-cont">
                       <img src={Blog1} alt="" />
                       <div>
                         <h4>The Rise of AI: Transforming Business in 2023</h4>
-                        <a href="/blog/ai">
+                        <a href="/blogs/ai">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
                     <a
-                      href="/blog/decoding"
+                      href="/blogs/decoding"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog3} alt="" />
@@ -132,25 +132,25 @@ const Blogs = () => {
                           Decoding the Success DNA: The Digital Landscape in
                           2023
                         </h4>
-                        <a href="/blog/decoding">
+                        <a href="/blogs/decoding">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
                     <a
-                      href="/blog/quantum"
+                      href="/blogs/quantum"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog4} alt="" />
                       <div>
                         <h4>Quantum Computing: The Next Frontier in 2023</h4>
-                        <a href="/blog/quantum">
+                        <a href="/blogs/quantum">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
                     <a
-                      href="/blog/ar-trends"
+                      href="/blogs/ar-trends"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog5} alt="" />
@@ -158,25 +158,25 @@ const Blogs = () => {
                         <h4>
                           Augmented Reality: Merging Digital and Physical Realms
                         </h4>
-                        <a href="/blog/ar-trends">
+                        <a href="/blogs/ar-trends">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
                     <a
-                      href="/blog/cybersecurity"
+                      href="/blogs/cybersecurity"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog6} alt="" />
                       <div>
                         <h4>Cybersecurity: Fortifying the Digital Frontier</h4>
-                        <a href="/blog/cybersecurity">
+                        <a href="/blogs/cybersecurity">
                           Read More <BsArrowRight />
                         </a>
                       </div>
                     </a>
                     <a
-                      href="/blog/sustainable-tech"
+                      href="/blogs/sustainable-tech"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog7} alt="" />
@@ -185,7 +185,7 @@ const Blogs = () => {
                           Harnessing Green Innovation: The Sustainable Tech
                           Revolution
                         </h4>
-                        <a href="/blog/sustainable-tech">
+                        <a href="/blogs/sustainable-tech">
                           Read More <BsArrowRight />
                         </a>
                       </div>
