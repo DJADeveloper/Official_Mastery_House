@@ -39,6 +39,7 @@ import { InertiaPlugin } from "gsap/InertiaPlugin";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { Link } from "react-router-dom";
 
 const Blogs = () => {
   gsap.registerPlugin(
@@ -101,7 +102,7 @@ const Blogs = () => {
                     </h1>
                   </div>
                   <div className="blogs-grid">
-                    <a href="/blogs/seo" className="blog-main-cont bm-r-cont">
+                    <Link to="/blogs/seo" className="blog-main-cont bm-r-cont">
                       <img src={Blog2} alt="" />
                       <div>
                         <h4>
@@ -112,8 +113,8 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a href="/blogs/ai" className="blog-main-cont bm-r-cont">
+                    </Link>
+                    <Link to="/blogs/ai" className="blog-main-cont bm-r-cont">
                       <img src={Blog1} alt="" />
                       <div>
                         <h4>The Rise of AI: Transforming Business in 2023</h4>
@@ -121,9 +122,9 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a
-                      href="/blogs/decoding"
+                    </Link>
+                    <Link
+                      to="/blogs/decoding"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog3} alt="" />
@@ -136,9 +137,9 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a
-                      href="/blogs/quantum"
+                    </Link>
+                    <Link
+                      to="/blogs/quantum"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog4} alt="" />
@@ -148,9 +149,9 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a
-                      href="/blogs/ar-trends"
+                    </Link>
+                    <Link
+                      to="/blogs/ar-trends"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog5} alt="" />
@@ -162,9 +163,9 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a
-                      href="/blogs/cybersecurity"
+                    </Link>
+                    <Link
+                      to="/blogs/cybersecurity"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog6} alt="" />
@@ -174,9 +175,9 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
-                    <a
-                      href="/blogs/sustainable-tech"
+                    </Link>
+                    <Link
+                      to="/blogs/sustainable-tech"
                       className="blog-main-cont bm-r-cont"
                     >
                       <img src={Blog7} alt="" />
@@ -189,7 +190,7 @@ const Blogs = () => {
                           Read More <BsArrowRight />
                         </a>
                       </div>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
