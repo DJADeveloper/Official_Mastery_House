@@ -18,9 +18,8 @@ const Booking = () => {
           <div className="git-b-top">
             <h3 className="gradient-text">Book a Call with Us</h3>
             <p>
-              Ready to transform your business with blockchain and AI? Consult
-              with our masters todayand take the first step towards a future of
-              innovation and success.
+              Join us at The Mastery House in Tampa. Let's set the benchmark in
+              digital excellence.
             </p>
           </div>
           <div className="gitsvg-box">
@@ -30,7 +29,7 @@ const Booking = () => {
                 Initial Consultation{" "}
                 <h6>
                   Let's discuss how we can redefine the digital narrative
-                  together
+                  together.
                 </h6>
               </span>
             </div>
@@ -39,7 +38,7 @@ const Booking = () => {
               <span>
                 Advanced Strategy Session
                 <h6>
-                  Deep dive into your digital needs and plot the course ahead
+                  Deep dive into your digital needs and plot the course ahead.
                 </h6>
               </span>
             </div>
@@ -47,12 +46,12 @@ const Booking = () => {
               <img src={GIT3} alt="" />
               <span>
                 Exclusive Partnership Meeting
-                <h6>Let's collaborate and create digital excellence</h6>
+                <h6>Let's collaborate and create digital excellence.</h6>
               </span>
             </div>
           </div>
           <Link to="/contact">
-            <button className="gradient-btn">Get Started</button>
+            <button className="gradient-btn">Book a Call</button>
           </Link>
         </div>
       </div>

@@ -1713,6 +1713,10 @@ footer h6 {
   height: auto;
   object-fit: contain;
 }
+.tb-box-img svg {
+  font-size: 10rem;
+  color: var(--white);
+}
 .tb-box-img h4 {
   color: var(--white);
   font-family: "Lato";
@@ -2379,6 +2383,9 @@ footer h6 {
   .hero-cont-left button {
     margin: 0 auto;
   }
+  .hero-cont-left a {
+    width: 100%;
+  }
   .service-section {
     padding: 5rem 0;
   }
@@ -2829,6 +2836,9 @@ footer h6 {
   }
   .tb-box-img img {
     width: 70px;
+  }
+  .tb-box-img svg {
+    font-size: 6.5rem;
   }
 }
 

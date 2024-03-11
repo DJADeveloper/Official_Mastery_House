@@ -187,7 +187,9 @@ function Home(props) {
                       celebrated as a respected guest."
                     </p>
                     <Link to="/contact">
-                      <button className="gradient-btn">Get Started</button>
+                      <button className="gradient-btn">
+                        Start Your Digital Story
+                      </button>
                     </Link>
                   </div>
                   <div className="hero-cont-right">
@@ -245,7 +247,7 @@ function Home(props) {
                       <Link to="/services/blockchain-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
-                            <span>Learn More</span>
+                            <span>Explore Our Services</span>
                           </div>
                         </div>
                       </Link>
@@ -255,15 +257,14 @@ function Home(props) {
                       <img src={Development} alt="" />
                       <h5>AI Development</h5>
                       <p>
-                        Leverage artificial intelligence to transform your
-                        operations, with services ranging from machine learning
-                        solutions to natural language processing and AI
-                        integration.
+                        Implementing smart solutions with AI. We harness the
+                        latest technologies to optimize processes and deliver
+                        results.
                       </p>
                       <Link to="/services/ai-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
-                            <span>Learn More</span>
+                            <span>Explore Our Services</span>
                           </div>
                         </div>
                       </Link>
@@ -273,14 +274,14 @@ function Home(props) {
                       <img src={Software} alt="" />
                       <h5>Software Development</h5>
                       <p>
-                        Build your digital foundation with our custom software
-                        development, mobile app creation, and web development
-                        services, tailored to meet your unique requirements.
+                        Developing reliable and efficient software tailored to
+                        your business needs. We turn ideas into functional
+                        digital solutions.
                       </p>
                       <Link to="/services/software-development">
                         <div className="service-btn">
                           <div className="inner-service-btn">
-                            <span>Learn More</span>
+                            <span>Explore Our Services</span>
                           </div>
                         </div>
                       </Link>
@@ -298,7 +299,7 @@ function Home(props) {
                       <Link to="/services/consulting">
                         <div className="service-btn">
                           <div className="inner-service-btn">
-                            <span>Learn More</span>
+                            <span>Explore Our Services</span>
                           </div>
                         </div>
                       </Link>
