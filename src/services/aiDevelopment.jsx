@@ -6,7 +6,6 @@ import ReactImg from "../assets/img/reactimg.svg";
 import NextImg from "../assets/img/nextimg.svg";
 import MUIImg from "../assets/img/material-ui-img.svg";
 import TSImg from "../assets/img/typescriptimg.svg";
-import Metamask from "../assets/img/metamask.svg";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
 
