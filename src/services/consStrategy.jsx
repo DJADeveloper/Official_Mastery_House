@@ -13,6 +13,7 @@ import Header from "../components/Header";
 import Marque from "../components/Marque";
 import Footer from "../components/Footer";
 import Booking from "../components/Booking";
+import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
 
 import gsap from "gsap";
 import {
