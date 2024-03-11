@@ -8,6 +8,7 @@ import MUIImg from "../assets/img/material-ui-img.svg";
 import TSImg from "../assets/img/typescriptimg.svg";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
+import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
 
 import Header from "../components/Header";
 import Marque from "../components/Marque";
