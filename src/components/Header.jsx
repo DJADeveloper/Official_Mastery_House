@@ -9,12 +9,18 @@ import {
   BsArrowUpRight,
   BsList,
   BsXLg,
+  BsChevronDown,
 } from "react-icons/bs";
 import gsap from "gsap";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropdownSerOpen, setIsDropdownSerOpen] = useState(false);
+
+  const toggleDropdownServ = () => {
+    setIsDropdownSerOpen(!isDropdownSerOpen);
+  };
   // Toggle mobile menu visibility
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -52,9 +58,27 @@ const Header = (props) => {
             </Link>
             <Link
               className={`${props.isActive == "services" ? "active" : ""}`}
-              to="/service"
+              onClick={toggleDropdownServ}
             >
-              Services
+              Services <BsChevronDown />
+              {isDropdownSerOpen && (
+                <div className="dropdown-box">
+                  <Link to="/services/blockchain-development">
+                    Blockchain Development
+                  </Link>
+                  <Link to="/services/software-development">
+                    Software Development
+                  </Link>
+                  <Link to="/services/ai-development">AI Development</Link>
+                  <Link to="/services/consulting">Consulting and Strategy</Link>
+                </div>
+              )}
+            </Link>
+            <Link
+              className={`${props.isActive == "contact" ? "active" : ""}`}
+              to="/blogs"
+            >
+              Blog
             </Link>
             <Link
               className={`${props.isActive == "contact" ? "active" : ""}`}
@@ -97,9 +121,29 @@ const Header = (props) => {
                 </Link>
                 <Link
                   className={`${props.isActive == "services" ? "active" : ""}`}
-                  to="/service"
+                  onClick={toggleDropdownServ}
                 >
-                  Services
+                  Services <BsChevronDown />
+                  {isDropdownSerOpen && (
+                    <div className="dropdown-box">
+                      <Link to="/services/blockchain-development">
+                        Blockchain Development
+                      </Link>
+                      <Link to="/services/software-development">
+                        Software Development
+                      </Link>
+                      <Link to="/services/ai-development">AI Development</Link>
+                      <Link to="/services/consulting">
+                        Consulting and Strategy
+                      </Link>
+                    </div>
+                  )}
+                </Link>
+                <Link
+                  className={`${props.isActive == "contact" ? "active" : ""}`}
+                  to="/blogs"
+                >
+                  Blog
                 </Link>
                 <Link
                   className={`${props.isActive == "contact" ? "active" : ""}`}

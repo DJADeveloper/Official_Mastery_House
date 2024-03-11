@@ -160,13 +160,38 @@ header {
   font-weight: 400;
   color: var(--color-slate-400);
   transition: 0.35s;
+  position: relative;
 }
-
+.header_right a svg {
+  color: var(--color-slate-200);
+  font-size: 1.45rem;
+  margin: 0 0 0 0.5rem;
+}
 .header_right a:hover {
   color: var(--color-slate-300);
 }
 .header_right a.active {
   color: var(--white);
+}
+
+.dropdown-box {
+  background-color: var(--color-slate-900);
+  padding: 1.75rem;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: absolute;
+  width: max-content;
+  transform: translate(-10%, 5%);
+}
+.dropdown-box a {
+  color: var(--color-slate-200);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
 }
 
 /* Hero Section  */
@@ -2337,7 +2362,7 @@ footer h6 {
     width: 80%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
   .header_right {
     display: none;
   }
@@ -2349,6 +2374,23 @@ footer h6 {
   }
   .technologies-box {
     grid-template-columns: 1fr 1fr;
+  }
+  .dropdown-box {
+    background-color: transparent;
+    padding: 2rem 0;
+    border-radius: unset;
+    gap: 2rem;
+    position: relative;
+    width: 100%;
+    transform: unset;
+  }
+  .dropdown-box a {
+    text-align: center;
+    width: 100%;
+    font-size: 1.8rem !important;
+  }
+  .mobile-menu-bottom a {
+    text-align: center !important;
   }
 }
 

@@ -7,6 +7,9 @@ import NextImg from "../assets/img/nextimg.svg";
 import MUIImg from "../assets/img/material-ui-img.svg";
 import TSImg from "../assets/img/typescriptimg.svg";
 import Tab from "react-bootstrap/Tab";
+import Zepline from "../assets/img/zepline.svg";
+import Flask from "../assets/img/flask.svg";
+import Mat from "../assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
 
@@ -223,7 +226,7 @@ const BlockchainService = () => {
                               <h4>Django</h4>
                             </div>
                             <div className="tb-box-img">
-                              <img src={MUIImg} alt="" />
+                              <img src={Flask} alt="" />
                               <h4>Flask</h4>
                             </div>
                           </div>
@@ -290,7 +293,7 @@ const BlockchainService = () => {
                               <h4>Hardhat</h4>
                             </div>
                             <div className="tb-box-img">
-                              <img src={MUIImg} alt="" />
+                              <img src={Zepline} alt="" />
                               <h4>OpenZeplin</h4>
                             </div>
                             <div className="tb-box-img">
@@ -473,7 +476,7 @@ const BlockchainService = () => {
                               <h4>numpy</h4>
                             </div>
                             <div className="tb-box-img">
-                              <img src={TSImg} alt="" />
+                              <img src={Mat} alt="" />
                               <h4>matplotlib</h4>
                             </div>
                             <div className="tb-box-img">
