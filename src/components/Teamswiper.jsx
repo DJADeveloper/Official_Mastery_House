@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
-import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { BsChevronLeft, BsChevronRight, BsInstagram } from "react-icons/bs";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Team1 from "../assets/img/team-1.png";
 import "../home.css";
@@ -57,11 +57,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -76,11 +82,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -95,11 +107,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -114,11 +132,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -133,11 +157,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -152,11 +182,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>
@@ -171,11 +207,17 @@ const Teamswiper = () => {
                   <span>CEO, Founder</span>
                 </h5>
                 <div className="tb-social-box">
-                  <Link to="#" className="tbs-social-icon">
+                  <Link
+                    to="http://linkedin.com/in/the-mastery-house-727664204/"
+                    className="tbs-social-icon"
+                  >
                     <FaLinkedinIn />
                   </Link>
-                  <Link to="#" className="tbs-social-icon">
-                    <FaXTwitter />
+                  <Link
+                    to="http://instagram.com/themasteryhouse"
+                    className="tbs-social-icon"
+                  >
+                    <BsInstagram />
                   </Link>
                 </div>
               </div>

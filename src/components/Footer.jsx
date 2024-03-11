@@ -1,7 +1,8 @@
 import React from "react";
 import Logo from "../assets/img/logo-tms.png";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { BsInstagram } from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -13,11 +14,14 @@ const Footer = () => {
           </Link>
           <h5>© 2023 The Mastery House. All rights reserved</h5>
           <div className="tb-social">
-            <Link to="#">
+            <Link to="http://linkedin.com/in/the-mastery-house-727664204/">
               <FaLinkedinIn />
             </Link>
-            <Link to="#">
-              <FaXTwitter />
+            <Link to="http://instagram.com/themasteryhouse">
+              <BsInstagram />
+            </Link>
+            <Link to="http://facebook.com/themasteryhouse">
+              <FaFacebookF />
             </Link>
           </div>
         </div>
