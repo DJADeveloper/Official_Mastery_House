@@ -2846,6 +2846,10 @@ footer h6 {
   .hero-cont-left p {
     font-size: 1.6rem;
   }
+  .booking-cont a {
+    width: max-content;
+    margin: 0 auto;
+  }
   .gradient-btn {
     font-size: 1.6rem;
   }
