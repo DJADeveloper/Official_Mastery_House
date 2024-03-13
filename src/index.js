@@ -19,12 +19,14 @@ import Blog4 from "./mainblogs/Quantum";
 import Blog5 from "./mainblogs/ARtrends";
 import Blog6 from "./mainblogs/Cybersecurity";
 import Blog7 from "./mainblogs/SustainableTech";
+import ScrollToTop from "./ScrollToTop";
 
 const root = document.getElementById("root");
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -33,7 +35,10 @@ const App = () => {
           <Route path="/service" element={<Service />} />
           <Route path="/casestudy" element={<CaseStudy />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/services/blockchain-development" element={<Service1 />} />
+          <Route
+            path="/services/blockchain-development"
+            element={<Service1 />}
+          />
           <Route path="/services/ai-development" element={<Service2 />} />
           <Route path="/services/software-development" element={<Service3 />} />
           <Route path="/services/consulting" element={<Service4 />} />
