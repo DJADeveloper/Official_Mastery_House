@@ -165,7 +165,7 @@ const AiDevelopment = () => {
                   <h3 className="gradient-text">Technologies & Tools We Use</h3>
                   <div className="technologies-tabs">
                     <Tabs
-                      defaultActiveKey="Frontend"
+                      defaultActiveKey="AI Development"
                       id="uncontrolled-tab-example"
                     >
                       {/* <Tab eventKey="Frontend" title="Frontend Development">
