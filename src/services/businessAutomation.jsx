@@ -36,7 +36,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-const BlockchainService = () => {
+const BusinessAutomationService = () => {
   gsap.registerPlugin(
     Draggable,
     SplitText,
@@ -109,51 +109,50 @@ const BlockchainService = () => {
               <div className="box">
                 <div className="about-content service-content">
                   <div className="about-c-top">
-                    <h4>Blockchain Development</h4>
+                    <h4>Business Automation</h4>
                     <h1 className="gradient-text">
-                      Unlocking the Potential <br />
-                      of Blockchain Technology
+                      Streamlining Operations with <br />
+                      Intelligent Automation
                     </h1>
                     <p>
-                      Blockchain technology offers unprecedented security,
-                      transparency, and efficiency. At TheMastery House, we
-                      harness these qualities to deliver custom blockchain
-                      development servicesthat are as innovative as they are
-                      reliable. From creating smart contracts that
-                      automatetransactions without intermediaries to developing
-                      decentralized applications (dApps) that opennew avenues
-                      for your business, our blockchain solutions are designed
-                      to set you apart in thedigital landscape.
+                      Enhance productivity and efficiency with our tailored
+                      business automation solutions. At The Mastery House, we
+                      specialize in automating repetitive tasks, integrating
+                      intelligent workflows, and creating custom automation
+                      systems that reduce manual workload and minimize errors.
+                      Our solutions help your business run smoothly and
+                      efficiently, allowing you to focus on growth and
+                      innovation.
                     </p>
                   </div>
                   <img src={ServiceImg} alt="" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
-                      <h3>Smart Contract Development</h3>
+                      <h3>Process Automation</h3>
                       <p>
-                        Streamline operations and ensure trust with our smart
-                        contract development services, tailored to automate your
-                        processes and secure your transactions.
+                        Automate repetitive tasks and streamline business
+                        processes with our advanced process automation
+                        solutions, designed to improve efficiency and reduce
+                        costs.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
-                      <h3>Decentralized Applications (dApps)</h3>
+                      <h3>Workflow Integration</h3>
                       <p>
-                        Revolutionize your online presence with dApps that offer
-                        unparalleled security, uptime, and user control,
-                        custom-built for your specific business needs.
+                        Integrate intelligent workflows into your existing
+                        systems to enhance productivity, ensure seamless
+                        operations, and optimize resource utilization.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle3"></div>
-                      <h3>Token Development</h3>
+                      <h3>Custom Automation Solutions</h3>
                       <p>
-                        Expand your digital footprint with custom tokens,
-                        designed to suit your business model, whether it’s for a
-                        new cryptocurrency or a unique utility token within your
-                        ecosystem.
+                        Develop custom automation systems tailored to your
+                        specific business needs, ensuring that your operations
+                        are both efficient and effective.
                       </p>
                     </div>
                   </div>
@@ -526,4 +525,4 @@ const BlockchainService = () => {
   );
 };
 
-export default BlockchainService;
+export default BusinessAutomationService;

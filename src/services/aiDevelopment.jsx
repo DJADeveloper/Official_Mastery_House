@@ -111,49 +111,48 @@ const AiDevelopment = () => {
                   <div className="about-c-top">
                     <h4>AI Development</h4>
                     <h1 className="gradient-text">
-                      Unlocking the Potential <br />
-                      of Blockchain Technology
+                      Harnessing the Power of <br />
+                      Artificial Intelligence
                     </h1>
                     <p>
-                      Blockchain technology offers unprecedented security,
-                      transparency, and efficiency. At TheMastery House, we
-                      harness these qualities to deliver custom blockchain
-                      development servicesthat are as innovative as they are
-                      reliable. From creating smart contracts that
-                      automatetransactions without intermediaries to developing
-                      decentralized applications (dApps) that opennew avenues
-                      for your business, our blockchain solutions are designed
-                      to set you apart in thedigital landscape.
+                      Artificial Intelligence offers unprecedented opportunities
+                      for enhancing efficiency, improving decision-making, and
+                      driving innovation. At The Mastery House, we harness these
+                      qualities to deliver custom AI development services that
+                      are as innovative as they are reliable. From machine
+                      learning models that provide deep insights to natural
+                      language processing that enhances user interactions, our
+                      AI solutions are designed to set you apart in the digital
+                      landscape.
                     </p>
                   </div>
                   <img src={ServiceImg} alt="" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
-                      <h3>Smart Contract Development</h3>
+                      <h3>Machine Learning Solutions</h3>
                       <p>
-                        Streamline operations and ensure trust with our smart
-                        contract development services, tailored to automate your
-                        processes and secure your transactions.
+                        Transform data into actionable insights with our machine
+                        learning solutions, designed to enhance your
+                        decision-making and optimize operations.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
-                      <h3>Decentralized Applications (dApps)</h3>
+                      <h3>Natural Language Processing (NLP)</h3>
                       <p>
-                        Revolutionize your online presence with dApps that offer
-                        unparalleled security, uptime, and user control,
-                        custom-built for your specific business needs.
+                        Improve user interactions and data analysis with our
+                        advanced NLP technologies, making communication more
+                        intuitive and efficient.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle3"></div>
-                      <h3>Token Development</h3>
+                      <h3>AI Integration</h3>
                       <p>
-                        Expand your digital footprint with custom tokens,
-                        designed to suit your business model, whether it’s for a
-                        new cryptocurrency or a unique utility token within your
-                        ecosystem.
+                        Seamlessly integrate AI into your existing systems to
+                        enhance performance, automate processes, and unlock new
+                        capabilities.
                       </p>
                     </div>
                   </div>
@@ -169,7 +168,7 @@ const AiDevelopment = () => {
                       defaultActiveKey="Frontend"
                       id="uncontrolled-tab-example"
                     >
-                      <Tab eventKey="Frontend" title="Frontend Development">
+                      {/* <Tab eventKey="Frontend" title="Frontend Development">
                         <div className="technologies-tabContent">
                           <p>
                             Our expertise ensures an exceptional user experience
@@ -195,8 +194,8 @@ const AiDevelopment = () => {
                             </div>
                           </div>
                         </div>
-                      </Tab>
-                      <Tab eventKey="Backend" title="Backend Development">
+                      </Tab> */}
+                      {/* <Tab eventKey="Backend" title="Backend Development">
                         <div className="technologies-tabContent">
                           <p>
                             Our expertise ensures an exceptional user experience
@@ -387,7 +386,7 @@ const AiDevelopment = () => {
                             </div>
                           </div>
                         </div>
-                      </Tab>
+                      </Tab> */}
                       <Tab eventKey="AI Development" title="AI Development">
                         <div className="technologies-tabContent">
                           <p>

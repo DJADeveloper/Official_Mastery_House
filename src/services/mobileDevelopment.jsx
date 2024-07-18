@@ -36,7 +36,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
-const ConsStrategy = () => {
+const MobileDevelopmentService = () => {
   gsap.registerPlugin(
     Draggable,
     SplitText,
@@ -109,51 +109,48 @@ const ConsStrategy = () => {
               <div className="box">
                 <div className="about-content service-content">
                   <div className="about-c-top">
-                    <h4>Consulting and Strategy</h4>
+                    <h4>Mobile Development</h4>
                     <h1 className="gradient-text">
-                      Unlocking the Potential <br />
-                      of Blockchain Technology
+                      Creating Innovative and <br />
+                      User-Friendly Mobile Apps
                     </h1>
                     <p>
-                      Blockchain technology offers unprecedented security,
-                      transparency, and efficiency. At TheMastery House, we
-                      harness these qualities to deliver custom blockchain
-                      development servicesthat are as innovative as they are
-                      reliable. From creating smart contracts that
-                      automatetransactions without intermediaries to developing
-                      decentralized applications (dApps) that opennew avenues
-                      for your business, our blockchain solutions are designed
-                      to set you apart in thedigital landscape.
+                      In today’s mobile-first world, having a strong mobile
+                      presence is crucial. At The Mastery House, we design and
+                      develop mobile applications that offer exceptional user
+                      experiences, enhance customer engagement, and drive
+                      business growth. Whether you need a consumer-facing app or
+                      a complex enterprise solution, our team has the expertise
+                      to bring your mobile vision to life.
                     </p>
                   </div>
                   <img src={ServiceImg} alt="" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
-                      <h3>Smart Contract Development</h3>
+                      <h3>iOS and Android Development</h3>
                       <p>
-                        Streamline operations and ensure trust with our smart
-                        contract development services, tailored to automate your
-                        processes and secure your transactions.
+                        Develop high-quality mobile apps for iOS and Android
+                        platforms that deliver seamless performance and
+                        exceptional user experiences.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
-                      <h3>Decentralized Applications (dApps)</h3>
+                      <h3>Cross-Platform Solutions</h3>
                       <p>
-                        Revolutionize your online presence with dApps that offer
-                        unparalleled security, uptime, and user control,
-                        custom-built for your specific business needs.
+                        Create versatile cross-platform mobile apps that ensure
+                        a consistent user experience across different devices
+                        and operating systems.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle3"></div>
-                      <h3>Token Development</h3>
+                      <h3>Enterprise Mobile Applications</h3>
                       <p>
-                        Expand your digital footprint with custom tokens,
-                        designed to suit your business model, whether it’s for a
-                        new cryptocurrency or a unique utility token within your
-                        ecosystem.
+                        Implement robust enterprise mobile solutions designed to
+                        optimize business processes and improve workforce
+                        productivity.
                       </p>
                     </div>
                   </div>
@@ -166,10 +163,10 @@ const ConsStrategy = () => {
                   <h3 className="gradient-text">Technologies & Tools We Use</h3>
                   <div className="technologies-tabs">
                     <Tabs
-                      defaultActiveKey="Frontend"
+                      defaultActiveKey="Mobile Development"
                       id="uncontrolled-tab-example"
                     >
-                      <Tab eventKey="Frontend" title="Frontend Development">
+                      {/* <Tab eventKey="Frontend" title="Frontend Development">
                         <div className="technologies-tabContent">
                           <p>
                             Our expertise ensures an exceptional user experience
@@ -337,7 +334,7 @@ const ConsStrategy = () => {
                             </div>
                           </div>
                         </div>
-                      </Tab>
+                      </Tab> */}
                       <Tab
                         eventKey="Mobile Development"
                         title="Mobile Development"
@@ -388,7 +385,7 @@ const ConsStrategy = () => {
                           </div>
                         </div>
                       </Tab>
-                      <Tab eventKey="AI Development" title="AI Development">
+                      {/* <Tab eventKey="AI Development" title="AI Development">
                         <div className="technologies-tabContent">
                           <p>
                             Our expertise ensures an exceptional user experience
@@ -506,7 +503,7 @@ const ConsStrategy = () => {
                             </div>
                           </div>
                         </div>
-                      </Tab>
+                      </Tab> */}
                     </Tabs>
                   </div>
                 </div>
@@ -526,4 +523,4 @@ const ConsStrategy = () => {
   );
 };
 
-export default ConsStrategy;
+export default MobileDevelopmentService;

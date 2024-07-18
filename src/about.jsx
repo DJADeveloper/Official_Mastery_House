@@ -142,7 +142,7 @@ function About() {
                   <div className="about-c-top">
                     <h4>About The Mastery House</h4>
                     <h1 className="gradient-text">
-                      A Dream Team for <br /> AI, Blockchain, and Software{" "}
+                      Your Partner in AI, Automation, and Software Development
                     </h1>
                   </div>
                   <div className="about-grid">
@@ -181,42 +181,40 @@ function About() {
                       <h3>What We Stand For</h3>
                       <p>
                         Innovation, Excellence, and Future-Readiness are the
-                        pillars that define our approach. Ourteam of experts
-                        brings together diverse skills and deep knowledge in
-                        Blockchain, ArtificialIntelligence, and Custom Software
+                        pillars that define our approach. Our team of experts
+                        brings together diverse skills and deep knowledge in AI
+                        Development, Business Automation, and Custom Software
                         Development, ensuring that we deliver solutions that are
-                        notonly effective but transformative.
+                        not only effective but transformative.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
                       <h3>Our Mission</h3>
                       <p>
-                        Innovation, Excellence, and Future-Readiness are the
-                        pillars that define our approach. Ourteam of experts
-                        brings together diverse skills and deep knowledge in
-                        Blockchain, ArtificialIntelligence, and Custom Software
-                        Development, ensuring that we deliver solutions that are
-                        notonly effective but transformative.
+                        At The Mastery House, our mission is to empower
+                        businesses through innovative technology solutions. We
+                        strive to create a future where technology seamlessly
+                        integrates with business processes, driving growth and
+                        efficiency.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle3"></div>
                       <h3>Why Choose Us</h3>
                       <p>
-                        Innovation, Excellence, and Future-Readiness are the
-                        pillars that define our approach. Ourteam of experts
-                        brings together diverse skills and deep knowledge in
-                        Blockchain, ArtificialIntelligence, and Custom Software
-                        Development, ensuring that we deliver solutions that are
-                        notonly effective but transformative.
+                        Our commitment to excellence, combined with our deep
+                        industry knowledge and innovative mindset, makes us the
+                        ideal partner for your digital transformation journey.
+                        We deliver customized solutions that drive real business
+                        results.
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
-            <Teamswiper />
+            {/* <Teamswiper /> */}
             <section className="getintouch-section">
               <div className="marquee-main-box">
                 <Marque />

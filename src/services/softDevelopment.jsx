@@ -111,49 +111,46 @@ const SoftDevelopment = () => {
                   <div className="about-c-top">
                     <h4>Software Development</h4>
                     <h1 className="gradient-text">
-                      Unlocking the Potential <br />
-                      of Blockchain Technology
+                      Building Robust and Scalable <br />
+                      Software Solutions
                     </h1>
                     <p>
-                      Blockchain technology offers unprecedented security,
-                      transparency, and efficiency. At TheMastery House, we
-                      harness these qualities to deliver custom blockchain
-                      development servicesthat are as innovative as they are
-                      reliable. From creating smart contracts that
-                      automatetransactions without intermediaries to developing
-                      decentralized applications (dApps) that opennew avenues
-                      for your business, our blockchain solutions are designed
-                      to set you apart in thedigital landscape.
+                      At The Mastery House, we specialize in creating custom
+                      software solutions tailored to meet your unique business
+                      needs. Our expertise ranges from enterprise applications
+                      and system integration to legacy system modernization. We
+                      leverage the latest technologies to deliver high-quality,
+                      robust, and scalable software that drives growth and
+                      efficiency.
                     </p>
                   </div>
                   <img src={ServiceImg} alt="" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
-                      <h3>Smart Contract Development</h3>
+                      <h3>Custom Software Development</h3>
                       <p>
-                        Streamline operations and ensure trust with our smart
-                        contract development services, tailored to automate your
-                        processes and secure your transactions.
+                        Develop bespoke software solutions that align perfectly
+                        with your business goals, enhancing productivity and
+                        streamlining operations.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
-                      <h3>Decentralized Applications (dApps)</h3>
+                      <h3>Enterprise Applications</h3>
                       <p>
-                        Revolutionize your online presence with dApps that offer
-                        unparalleled security, uptime, and user control,
-                        custom-built for your specific business needs.
+                        Implement powerful enterprise applications designed to
+                        optimize your business processes and improve overall
+                        efficiency.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle3"></div>
-                      <h3>Token Development</h3>
+                      <h3>System Integration</h3>
                       <p>
-                        Expand your digital footprint with custom tokens,
-                        designed to suit your business model, whether it’s for a
-                        new cryptocurrency or a unique utility token within your
-                        ecosystem.
+                        Seamlessly integrate new software with your existing
+                        systems to ensure smooth operations and enhance overall
+                        performance.
                       </p>
                     </div>
                   </div>
