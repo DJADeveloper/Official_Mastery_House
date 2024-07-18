@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./home.css";
-import ContactImg from "./assets/img/contactimg.png";
+import ContactImg from "./assets/img/digitalTampa.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { BsTelephone, BsEnvelope, BsGeoAltFill } from "react-icons/bs";
@@ -95,7 +95,12 @@ const Contact = () => {
                       <button className="gradient-btn">Submit</button>
                     </div>
                     <div className="cg-right">
-                      <img src={ContactImg} alt="" />
+                      <img
+                        src={ContactImg}
+                        alt="digital tampa skyline with gradient background"
+                        style={{ height: 500, width: "auto" }}
+                        height={400}
+                      />
                       <div className="contact-info-box">
                         <h5>
                           <span>
@@ -113,7 +118,7 @@ const Contact = () => {
                           <span>
                             <BsGeoAltFill />
                           </span>
-                          CS - #5013 Millville, NJ 08332
+                          Tampa, FL
                         </h5>
                       </div>
                     </div>
