@@ -7,7 +7,7 @@ const items = [
     color: "#9C42F5",
   },
   {
-    name: "Blockchain",
+    name: "Mobile",
     color: "#0FA",
   },
   {
@@ -15,7 +15,7 @@ const items = [
     color: "#4579F5",
   },
   {
-    name: "Consulting",
+    name: "Automation",
     color: "#F43F5E",
   },
   {
@@ -23,7 +23,7 @@ const items = [
     color: "#9C42F5",
   },
   {
-    name: "Blockchain",
+    name: "Mobile",
     color: "#0FA",
   },
   {
@@ -31,7 +31,7 @@ const items = [
     color: "#4579F5",
   },
   {
-    name: "Consulting",
+    name: "Automation",
     color: "#F43F5E",
   },
 ];
