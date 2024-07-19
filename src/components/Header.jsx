@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/img/logo-tms.png";
-import Logo from "../assets/2.png";
+import Logo from "../assets/logo-tms.svg";
 
 import {
   BsChevronRight,
@@ -35,21 +35,7 @@ const Header = (props) => {
       <div className="box">
         <div className="header_cont">
           <Link to="/">
-            <img
-              style={{
-                height: "210px",
-                width: "auto",
-
-                display: "flex",
-                direction: "column",
-                justifyContent: "start",
-                alignContent: "start",
-              }}
-              src="#"
-              alt="tmh-logo"
-              height="500px"
-              width="auto"
-            />
+            <img src={Logo} alt="tmh-logo" />
           </Link>
 
           <div className="header_right">

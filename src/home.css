@@ -56,6 +56,10 @@ a {
 img {
   object-fit: contain;
 }
+
+.error {
+  color: #ff4d4f; /* A bright red color for errors */
+}
 .gradient-btn {
   display: flex;
   justify-content: center;
