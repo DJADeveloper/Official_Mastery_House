@@ -23,6 +23,25 @@
   --color-slate-900: #0f172a;
   --color-slate-950: #020617;
 }
+
+/* Light mode variables */
+.light-mode {
+  --color-slate-50: #ffffff;
+  --color-slate-100: #f8f9fa;
+  --color-slate-200: #e9ecef;
+  --color-slate-300: #dee2e6;
+  --color-slate-400: #ced4da;
+  --color-slate-500: #adb5bd;
+  --color-slate-600: #6c757d;
+  --color-slate-700: #495057;
+  --color-slate-800: #343a40;
+  --color-slate-900: #212529;
+  --color-slate-950: #161b22;
+  --color-dark-primary: #ffffff;
+  --color-light-primary: #1e1e1e;
+  --error-red: #dc3545;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -55,6 +74,12 @@ a {
 }
 img {
   object-fit: contain;
+}
+.theme-toggle-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--color-slate-800);
 }
 
 .error {
@@ -1138,6 +1163,117 @@ header {
   position: relative;
   overflow: hidden;
 }
+.book-a-call-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.book-a-call-container {
+  background-color: var(--color-slate-900);
+  padding: 3.5rem;
+  border-radius: 1rem;
+  position: absolute;
+  width: 600px;
+  max-width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.book-a-call-container .close-btn {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  background: none;
+  border: none;
+  font-size: 1.7rem;
+  cursor: pointer;
+  color: var(--color-slate-200);
+}
+
+.book-a-call-container h3 {
+  color: var(--white);
+  font-family: "Lato";
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.book-a-call-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.book-a-call-container form input,
+.book-a-call-container form textarea {
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  background-color: var(--color-slate-800);
+  padding: 1.75rem 2rem;
+  color: var(--color-slate-500);
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: "Lato";
+  width: 100%;
+  margin-bottom: 1.5rem;
+  transition: 0.35s;
+}
+
+.book-a-call-container form input:focus,
+.book-a-call-container form textarea:focus {
+  border: 1px solid var(--color-slate-400);
+  outline: none;
+}
+
+.book-a-call-container form input::placeholder,
+.book-a-call-container form textarea::placeholder {
+  color: var(--color-slate-500);
+}
+
+.book-a-call-container form input.error,
+.book-a-call-container form textarea.error {
+  border-color: #e84e3d; /* Error red color */
+}
+
+.book-a-call-container form .error-text {
+  color: #e84e3d; /* Error red color */
+  font-size: 0.875rem;
+}
+
+.book-a-call-container form .gradient-btn {
+  background-image: linear-gradient(to bottom right, #00ffaa, #4579f5, #9c42f5);
+  border: none;
+  padding: 1.5rem;
+  color: var(--white);
+  font-size: 1.75rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.book-a-call-container form .gradient-btn.full-width {
+  width: 100% !important;
+}
+
+.book-a-call-container form .gradient-btn:hover {
+  opacity: 0.9;
+}
+
+.book-a-call-container .submission-status {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: var(--color-primary-green);
+  text-align: center;
+}
+
 .booking-cont {
   display: flex;
   justify-content: flex-start;
