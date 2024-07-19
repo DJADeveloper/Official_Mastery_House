@@ -6,11 +6,18 @@ import GIT3 from "../assets/img/epmsvg.svg";
 import { Link } from "react-router-dom";
 
 const Booking = () => {
+  const handleClick = () => {
+    window.Calendly.initPopupWidget({
+      url: "https://calendly.com/themasteryhouse",
+    });
+    return false;
+  };
+
   return (
     <section className="booking-section">
       <div className="booking-cont">
         <div className="booking-img">
-          <img src={Book} alt="" />
+          <img src={Book} alt="Booking" />
         </div>
         <div className="git-box">
           <div className="git-circle-1"></div>
@@ -24,7 +31,7 @@ const Booking = () => {
           </div>
           <div className="gitsvg-box">
             <div>
-              <img src={GIT1} alt="" />
+              <img src={GIT1} alt="Initial Consultation" />
               <span>
                 Initial Consultation{" "}
                 <h6>
@@ -34,7 +41,7 @@ const Booking = () => {
               </span>
             </div>
             <div>
-              <img src={GIT2} alt="" />
+              <img src={GIT2} alt="Advanced Strategy Session" />
               <span>
                 Advanced Strategy Session
                 <h6>
@@ -43,16 +50,14 @@ const Booking = () => {
               </span>
             </div>
             <div>
-              <img src={GIT3} alt="" />
+              <img src={GIT3} alt="Exclusive Partnership Meeting" />
               <span>
                 Exclusive Partnership Meeting
                 <h6>Let's collaborate and create digital excellence.</h6>
               </span>
             </div>
           </div>
-          <Link to="/contact">
-            <button className="gradient-btn">Book a Call</button>
-          </Link>
+          <button className="gradient-btn">Book a Call</button>
         </div>
       </div>
     </section>
