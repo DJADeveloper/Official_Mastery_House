@@ -19,6 +19,13 @@ const Header = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropdownSerOpen, setIsDropdownSerOpen] = useState(false);
 
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsLightMode(!isLightMode);
+    document.documentElement.classList.toggle("light-mode");
+  };
+
   const toggleDropdownServ = () => {
     setIsDropdownSerOpen(!isDropdownSerOpen);
   };
@@ -89,6 +96,7 @@ const Header = (props) => {
             >
               Contact
             </Link>
+            {/* <button onClick={toggleTheme}>Toggle Light Mode</button> */}
           </div>
           <div className="hr-mob-icon" onClick={toggleMobileMenu}>
             <BsList />
