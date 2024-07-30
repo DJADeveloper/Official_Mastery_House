@@ -124,12 +124,12 @@ const Header = (props) => {
                 >
                   About
                 </Link>
-                <Link
+                {/* <Link
                   className={`${props.isActive == "casestudy" ? "active" : ""}`}
                   to="/casestudy"
                 >
                   Case Studies
-                </Link>
+                </Link> */}
                 <Link
                   className={`${props.isActive == "services" ? "active" : ""}`}
                   onClick={toggleDropdownServ}

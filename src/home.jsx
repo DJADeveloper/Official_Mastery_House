@@ -189,13 +189,14 @@ function Home(props) {
                   <div className="hero-cont-left">
                     <span>Welcome to The Mastery House</span>
                     <h1 className="gradient-text">
-                      Where Innovation Meets Mastery in Blockchain & AI
+                      Where Innovation Meets Mastery in Software & AI
+                      Development
                     </h1>
                     <p>
                       At The Mastery House, we excel in driving digital
                       transformation through innovative technology solutions.
-                      With expertise in blockchain, AI, software development,
-                      and business automation, we help businesses navigate the
+                      With expertise in AI, software, mobile development, and
+                      business automation, we help businesses navigate the
                       complexities of the digital world.
                     </p>
                     <Link to="/contact">
