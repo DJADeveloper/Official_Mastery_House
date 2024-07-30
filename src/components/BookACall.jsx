@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import "../home.css";
 
-const BookACall = ({ onClose, position }) => {
+const BookACall = ({ onClose }) => {
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -10,16 +12,6 @@ const BookACall = ({ onClose, position }) => {
   });
   const [errors, setErrors] = useState({});
   const [submissionStatus, setSubmissionStatus] = useState("");
-
-  useEffect(() => {
-    if (position) {
-      const popup = document.querySelector(".book-a-call-container");
-      if (popup) {
-        popup.style.top = `${position.top}px`;
-        popup.style.left = `${position.left}px`;
-      }
-    }
-  }, [position]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -79,7 +71,7 @@ const BookACall = ({ onClose, position }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <button className="close-btn" onClick={onClose}>
-          X
+          <FontAwesomeIcon icon={faTimes} />
         </button>
         <h3>Book a 30-Minute Call</h3>
         <form onSubmit={handleSubmit} className="cg-left-form">
@@ -123,7 +115,7 @@ const BookACall = ({ onClose, position }) => {
             required
           />
           {errors.time && <span className="error-text">{errors.time}</span>}
-          <button type="submit" className="gradient-btn">
+          <button type="submit" className="gradient-btn full-width">
             Submit
           </button>
         </form>
