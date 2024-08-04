@@ -8,14 +8,14 @@ import { Link } from "react-router-dom";
 
 const Booking = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
-  // const [position, setPosition] = useState({ top: 0, left: 0 });
+  const [position, setPosition] = useState({ top: 0, left: 0 });
 
   const handleOpenBooking = (e) => {
-    // const rect = e.target.getBoundingClientRect();
-    // setPosition({
-    //   top: rect.top + window.scrollY,
-    //   left: rect.left + window.scrollX,
-    // });
+    const rect = e.target.getBoundingClientRect();
+    setPosition({
+      top: rect.top + window.scrollY,
+      left: rect.left + window.scrollX,
+    });
     setIsBookingOpen(true);
   };
 
