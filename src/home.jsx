@@ -26,7 +26,9 @@ import Flask from "./assets/img/flask.svg";
 import Mat from "./assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
-import Case1 from "./assets/img/case1.png";
+import Case1 from "./assets/img/jobSkuyy.svg";
+import Case2 from "./assets/img/jobSkuyy.svg";
+import Case3 from "./assets/img/jobSkuyy.svg";
 import CaseLogo1 from "./assets/img/ikea.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -69,6 +71,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
+import Chatbot from "./components/Chatbot";
 
 function Home(props) {
   gsap.registerPlugin(
@@ -875,7 +878,7 @@ function Home(props) {
               </div>
             </section> */}
 
-            <section className="blog-section">
+            {/* <section className="blog-section">
               <div data-speed={0.5} className="blogcircle-1"></div>
               <div className="blogcircle-2"></div>
               <div className="box">
@@ -957,7 +960,7 @@ function Home(props) {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
             <section className="faq-section">
               <div data-speed={0.85} className="faqrectangle"></div>
               <div className="faq-circle"></div>

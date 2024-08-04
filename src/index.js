@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Router, Routes, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./about";
 import Home from "./home";
 import Blogs from "./blogs";
@@ -19,9 +19,17 @@ import Blog5 from "./mainblogs/ARtrends";
 import Blog6 from "./mainblogs/Cybersecurity";
 import Blog7 from "./mainblogs/SustainableTech";
 import CaseStudy from "./maincasestudy";
+import Chatbot from "./components/Chatbot";
+import ChatButton from "./components/ChatButton";
 
 const root = document.getElementById("root");
+
 const App = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const handleOpenChat = () => setIsChatOpen(true);
+  const handleCloseChat = () => setIsChatOpen(false);
+
   return (
     <>
       <BrowserRouter>
@@ -46,6 +54,8 @@ const App = () => {
           <Route path="/blogs/sustainable-tech" element={<Blog7 />} />
         </Routes>
       </BrowserRouter>
+      <ChatButton onClick={handleOpenChat} />
+      {isChatOpen && <Chatbot onClose={handleCloseChat} />}
     </>
   );
 };
