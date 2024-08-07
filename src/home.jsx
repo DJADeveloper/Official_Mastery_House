@@ -26,7 +26,7 @@ import Flask from "./assets/img/flask.svg";
 import Mat from "./assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
-import Case1 from "./assets/img/jobSkuyy.svg";
+import Case1 from "./assets/img/portfolio3.png";
 import Case2 from "./assets/img/jobSkuyy.svg";
 import Case3 from "./assets/img/jobSkuyy.svg";
 import CaseLogo1 from "./assets/img/ikea.png";
@@ -351,7 +351,7 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            {/* <section className="casestudy-section" id="casestudy">
+            <section className="casestudy-section" id="casestudy">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="774"
@@ -517,7 +517,7 @@ function Home(props) {
                   </div>
                 </div>
               </div>
-            </section> */}
+            </section>
             <section className="technologies-section">
               <div className="box">
                 <div className="technologies-content">
