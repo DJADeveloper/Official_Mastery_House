@@ -71,7 +71,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
-import Chatbot from "./components/Chatbot";
+// import Chatbot from "./components/Chatbot";
 
 function Home(props) {
   gsap.registerPlugin(
