@@ -21,6 +21,7 @@ import Blog7 from "./mainblogs/SustainableTech";
 import CaseStudy from "./maincasestudy";
 import Chatbot from "./components/Chatbot";
 import ChatButton from "./components/ChatButton";
+import DynamicBlog from "./components/DynamicBlog";
 
 const root = document.getElementById("root");
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blogs/:id" element={<DynamicBlog />} />{" "}
           <Route path="/service" element={<Service />} />
           <Route path="/casestudy1" element={<CaseStudy1 />} />
           <Route path="/casestudy" element={<CaseStudy />} />
@@ -54,8 +56,8 @@ const App = () => {
           <Route path="/blogs/sustainable-tech" element={<Blog7 />} />
         </Routes>
       </BrowserRouter>
-      <ChatButton onClick={handleOpenChat} />
-      {isChatOpen && <Chatbot onClose={handleCloseChat} />}
+      {/* <ChatButton onClick={handleOpenChat} />
+      {isChatOpen && <Chatbot onClose={handleCloseChat} />} */}
     </>
   );
 };

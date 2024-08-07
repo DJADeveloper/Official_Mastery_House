@@ -1348,13 +1348,13 @@ header {
 }
 
 /* Chatbot Styles */
-.chatbot-container {
+/* .chatbot-container {
   position: fixed;
   bottom: 100px;
   right: 20px;
   width: 350px;
   max-width: 100%;
-  height: 500px; /* Adjusted height */
+  height: 500px;
   background-color: var(--color-slate-900);
   border-radius: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -1376,7 +1376,7 @@ header {
 }
 
 .chatbot-messages {
-  flex: 1; /* Allows the message area to grow and shrink */
+  flex: 1; 
   overflow-y: auto;
   padding: 1rem;
   display: flex;
@@ -1433,9 +1433,9 @@ header {
 }
 
 .close-icon {
-  font-size: 1.8rem; /* Increased font size */
+  font-size: 1.8rem; 
   cursor: pointer;
-}
+} */
 
 /* Git Section */
 .git-box {
