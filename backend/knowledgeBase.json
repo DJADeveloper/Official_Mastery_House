@@ -1,0 +1,44 @@
+{
+  "about": "The Mastery House is a digital agency located in Tampa, Florida, specializing in AI and software development, with a focus on business automation solutions. The agency is known for its innovative approach and commitment to excellence, emphasizing a client-centric ethos. The Mastery House's mission is to drive digital transformation for businesses by integrating advanced technology into their strategies and operations.",
+  "services": [
+    {
+      "name": "AI Development",
+      "description": "Transform your business with cutting-edge AI solutions. From machine learning and NLP to predictive analytics, we harness the power of AI to deliver actionable insights and drive innovation.",
+      "features": [
+        "Machine Learning Solutions",
+        "Natural Language Processing (NLP)",
+        "AI Integration"
+      ]
+    },
+    {
+      "name": "Software Development",
+      "description": "Custom software solutions designed to meet your business needs. Our expertise ranges from enterprise applications to system integration, ensuring robust, scalable, and secure software development.",
+      "features": [
+        "Custom Software Development",
+        "Mobile App Development",
+        "Web Development"
+      ]
+    },
+    {
+      "name": "Business Automation",
+      "description": "Enhance productivity with our tailored automation solutions. We streamline operations by automating repetitive tasks and integrating intelligent workflows, helping your business run efficiently.",
+      "features": [
+        "Process Automation Consultation",
+        "Custom Automation Solutions Development",
+        "Integration Services for Seamless Operation"
+      ]
+    }
+  ],
+  "ethos": {
+    "innovation": "Pioneering new paths in digital technology.",
+    "excellence": "Delivering high-quality solutions tailored to client needs.",
+    "communityCommitment": "Supporting and contributing to organizations, especially those focusing on autism for children."
+  },
+  "technologies": {
+    "frontend": ["React", "Next.js", "MUI", "Typescript"],
+    "backend": ["Python", "Node.js", "Django", "Flask"],
+    "mobile": ["Swift", "React Native", "Expo CLI", "Firebase"],
+    "ai": ["TensorFlow", "Pandas", "NumPy", "Matplotlib", "PyTorch", "Anaconda"]
+  },
+  "mission": "To empower businesses through innovative technology solutions. We strive to create a future where technology seamlessly integrates with business processes, driving growth and efficiency."
+}

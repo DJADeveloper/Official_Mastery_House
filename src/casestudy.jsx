@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./home.css";
-import Case1 from "./assets/img/case1.png";
+import Case1 from "./assets/img/portfolio1.png";
 import CaseLogo1 from "./assets/img/ikea.png";
 import LaptopMockup from "./assets/img/Mockup.png";
 import csProfile from "./assets/img/csprofile.png";

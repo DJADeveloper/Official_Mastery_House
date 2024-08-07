@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import Blog1 from "./assets/img/blog1.png";
 import Blog2 from "./assets/img/blog2.png";
@@ -8,40 +8,27 @@ import Blog5 from "./assets/img/blog5.png";
 import Blog6 from "./assets/img/blog6.png";
 import Blog7 from "./assets/img/blog7.png";
 
-import {
-  BsChevronRight,
-  BsChevronLeft,
-  BsArrowRight,
-  BsArrowUpRight,
-  BsXLg,
-  BsList,
-} from "react-icons/bs";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { BsArrowRight } from "react-icons/bs";
 import Header from "./components/Header";
 import Marque from "./components/Marque";
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
+import axios from "axios";
 
 import gsap from "gsap";
 import {
-  Back,
-  Power3,
-  Power1,
-  Power2,
-  Power4,
-  Linear,
-  Expo,
-  Circ,
-} from "gsap/dist/gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { Draggable } from "gsap/Draggable";
-import { InertiaPlugin } from "gsap/InertiaPlugin";
-import { SplitText } from "gsap/SplitText";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+  ScrollSmoother,
+  Draggable,
+  InertiaPlugin,
+  SplitText,
+  ScrollTrigger,
+  DrawSVGPlugin,
+} from "gsap/all";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
+  const [dynamicBlogs, setDynamicBlogs] = useState([]);
+
   gsap.registerPlugin(
     Draggable,
     SplitText,
@@ -50,6 +37,7 @@ const Blogs = () => {
     ScrollTrigger,
     DrawSVGPlugin
   );
+
   useEffect(() => {
     ScrollSmoother.create({
       smooth: 1.15,
@@ -66,7 +54,23 @@ const Blogs = () => {
       duration: 3,
       delay: 1,
     });
+
+    // Fetch dynamic blogs from the backend
+    const fetchDynamicBlogs = async () => {
+      try {
+        const response = await axios.get(
+          "http://localhost:5001/api/blog-posts"
+        );
+        console.log(response, "blog responses");
+        setDynamicBlogs(response.data);
+      } catch (error) {
+        console.error("Error fetching dynamic blogs:", error);
+      }
+    };
+
+    fetchDynamicBlogs();
   }, []);
+
   return (
     <div className="masteryhouse">
       <div id="smooth-wrapper">
@@ -191,6 +195,24 @@ const Blogs = () => {
                         </a>
                       </div>
                     </Link>
+                    {dynamicBlogs.map((blog, index) => (
+                      <Link
+                        to={`/blogs/${blog.id}`}
+                        className="blog-main-cont bm-r-cont"
+                        key={index}
+                      >
+                        {blog.imageUrl && (
+                          <img src={blog.imageUrl} alt={blog.title} />
+                        )}
+
+                        <div>
+                          <h4>{blog.title}</h4>
+                          <a href={`/blogs/${blog.id}`}>
+                            Read More <BsArrowRight />
+                          </a>
+                        </div>
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </div>
