@@ -71,6 +71,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
+import NewsletterForm from "./components/NewsLetterForm";
 // import Chatbot from "./components/Chatbot";
 
 function Home(props) {
@@ -518,6 +519,11 @@ function Home(props) {
                 </div>
               </div>
             </section>
+            {/* <section className="getintouch-section">
+              <div className="marquee-main-box">
+                <Marque />
+              </div>
+            </section> */}
             <section className="technologies-section">
               <div className="box">
                 <div className="technologies-content">
@@ -872,13 +878,8 @@ function Home(props) {
             </section>
 
             {/* <Teamswiper /> */}
-            {/* <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
-            </section> */}
 
-            {/* <section className="blog-section">
+            <section className="blog-section">
               <div data-speed={0.5} className="blogcircle-1"></div>
               <div className="blogcircle-2"></div>
               <div className="box">
@@ -960,7 +961,10 @@ function Home(props) {
                   </div>
                 </div>
               </div>
-            </section> */}
+            </section>
+            <section>
+              <NewsletterForm />
+            </section>
             <section className="faq-section">
               <div data-speed={0.85} className="faqrectangle"></div>
               <div className="faq-circle"></div>
