@@ -59,7 +59,7 @@ const Teamswiper = () => {
                 <div className="tb-social-box">
                   <Link
                     to="http://linkedin.com/in/the-mastery-house-727664204/"
-                    className="tbs-social-icon"
+                    className="tbs-social-ico"
                   >
                     <FaLinkedinIn />
                   </Link>
