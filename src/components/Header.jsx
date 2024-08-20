@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/img/logo-tms.png";
-import Logo from "../assets/logo-tms.svg";
+import Logo from "../assets/img/tms-logo.png";
 
 import {
   BsChevronRight,
@@ -42,7 +42,7 @@ const Header = (props) => {
       <div className="box">
         <div className="header_cont">
           <Link to="/">
-            <img src={Logo} alt="tmh-logo" />
+            <img src={Logo} alt="tmh-logo" style={{ width: "250px" }} />
           </Link>
 
           <div className="header_right">
@@ -58,12 +58,12 @@ const Header = (props) => {
             >
               About
             </Link>
-            {/* <Link
+            <Link
               className={`${props.isActive == "casestudy" ? "active" : ""}`}
               to="/casestudy"
             >
               Case Studies
-            </Link> */}
+            </Link>
             <Link
               className={`${props.isActive == "services" ? "active" : ""}`}
               onClick={toggleDropdownServ}

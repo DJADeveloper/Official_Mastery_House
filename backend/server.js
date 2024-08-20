@@ -7,6 +7,9 @@ const fs = require("fs");
 const axios = require("axios");
 const RSSParser = require("rss-parser");
 const { v4: uuidv4 } = require("uuid");
+const nodemailer = require("nodemailer");
+const path = require("path");
+const PDFDocument = require("pdfkit");
 
 const app = express();
 app.use(cors());
@@ -16,6 +19,8 @@ const ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 
 const rssParser = new RSSParser();
+
+const klayvio_list_id = "Rj85mx";
 
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,
@@ -214,6 +219,260 @@ app.post("/generate-content", async (req, res) => {
     console.error("Error in /generate-content endpoint:", error);
     res.status(500).send("An error occurred while generating content.");
   }
+});
+
+app.post("/analyze-data", async (req, res) => {
+  const {
+    fullName,
+    email,
+    companyName,
+    industry,
+    companySize,
+    mainBusinessOperations,
+    keyTools,
+    mainChallenges,
+    automationAreas,
+    bottlenecks,
+    businessGoals,
+    aiGoals,
+    avgRevenue,
+    avgCost,
+    manualHours,
+    customerSatisfaction,
+    leadTime,
+    aiBudget,
+    budgetConstraints,
+  } = req.body;
+
+  try {
+    const completion = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [
+        {
+          role: "system",
+          content:
+            "You are a business consultant specializing in AI and automation. Provide detailed recommendations based on the following business data.",
+        },
+        {
+          role: "user",
+          content: `
+            Here is the data from a business:
+
+            Full Name: ${fullName}
+            Company Name: ${companyName}
+            Industry: ${industry}
+            Company Size: ${companySize}
+            Main Business Operations: ${mainBusinessOperations}
+            Key Tools/Software: ${keyTools}
+            Main Challenges: ${mainChallenges}
+            Areas for Automation: ${automationAreas}
+            Workflow Bottlenecks: ${bottlenecks}
+            Business Goals (6-12 months): ${businessGoals}
+            AI/Automation Goals: ${aiGoals}
+            Average Revenue Per Month: ${avgRevenue}
+            Average Cost Per Month: ${avgCost}
+            Manual Process Hours per Week: ${manualHours}
+            Customer Satisfaction Rate: ${customerSatisfaction}
+            Lead Time from Order to Delivery: ${leadTime}
+            AI/Automation Budget: ${aiBudget}
+            Budget Constraints: ${budgetConstraints}
+          `,
+        },
+      ],
+    });
+
+    const recommendations = completion.choices[0].message.content;
+
+    // Generate PDF report
+    const filePath = path.join(
+      __dirname,
+      `${fullName.replace(/ /g, "_")}_AI_Automation_Audit_Report.pdf`
+    );
+    createPdfReport(
+      fullName,
+      companyName,
+      industry,
+      companySize,
+      recommendations,
+      filePath
+    );
+
+    // Send email with PDF report attached
+    sendEmailWithAttachment(email, filePath, async (err, info) => {
+      if (err) {
+        console.error("Failed to send email:", err);
+        res.status(500).send("Failed to send email");
+      } else {
+        console.log("Email sent:", info.response);
+
+        // Delete the temporary file after sending the email
+        fs.unlink(filePath, (err) => {
+          if (err) {
+            console.error("Failed to delete temporary file:", err);
+          } else {
+            console.log("Temporary file deleted");
+          }
+        });
+
+        // Send the data to Klaviyo (example of a POST request to add to a list)
+        const klaviyoData = {
+          profiles: [
+            {
+              email: email,
+              properties: {
+                $first_name: fullName,
+                company_name: companyName,
+                industry: industry,
+                company_size: companySize,
+                recommendations: recommendations,
+              },
+            },
+          ],
+        };
+
+        try {
+          await axios.post(
+            `https://a.klaviyo.com/api/v2/list/${klayvio_list_id}/members`,
+            klaviyoData,
+            {
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${process.env.KLAVIYO_API_KEY}`,
+              },
+            }
+          );
+
+          // Send the welcome email with the ChatPDF link
+          await sendEmailWithChatPDFLink(email);
+
+          res
+            .status(200)
+            .send(
+              "Klaviyo profile created, PDF sent, and ChatPDF link email sent successfully"
+            );
+        } catch (klaviyoError) {
+          console.error("Error interacting with Klaviyo:", klaviyoError);
+          res.status(500).send("Error interacting with Klaviyo");
+        }
+      }
+    });
+  } catch (error) {
+    console.error(
+      "Error interacting with OpenAI API or generating report:",
+      error
+    );
+    res
+      .status(500)
+      .send("Error interacting with OpenAI API or generating report");
+  }
+});
+
+function sendEmailWithChatPDFLink(to) {
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: to,
+    subject: "Welcome to The Mastery House!",
+    text: "Thank you for signing up! As a special welcome, we're giving you access to our ChatPDF tool. Use this link to chat with your PDF: https://your-chatpdf-link.com",
+  };
+
+  return transporter.sendMail(mailOptions);
+}
+
+function createPdfReport(
+  fullName,
+  companyName,
+  industry,
+  companySize,
+  recommendations,
+  filePath
+) {
+  const doc = new PDFDocument();
+
+  doc.pipe(fs.createWriteStream(filePath));
+
+  doc.fontSize(20).text("AI/Automation Audit Report", { align: "center" });
+  doc.moveDown();
+  doc.fontSize(16).text(`Hello ${fullName},`, { align: "left" });
+  doc.moveDown();
+  doc
+    .fontSize(12)
+    .text(
+      "Thank you for subscribing to our newsletter. Here is your AI/Automation Audit Report:",
+      { align: "left" }
+    );
+  doc.moveDown();
+  doc.fontSize(14).text("Company Information:", { align: "left" });
+  doc.fontSize(12).text(`Company Name: ${companyName}`, { align: "left" });
+  doc.text(`Industry: ${industry}`, { align: "left" });
+  doc.text(`Company Size: ${companySize}`, { align: "left" });
+  doc.moveDown();
+  doc.fontSize(14).text("Recommendations:", { align: "left" });
+  doc.fontSize(12).text(recommendations, { align: "left" });
+
+  doc.end();
+}
+
+function sendEmailWithAttachment(to, filePath, callback) {
+  const transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: to,
+    subject: "Your AI/Automation Audit Report",
+    text: "Please find attached your personalized AI/Automation Audit Report.",
+    attachments: [
+      {
+        filename: path.basename(filePath),
+        path: filePath,
+      },
+    ],
+  };
+
+  transporter.sendMail(mailOptions, callback);
+}
+
+// Add the email sending route
+app.post("/send-email", async (req, res) => {
+  const { to, subject, body } = req.body;
+
+  // Create a transporter
+  let transporter = nodemailer.createTransport({
+    service: "Gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  // Define the email options
+  let mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: to,
+    subject: subject,
+    text: body,
+  };
+
+  // Send the email
+  transporter.sendMail(mailOptions, (error, info) => {
+    if (error) {
+      return res.status(500).send(error.toString());
+    }
+    res.status(200).send("Email sent: " + info.response);
+  });
 });
 
 // Endpoint to get all blog posts
