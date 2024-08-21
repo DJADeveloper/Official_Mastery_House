@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 // import Logo from "../assets/img/logo-tms.png";
-import Logo from "../assets/img/tms-logo.png";
+// import Logo from "../assets/img/tms-logo.png";
+import Logo from "../assets/potential-logos/potential-logo2.svg";
 
 import {
   BsChevronRight,
@@ -58,12 +59,12 @@ const Header = (props) => {
             >
               About
             </Link>
-            <Link
+            {/* <Link
               className={`${props.isActive == "casestudy" ? "active" : ""}`}
               to="/casestudy"
             >
               Case Studies
-            </Link>
+            </Link> */}
             <Link
               className={`${props.isActive == "services" ? "active" : ""}`}
               onClick={toggleDropdownServ}

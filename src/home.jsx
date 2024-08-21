@@ -26,10 +26,14 @@ import Flask from "./assets/img/flask.svg";
 import Mat from "./assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
-import Case1 from "./assets/img/portfolio3.png";
-import Case2 from "./assets/img/jobSkuyy.svg";
-import Case3 from "./assets/img/jobSkuyy.svg";
-import CaseLogo1 from "./assets/img/ikea.png";
+import Case1 from "./assets/projectImages/unifit/unifit-banner.png";
+import Case2 from "./assets/projectImages/nwm/nwm-banner.png";
+import Case3 from "./assets/projectImages/jobskuyy/jobskuyy-banner.png";
+import Case4 from "./assets/projectImages/definitity/definity-banner.png";
+import CaseLogo1 from "./assets/projectImages/unifit/unifit-logo.png";
+import CaseLogo2 from "./assets/projectImages/nwm/nwm-logo.png";
+import CaseLogo3 from "./assets/projectImages/jobskuyy/jobskuyy-logo.png";
+import CaseLogo4 from "./assets/projectImages/definitity/definity-logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -411,6 +415,48 @@ function Home(props) {
                       <div className="cs-main-left">
                         <img src={CaseLogo1} alt="" />
                         <p>
+                          Leveraging cutting-edge AI and automation
+                          technologies, we transformed UniFit into a leading
+                          eco-friendly fitness brand. The Mastery House crafted
+                          the brand's identity, developed a suite of SaaS tools,
+                          and significantly scaled the company's operations,
+                          driving customer engagement and retention through
+                          innovative digital solutions.
+                        </p>
+                        <div className="ind-serv-box">
+                          <span>
+                            Industry <h6>Health & Fitness</h6>
+                          </span>
+                          <span>
+                            Services{" "}
+                            <h6>
+                              Brand Development, SaaS Development, Business
+                              Scaling
+                            </h6>
+                          </span>
+                        </div>
+                        {/* <div className="cs-main-btn">
+                          <div className="service-btn">
+                            <Link to="/casestudy1">
+                              <div className="inner-service-btn">
+                                <span>
+                                  Learn More <BsArrowUpRight />
+                                </span>
+                              </div>
+                            </Link>
+                          </div>
+                          <Link to="/">
+                            <h5>
+                              Visit Website <BsArrowUpRight />
+                            </h5>
+                          </Link>
+                        </div> */}
+                      </div>
+                    </div>
+                    {/* <div className="cs-main-grid middle-main-grid">
+                      <div className="cs-main-left">
+                        <img src={CaseLogo2} alt="" />
+                        <p>
                           Deploying IoT-powered kiosks integrated with a custom
                           ERP solution, we enhanced IKEA’s customer onboarding,
                           product exploration, and data-driven marketing.{" "}
@@ -440,24 +486,36 @@ function Home(props) {
                           </Link>
                         </div>
                       </div>
-                    </div>
+                      <div className="cs-main-right">
+                        <img src={Case2} alt="" />
+                      </div>
+                    </div> */}
                     <div className="cs-main-grid middle-main-grid">
                       <div className="cs-main-left">
-                        <img src={CaseLogo1} alt="" />
+                        <img src={CaseLogo4} alt="" />
                         <p>
-                          Deploying IoT-powered kiosks integrated with a custom
-                          ERP solution, we enhanced IKEA’s customer onboarding,
-                          product exploration, and data-driven marketing.{" "}
+                          By integrating blockchain technology with AI-driven
+                          security protocols, The Mastery House elevated
+                          Definity Exchange's platform, ensuring seamless
+                          cryptocurrency transactions with enhanced reliability
+                          and security. Our comprehensive approach also included
+                          developing a user-friendly interface and optimizing
+                          the platform for low-latency trading, significantly
+                          improving user experience and engagement.
                         </p>
                         <div className="ind-serv-box">
                           <span>
-                            Industry <h6>Retail</h6>
+                            Industry <h6>Fintech</h6>
                           </span>
                           <span>
-                            Services <h6>Blockchain Development, Deployment</h6>
+                            Services{" "}
+                            <h6>
+                              Blockchain Integration, AI Security Enhancement,
+                              UX/UI Design
+                            </h6>
                           </span>
                         </div>
-                        <div className="cs-main-btn">
+                        {/* <div className="cs-main-btn">
                           <div className="service-btn">
                             <Link to="/casestudy1">
                               <div className="inner-service-btn">
@@ -472,32 +530,43 @@ function Home(props) {
                               Visit Website <BsArrowUpRight />
                             </h5>
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                       <div className="cs-main-right">
-                        <img src={Case1} alt="" />
+                        <img src={Case4} alt="" />
                       </div>
                     </div>
+
                     <div className="cs-main-grid">
                       <div className="cs-main-right">
-                        <img src={Case1} alt="" />
+                        <img src={Case3} alt="" />
                       </div>
                       <div className="cs-main-left">
-                        <img src={CaseLogo1} alt="" />
+                        <img src={CaseLogo3} alt="" />
                         <p>
-                          Deploying IoT-powered kiosks integrated with a custom
-                          ERP solution, we enhanced IKEA’s customer onboarding,
-                          product exploration, and data-driven marketing.{" "}
+                          The Mastery House developed a versatile SaaS template
+                          for JobSkyy, enabling the company to offer a scalable
+                          recruitment platform to its users. This template not
+                          only streamlined the job matching process with
+                          AI-driven recommendations but also allowed JobSkyy to
+                          sell the software as a white-label solution,
+                          empowering other companies to deploy their own branded
+                          recruitment platforms with ease.
                         </p>
                         <div className="ind-serv-box">
                           <span>
-                            Industry <h6>Retail</h6>
+                            Industry <h6>Human Resources</h6>
                           </span>
                           <span>
-                            Services <h6>Blockchain Development, Deployment</h6>
+                            Services{" "}
+                            <h6>
+                              SaaS Development, AI Integration, White-Label
+                              Solutions
+                            </h6>
                           </span>
                         </div>
-                        <div className="cs-main-btn">
+                        {/* Button area */}
+                        {/* <div className="cs-main-btn">
                           <div className="service-btn">
                             <Link to="/casestudy1">
                               <div className="inner-service-btn">
@@ -512,7 +581,7 @@ function Home(props) {
                               Visit Website <BsArrowUpRight />
                             </h5>
                           </Link>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
@@ -962,9 +1031,9 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            <section>
+            {/* <section>
               <NewsletterForm />
-            </section>
+            </section> */}
             <section className="faq-section">
               <div data-speed={0.85} className="faqrectangle"></div>
               <div className="faq-circle"></div>
