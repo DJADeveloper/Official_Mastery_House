@@ -85,6 +85,8 @@ const NewsletterForm = () => {
     setIsSubmitting(true);
 
     try {
+      // Add user to Klaviyo
+      await addToKlaviyo(formData);
       // Send email with link to Google Form
       await sendEmailWithFormLink(formData.email);
 
@@ -101,6 +103,19 @@ const NewsletterForm = () => {
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  const addToKlaviyo = async (data) => {
+    return fetch("http://localhost:5001/add-to-klaviyo", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: data.email,
+        fullName: data.fullName,
+      }),
+    });
   };
 
   const sendEmailWithFormLink = async (email) => {

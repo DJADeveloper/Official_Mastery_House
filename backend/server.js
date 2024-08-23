@@ -17,10 +17,11 @@ app.use(bodyParser.json());
 
 const ZAPIER_WEBHOOK_URL = process.env.ZAPIER_WEBHOOK_URL;
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const KLAVIYO_API_KEY = process.env.KLAVIYO_API_KEY;
 
 const rssParser = new RSSParser();
 
-const klayvio_list_id = "Rj85mx";
+const KLAYVIO_LIST_ID = "Rj85mx";
 
 const openai = new OpenAI({
   apiKey: OPENAI_API_KEY,
@@ -444,6 +445,45 @@ function sendEmailWithAttachment(to, filePath, callback) {
 
   transporter.sendMail(mailOptions, callback);
 }
+
+// Route to handle adding user to Klaviyo list
+app.post("/add-to-klaviyo", async (req, res) => {
+  const { email, fullName } = req.body;
+
+  const klaviyoData = {
+    profiles: [
+      {
+        email: email,
+        properties: {
+          $first_name: fullName,
+        },
+      },
+    ],
+  };
+
+  try {
+    const response = await axios.post(
+      `https://a.klaviyo.com/api/v2/list/${KLAYVIO_LIST_ID}/members`,
+      klaviyoData,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${KLAVIYO_API_KEY}`,
+        },
+      }
+    );
+
+    if (response.status === 200) {
+      res.status(200).send("User added to Klaviyo successfully");
+    } else {
+      console.error("Klaviyo response:", response.data);
+      res.status(500).send("Failed to add user to Klaviyo");
+    }
+  } catch (error) {
+    console.error("Error adding user to Klaviyo:", error);
+    res.status(500).send("Error adding user to Klaviyo");
+  }
+});
 
 // Add the email sending route
 app.post("/send-email", async (req, res) => {

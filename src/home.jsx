@@ -588,6 +588,9 @@ function Home(props) {
                 </div>
               </div>
             </section>
+            <section>
+              <NewsletterForm />
+            </section>
             {/* <section className="getintouch-section">
               <div className="marquee-main-box">
                 <Marque />
@@ -1031,9 +1034,7 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            {/* <section>
-              <NewsletterForm />
-            </section> */}
+
             <section className="faq-section">
               <div data-speed={0.85} className="faqrectangle"></div>
               <div className="faq-circle"></div>
