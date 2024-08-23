@@ -449,7 +449,7 @@ function sendEmailWithAttachment(to, filePath, callback) {
 // Route to handle adding user to Klaviyo list
 app.post("/add-to-klaviyo", async (req, res) => {
   const { email, fullName } = req.body;
-
+  console.log(KLAVIYO_API_KEY, "YOOOOO");
   const klaviyoData = {
     profiles: [
       {

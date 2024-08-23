@@ -106,6 +106,7 @@ const NewsletterForm = () => {
   };
 
   const addToKlaviyo = async (data) => {
+    console.log(data);
     return fetch("http://localhost:5001/add-to-klaviyo", {
       method: "POST",
       headers: {
