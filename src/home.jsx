@@ -588,9 +588,9 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            <section>
+            {/* <section>
               <NewsletterForm />
-            </section>
+            </section> */}
             {/* <section className="getintouch-section">
               <div className="marquee-main-box">
                 <Marque />
