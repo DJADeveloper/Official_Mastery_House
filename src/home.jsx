@@ -363,9 +363,7 @@ function Home(props) {
               </div>
             </section>
             {/* <Maincasestudy /> */}
-            {/* <div className="marquee-main-box">
-              <Marque />
-            </div> */}
+
             {/* <section>
               <NewsletterForm />
             </section> */}

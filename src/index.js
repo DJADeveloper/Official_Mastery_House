@@ -11,6 +11,7 @@ import Service1 from "./services/businessAutomation";
 import Service2 from "./services/aiDevelopment";
 import Service3 from "./services/softDevelopment";
 import Service4 from "./services/mobileDevelopment";
+import Service5 from "./services/webDevelopment";
 import Blog1 from "./mainblogs/SEO";
 import Blog2 from "./mainblogs/RiseAI";
 import Blog3 from "./mainblogs/Decoding";
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="/services/business-automation" element={<Service1 />} />
           <Route path="/services/ai-development" element={<Service2 />} />
           <Route path="/services/software-development" element={<Service3 />} />
+          <Route path="/services/web-development" element={<Service5 />} />
           <Route path="/services/mobile-development" element={<Service4 />} />
           <Route path="/blogs/seo" element={<Blog1 />} />
           <Route path="/blogs/ai" element={<Blog2 />} />

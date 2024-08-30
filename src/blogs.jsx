@@ -218,9 +218,7 @@ const Blogs = () => {
               </div>
             </section>
             <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
+              <div className="marquee-main-box">{/* <Marque /> */}</div>
             </section>
             <Booking />
             <Footer />

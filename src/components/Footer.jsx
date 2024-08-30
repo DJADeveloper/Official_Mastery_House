@@ -10,11 +10,7 @@ const Footer = () => {
       <div className="box">
         <div className="footer-content">
           <Link to="/">
-            <img
-              src={Logo}
-              alt=""
-              style={{ width: "250px", height: "250px" }}
-            />
+            <img src={Logo} alt="" style={{ width: "80%", height: "auto" }} />
           </Link>
           <h5>© 2023 The Mastery House. All rights reserved</h5>
           <div className="tb-social">
@@ -29,7 +25,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <h6>© 2023 The Mastery House. All rights reserved</h6>
+        <h6>© 2024 The Mastery House. All rights reserved</h6>
       </div>
     </footer>
   );

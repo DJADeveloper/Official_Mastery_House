@@ -1,4 +1,6 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper and SwiperSlide
+import { Navigation, Thumbs } from "swiper/modules";
 import "../home.css";
 import ServiceImg from "../assets/img/serviceimg.png";
 import AboutImg from "../assets/img/aboutimg.png";
@@ -35,6 +37,7 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
+import { useMediaQuery } from "react-responsive";
 
 const AiDevelopment = () => {
   gsap.registerPlugin(
@@ -45,6 +48,11 @@ const AiDevelopment = () => {
     ScrollTrigger,
     DrawSVGPlugin
   );
+  // State for Swiper thumbs
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  // Media query to detect if the screen is mobile-sized
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   useEffect(() => {
     ScrollSmoother.create({
       smooth: 1.15,
@@ -102,6 +110,7 @@ const AiDevelopment = () => {
               ></circle>
             </svg>
             <Header isActive="services" />
+            {/* AI Development Section */}
             <section className="about-section">
               <div className="main-about-circle"></div>
               <div className="about-circle-2"></div>
@@ -109,32 +118,33 @@ const AiDevelopment = () => {
               <div className="box">
                 <div className="about-content service-content">
                   <div className="about-c-top">
-                    <h4>AI Development</h4>
+                    <h4>AI Development Services</h4>
                     <h1 className="gradient-text">
-                      Harnessing the Power of <br />
-                      Artificial Intelligence
+                      Leveraging Artificial Intelligence for Business Growth
                     </h1>
                     <p>
-                      Artificial Intelligence offers unprecedented opportunities
-                      for enhancing efficiency, improving decision-making, and
-                      driving innovation. At The Mastery House, we harness these
-                      qualities to deliver custom AI development services that
-                      are as innovative as they are reliable. From machine
-                      learning models that provide deep insights to natural
-                      language processing that enhances user interactions, our
-                      AI solutions are designed to set you apart in the digital
+                      Artificial Intelligence (AI) is revolutionizing industries
+                      by enhancing efficiency, improving decision-making, and
+                      driving innovation. At The Mastery House, we offer
+                      <strong>custom AI development services</strong> that are
+                      as innovative as they are reliable. From{" "}
+                      <strong>machine learning models</strong>
+                      that deliver deep insights to{" "}
+                      <strong>natural language processing (NLP)</strong>
+                      that enhances user interactions, our AI solutions are
+                      designed to set you apart in the competitive digital
                       landscape.
                     </p>
                   </div>
-                  <img src={ServiceImg} alt="" />
+                  <img src={ServiceImg} alt="AI Development Services" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
                       <h3>Machine Learning Solutions</h3>
                       <p>
-                        Transform data into actionable insights with our machine
-                        learning solutions, designed to enhance your
-                        decision-making and optimize operations.
+                        Transform data into actionable insights with our
+                        <strong> machine learning solutions</strong>, designed
+                        to enhance decision-making and optimize operations.
                       </p>
                     </div>
                     <div className="about-flex-box">
@@ -142,8 +152,8 @@ const AiDevelopment = () => {
                       <h3>Natural Language Processing (NLP)</h3>
                       <p>
                         Improve user interactions and data analysis with our
-                        advanced NLP technologies, making communication more
-                        intuitive and efficient.
+                        advanced <strong>NLP technologies</strong>, making
+                        communication more intuitive and efficient.
                       </p>
                     </div>
                     <div className="about-flex-box">
@@ -156,6 +166,173 @@ const AiDevelopment = () => {
                       </p>
                     </div>
                   </div>
+                </div>
+              </div>
+            </section>
+            <section className="benefits-section">
+              <div className="box">
+                <div className="about-content">
+                  <div className="about-c-top">
+                    <h2 className="custom-h2 gradient-text">
+                      Benefits of Choosing Our AI Development Services
+                    </h2>
+                    <p>
+                      At The Mastery House, we specialize in creating
+                      cutting-edge AI solutions that enhance your business
+                      capabilities. Our AI development services provide
+                      significant benefits to help you stay ahead in a
+                      competitive landscape.
+                    </p>
+                  </div>
+                  {/* Conditionally render Swiper or Grid based on screen size */}
+                  {isMobile ? (
+                    <Swiper
+                      spaceBetween={20}
+                      slidesPerView={1}
+                      modules={[Navigation, Thumbs]} // Include Swiper modules
+                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2, // 2 slides per view on tablets
+                        },
+                        1024: {
+                          slidesPerView: 3, // 3 slides per view on desktops
+                        },
+                      }}
+                      style={{
+                        width: "100%",
+                        overflow: "visible",
+                      }}
+                    >
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Data-Driven Decision Making</h5>
+                        <p>
+                          Harness the power of data to make informed decisions.
+                          Our AI solutions analyze vast amounts of data to
+                          provide actionable insights, enabling better
+                          decision-making processes.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Enhanced Customer Experience</h5>
+                        <p>
+                          Improve customer satisfaction and loyalty with
+                          personalized AI-driven experiences. Our AI models
+                          analyze customer behavior to deliver customized
+                          interactions and recommendations.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Automated Processes</h5>
+                        <p>
+                          Reduce manual work and increase efficiency by
+                          automating repetitive tasks. Our AI solutions
+                          streamline workflows, reduce errors, and free up
+                          valuable resources for more strategic initiatives.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Predictive Analytics</h5>
+                        <p>
+                          Stay ahead of the curve with predictive analytics. Our
+                          AI solutions forecast trends and customer behaviors,
+                          helping you anticipate market shifts and plan
+                          strategically for the future.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Improved Security</h5>
+                        <p>
+                          Enhance your security measures with AI-powered threat
+                          detection and prevention. Our AI models identify and
+                          respond to potential threats in real-time, keeping
+                          your data safe and secure.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Scalable AI Solutions</h5>
+                        <p>
+                          Develop AI solutions that scale with your business.
+                          Our approach ensures your AI tools can handle
+                          increased data volume and complexity as your business
+                          grows.
+                        </p>
+                      </SwiperSlide>
+                    </Swiper>
+                  ) : (
+                    <div className="about-grid">
+                      {/* Grid Layout for larger screens */}
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Data-Driven Decision Making</h5>
+                        <p>
+                          Harness the power of data to make informed decisions.
+                          Our AI solutions analyze vast amounts of data to
+                          provide actionable insights, enabling better
+                          decision-making processes.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Enhanced Customer Experience</h5>
+                        <p>
+                          Improve customer satisfaction and loyalty with
+                          personalized AI-driven experiences. Our AI models
+                          analyze customer behavior to deliver customized
+                          interactions and recommendations.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Automated Processes</h5>
+                        <p>
+                          Reduce manual work and increase efficiency by
+                          automating repetitive tasks. Our AI solutions
+                          streamline workflows, reduce errors, and free up
+                          valuable resources for more strategic initiatives.
+                        </p>
+                      </div>
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Predictive Analytics</h5>
+                        <p>
+                          Stay ahead of the curve with predictive analytics. Our
+                          AI solutions forecast trends and customer behaviors,
+                          helping you anticipate market shifts and plan
+                          strategically for the future.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Improved Security</h5>
+                        <p>
+                          Enhance your security measures with AI-powered threat
+                          detection and prevention. Our AI models identify and
+                          respond to potential threats in real-time, keeping
+                          your data safe and secure.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Scalable AI Solutions</h5>
+                        <p>
+                          Develop AI solutions that scale with your business.
+                          Our approach ensures your AI tools can handle
+                          increased data volume and complexity as your business
+                          grows.
+                        </p>
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             </section>
@@ -512,9 +689,7 @@ const AiDevelopment = () => {
               </div>
             </section>
             <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
+              <div className="marquee-main-box">{/* <Marque /> */}</div>
             </section>
             <Booking />
             <Footer />

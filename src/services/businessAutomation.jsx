@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "../home.css";
 import ServiceImg from "../assets/img/serviceimg.png";
 import AboutImg from "../assets/img/aboutimg.png";
@@ -12,6 +12,13 @@ import Flask from "../assets/img/flask.svg";
 import Mat from "../assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
+
+import { useMediaQuery } from "react-responsive";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Thumbs } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import Header from "../components/Header";
 import Marque from "../components/Marque";
@@ -37,6 +44,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
 const BusinessAutomationService = () => {
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+  // Media query to detect mobile screen size
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   gsap.registerPlugin(
     Draggable,
     SplitText,
@@ -102,39 +113,41 @@ const BusinessAutomationService = () => {
               ></circle>
             </svg>
             <Header isActive="services" />
-            <section className="about-section">
+            {/* Business Automation Section */}
+            <section className="service-section">
               <div className="main-about-circle"></div>
               <div className="about-circle-2"></div>
               <div className="about-circle-3"></div>
               <div className="box">
                 <div className="about-content service-content">
                   <div className="about-c-top">
-                    <h4>Business Automation</h4>
+                    <h4>Business Automation Services</h4>
                     <h1 className="gradient-text">
-                      Streamlining Operations with <br />
-                      Intelligent Automation
+                      Streamlining Your Business Operations with <br />
+                      Intelligent Automation Solutions
                     </h1>
                     <p>
-                      Enhance productivity and efficiency with our tailored
-                      business automation solutions. At The Mastery House, we
-                      specialize in automating repetitive tasks, integrating
-                      intelligent workflows, and creating custom automation
-                      systems that reduce manual workload and minimize errors.
-                      Our solutions help your business run smoothly and
-                      efficiently, allowing you to focus on growth and
-                      innovation.
+                      Increase productivity and reduce operational costs with
+                      our comprehensive{" "}
+                      <strong>business automation solutions</strong>. At The
+                      Mastery House, we specialize in automating repetitive
+                      tasks, integrating intelligent workflows, and developing
+                      custom automation systems. These solutions are designed to
+                      reduce manual workload, minimize errors, and enhance
+                      overall efficiency, allowing your business to focus on
+                      innovation and growth.
                     </p>
                   </div>
-                  <img src={ServiceImg} alt="" />
+                  <img src={ServiceImg} alt="Business Automation Services" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
                       <h3>Process Automation</h3>
                       <p>
                         Automate repetitive tasks and streamline business
-                        processes with our advanced process automation
-                        solutions, designed to improve efficiency and reduce
-                        costs.
+                        processes with our advanced{" "}
+                        <strong>process automation solutions</strong>, designed
+                        to enhance efficiency and reduce operational costs.
                       </p>
                     </div>
                     <div className="about-flex-box">
@@ -142,7 +155,7 @@ const BusinessAutomationService = () => {
                       <h3>Workflow Integration</h3>
                       <p>
                         Integrate intelligent workflows into your existing
-                        systems to enhance productivity, ensure seamless
+                        systems to boost productivity, ensure seamless
                         operations, and optimize resource utilization.
                       </p>
                     </div>
@@ -159,10 +172,188 @@ const BusinessAutomationService = () => {
                 </div>
               </div>
             </section>
+            <section className="benefits-section">
+              <div className="box">
+                <div className="about-content">
+                  <div className="about-c-top">
+                    <h2 className="custom-h2 gradient-text">
+                      Benefits of Choosing Our Web Development Services
+                    </h2>
+                    <p>
+                      At The Mastery House, we deliver exceptional web
+                      development services that not only meet your business
+                      needs but also drive growth and success. Here are some of
+                      the key benefits you will enjoy:
+                    </p>
+                  </div>
+
+                  {/* Conditionally render Swiper or Grid based on screen size */}
+                  {isMobile ? (
+                    <Swiper
+                      spaceBetween={20}
+                      slidesPerView={1} // 1 slide per view on mobile
+                      modules={[Navigation, Thumbs]} // Include Swiper modules
+                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2, // 2 slides per view on tablets
+                        },
+                        1024: {
+                          slidesPerView: 3, // 3 slides per view on desktops
+                        },
+                      }}
+                      style={{
+                        width: "100%",
+                        overflow: "visible",
+                      }}
+                    >
+                      {/* Swiper Slides for each Benefit */}
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Custom Solutions for Unique Challenges</h5>
+                        <p>
+                          At The Mastery House, we recognize that each business
+                          is unique. Our web development services are tailored
+                          to meet your specific needs, ensuring innovative,
+                          efficient, and scalable solutions that directly
+                          address your challenges.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Reduce Costs</h5>
+                        <p>
+                          By optimizing your web development processes, we help
+                          reduce waste and improve productivity. Our efficient
+                          development practices ensure that you get more out of
+                          your existing resources, driving down costs while
+                          delivering quality.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Drive Business Growth</h5>
+                        <p>
+                          Our focus is on building resilient, outcomes-driven
+                          web solutions that attract and retain users. With a
+                          website that effectively converts visitors into
+                          customers, we help you drive sustained business
+                          growth.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Accelerate Innovation</h5>
+                        <p>
+                          Stay ahead of the competition with websites designed
+                          to support rapid innovation. Our development teams
+                          enhance your website's capabilities, improving
+                          efficiency and reducing the time to market for new
+                          features.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Enhance User Experience</h5>
+                        <p>
+                          We prioritize creating seamless and intuitive user
+                          experiences that keep visitors engaged. By focusing on
+                          usability and accessibility, we ensure that your
+                          website provides a positive experience for all users.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Boost SEO Performance</h5>
+                        <p>
+                          Our SEO-optimized web development practices ensure
+                          that your website is easily discoverable by search
+                          engines. Higher rankings lead to increased visibility,
+                          driving more organic traffic to your business.
+                        </p>
+                      </SwiperSlide>
+                    </Swiper>
+                  ) : (
+                    <div className="about-grid">
+                      {/* Grid Layout for larger screens */}
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Custom Solutions for Unique Challenges</h5>
+                        <p>
+                          At The Mastery House, we recognize that each business
+                          is unique. Our web development services are tailored
+                          to meet your specific needs, ensuring innovative,
+                          efficient, and scalable solutions that directly
+                          address your challenges.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Reduce Costs</h5>
+                        <p>
+                          By optimizing your web development processes, we help
+                          reduce waste and improve productivity. Our efficient
+                          development practices ensure that you get more out of
+                          your existing resources, driving down costs while
+                          delivering quality.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Drive Business Growth</h5>
+                        <p>
+                          Our focus is on building resilient, outcomes-driven
+                          web solutions that attract and retain users. With a
+                          website that effectively converts visitors into
+                          customers, we help you drive sustained business
+                          growth.
+                        </p>
+                      </div>
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Accelerate Innovation</h5>
+                        <p>
+                          Stay ahead of the competition with websites designed
+                          to support rapid innovation. Our development teams
+                          enhance your website's capabilities, improving
+                          efficiency and reducing the time to market for new
+                          features.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Enhance User Experience</h5>
+                        <p>
+                          We prioritize creating seamless and intuitive user
+                          experiences that keep visitors engaged. By focusing on
+                          usability and accessibility, we ensure that your
+                          website provides a positive experience for all users.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Boost SEO Performance</h5>
+                        <p>
+                          Our SEO-optimized web development practices ensure
+                          that your website is easily discoverable by search
+                          engines. Higher rankings lead to increased visibility,
+                          driving more organic traffic to your business.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
             <section className="technologies-section">
               <div className="box">
                 <div className="technologies-content">
-                  <h3 className="gradient-text">Technologies & Tools We Use</h3>
+                  <h3 className=" gradient-text">
+                    Technologies & Tools We Use
+                  </h3>
                   <div className="technologies-tabs">
                     <Tabs
                       defaultActiveKey="Frontend"
@@ -512,9 +703,7 @@ const BusinessAutomationService = () => {
               </div>
             </section>
             <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
+              <div className="marquee-main-box">{/* <Marque /> */}</div>
             </section>
             <Booking />
             <Footer />

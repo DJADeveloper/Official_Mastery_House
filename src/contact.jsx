@@ -237,8 +237,7 @@ const Contact = () => {
                       <img
                         src={ContactImg}
                         alt="digital tampa skyline with gradient background"
-                        style={{ height: 500, width: "auto" }}
-                        height={400}
+                        style={{ height: "400px", width: "auto" }}
                       />
                       <div className="contact-info-box">
                         <h5>
@@ -265,11 +264,7 @@ const Contact = () => {
                 </div>
               </div>
             </section>
-            <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
-            </section>
+            <section className="getintouch-section"></section>
             <Booking />
             <Footer />
           </main>

@@ -1,4 +1,7 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper and SwiperSlide
+import { Navigation, Thumbs } from "swiper/modules"; // Import Swiper modules
+import { useMediaQuery } from "react-responsive";
 import "../home.css";
 import ServiceImg from "../assets/img/serviceimg.png";
 import AboutImg from "../assets/img/aboutimg.png";
@@ -16,6 +19,7 @@ import Header from "../components/Header";
 import Marque from "../components/Marque";
 import Footer from "../components/Footer";
 import Booking from "../components/Booking";
+
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
 
 import gsap from "gsap";
@@ -45,6 +49,8 @@ const MobileDevelopmentService = () => {
     ScrollTrigger,
     DrawSVGPlugin
   );
+  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+  const isMobile = useMediaQuery({ maxWidth: 767 });
   useEffect(() => {
     ScrollSmoother.create({
       smooth: 1.15,
@@ -102,6 +108,7 @@ const MobileDevelopmentService = () => {
               ></circle>
             </svg>
             <Header isActive="services" />
+            {/* Mobile Development Section */}
             <section className="about-section">
               <div className="main-about-circle"></div>
               <div className="about-circle-2"></div>
@@ -109,39 +116,39 @@ const MobileDevelopmentService = () => {
               <div className="box">
                 <div className="about-content service-content">
                   <div className="about-c-top">
-                    <h4>Mobile Development</h4>
+                    <h4>Mobile Development Services</h4>
                     <h1 className="gradient-text">
-                      Creating Innovative and <br />
-                      User-Friendly Mobile Apps
+                      Innovative Mobile App Development Solutions
                     </h1>
                     <p>
-                      In today’s mobile-first world, having a strong mobile
-                      presence is crucial. At The Mastery House, we design and
-                      develop mobile applications that offer exceptional user
-                      experiences, enhance customer engagement, and drive
-                      business growth. Whether you need a consumer-facing app or
-                      a complex enterprise solution, our team has the expertise
-                      to bring your mobile vision to life.
+                      In today’s mobile-first world, having a robust mobile
+                      presence is essential. At The Mastery House, we specialize
+                      in creating innovative and user-friendly mobile
+                      applications that enhance customer engagement and drive
+                      business growth. Whether you need a{" "}
+                      <strong>consumer-facing app</strong> or a
+                      <strong>complex enterprise solution</strong>, our team has
+                      the expertise to bring your mobile vision to life.
                     </p>
                   </div>
-                  <img src={ServiceImg} alt="" />
+                  <img src={ServiceImg} alt="Mobile Development Services" />
                   <div className="about-flex service-flex">
                     <div className="about-flex-box">
                       <div className="about-circle about-circle1"></div>
-                      <h3>iOS and Android Development</h3>
+                      <h3>iOS and Android App Development</h3>
                       <p>
-                        Develop high-quality mobile apps for iOS and Android
+                        We develop high-quality mobile apps for iOS and Android
                         platforms that deliver seamless performance and
                         exceptional user experiences.
                       </p>
                     </div>
                     <div className="about-flex-box">
                       <div className="about-circle about-circle2"></div>
-                      <h3>Cross-Platform Solutions</h3>
+                      <h3>Cross-Platform Mobile Solutions</h3>
                       <p>
-                        Create versatile cross-platform mobile apps that ensure
-                        a consistent user experience across different devices
-                        and operating systems.
+                        Create versatile cross-platform mobile apps that provide
+                        a consistent user experience across all devices and
+                        operating systems.
                       </p>
                     </div>
                     <div className="about-flex-box">
@@ -149,7 +156,7 @@ const MobileDevelopmentService = () => {
                       <h3>Enterprise Mobile Applications</h3>
                       <p>
                         Implement robust enterprise mobile solutions designed to
-                        optimize business processes and improve workforce
+                        optimize business processes and enhance workforce
                         productivity.
                       </p>
                     </div>
@@ -157,10 +164,179 @@ const MobileDevelopmentService = () => {
                 </div>
               </div>
             </section>
+            <section className="benefits-section">
+              <div className="box">
+                <div className="about-content">
+                  <div className="about-c-top">
+                    <h2 className="custom-h2 gradient-text">
+                      Benefits of Choosing Our Mobile Development Services
+                    </h2>
+                    <p>
+                      At The Mastery House, our mobile development services are
+                      designed to provide seamless, high-performance
+                      applications that enhance user experience and drive
+                      engagement. Here are some of the key benefits you will
+                      enjoy:
+                    </p>
+                  </div>
+                  {/* Conditionally render Swiper or Grid based on screen size */}
+                  {isMobile ? (
+                    <Swiper
+                      spaceBetween={20}
+                      slidesPerView={1} // 1 slide per view on mobile
+                      modules={[Navigation, Thumbs]} // Include Swiper modules
+                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 1,
+                        },
+                        768: {
+                          slidesPerView: 2, // 2 slides per view on tablets
+                        },
+                        1024: {
+                          slidesPerView: 3, // 3 slides per view on desktops
+                        },
+                      }}
+                      style={{
+                        width: "100%",
+                        overflow: "visible",
+                      }}
+                    >
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Cross-Platform Development</h5>
+                        <p>
+                          Develop applications that run smoothly on both iOS and
+                          Android platforms. Our cross-platform approach ensures
+                          consistent performance and reduces development costs
+                          and time to market.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Native App Performance</h5>
+                        <p>
+                          Achieve optimal performance with native app
+                          development. We utilize the latest frameworks and
+                          tools to build high-performance apps that provide a
+                          seamless user experience.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Enhanced User Engagement</h5>
+                        <p>
+                          Our mobile apps are designed with user engagement in
+                          mind. Through intuitive interfaces and interactive
+                          features, we ensure users stay engaged and return
+                          frequently.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Security and Compliance</h5>
+                        <p>
+                          We prioritize security in our mobile applications. Our
+                          development practices adhere to the highest standards,
+                          ensuring your apps are safe, secure, and compliant
+                          with industry regulations.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-2"></div>
+                        <h5>Scalable Solutions</h5>
+                        <p>
+                          Build mobile apps that grow with your business. Our
+                          scalable development approach ensures your app can
+                          handle increasing traffic and new features without
+                          compromising performance.
+                        </p>
+                      </SwiperSlide>
+                      <SwiperSlide className="about-grid-content">
+                        <div className="ag-circle-3"></div>
+                        <h5>Post-Launch Support</h5>
+                        <p>
+                          We provide ongoing support and maintenance services to
+                          ensure your app remains up-to-date, secure, and fully
+                          functional after launch, allowing you to focus on your
+                          core business.
+                        </p>
+                      </SwiperSlide>
+                    </Swiper>
+                  ) : (
+                    <div className="about-grid">
+                      {/* Grid Layout for larger screens */}
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Cross-Platform Development</h5>
+                        <p>
+                          Develop applications that run smoothly on both iOS and
+                          Android platforms. Our cross-platform approach ensures
+                          consistent performance and reduces development costs
+                          and time to market.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Native App Performance</h5>
+                        <p>
+                          Achieve optimal performance with native app
+                          development. We utilize the latest frameworks and
+                          tools to build high-performance apps that provide a
+                          seamless user experience.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Enhanced User Engagement</h5>
+                        <p>
+                          Our mobile apps are designed with user engagement in
+                          mind. Through intuitive interfaces and interactive
+                          features, we ensure users stay engaged and return
+                          frequently.
+                        </p>
+                      </div>
+                      <div className="about-grid-content">
+                        <div className="ag-circle-1"></div>
+                        <h5>Security and Compliance</h5>
+                        <p>
+                          We prioritize security in our mobile applications. Our
+                          development practices adhere to the highest standards,
+                          ensuring your apps are safe, secure, and compliant
+                          with industry regulations.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-2">
+                        <div className="ag-circle-2"></div>
+                        <h5>Scalable Solutions</h5>
+                        <p>
+                          Build mobile apps that grow with your business. Our
+                          scalable development approach ensures your app can
+                          handle increasing traffic and new features without
+                          compromising performance.
+                        </p>
+                      </div>
+                      <div className="about-grid-content agc-3">
+                        <div className="ag-circle-3"></div>
+                        <h5>Post-Launch Support</h5>
+                        <p>
+                          We provide ongoing support and maintenance services to
+                          ensure your app remains up-to-date, secure, and fully
+                          functional after launch, allowing you to focus on your
+                          core business.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </section>
             <section className="technologies-section">
               <div className="box">
                 <div className="technologies-content">
-                  <h3 className="gradient-text">Technologies & Tools We Use</h3>
+                  <h3 className=" gradient-text">
+                    Technologies & Tools We Use
+                  </h3>
                   <div className="technologies-tabs">
                     <Tabs
                       defaultActiveKey="Mobile Development"
@@ -510,9 +686,7 @@ const MobileDevelopmentService = () => {
               </div>
             </section>
             <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
+              <div className="marquee-main-box">{/* <Marque /> */}</div>
             </section>
             <Booking />
             <Footer />

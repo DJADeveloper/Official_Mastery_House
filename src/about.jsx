@@ -189,11 +189,7 @@ function About() {
               </div>
             </section>
             {/* <Teamswiper /> */}
-            <section className="getintouch-section">
-              {/* <div className="marquee-main-box">
-                <Marque />
-              </div> */}
-            </section>
+            <section className="getintouch-section"></section>
             <Booking />
             <Footer />
           </main>

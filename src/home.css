@@ -160,6 +160,14 @@ img {
   font-family: "Lato";
   font-weight: 400;
 }
+
+.custom-h2 {
+  font-size: 3.5rem;
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 150%;
+}
+
 /* Header  */
 
 header {
@@ -524,6 +532,168 @@ header {
   right: 0;
   z-index: 1;
   width: 104px;
+}
+
+/* Benefits Section */
+.benefits-section {
+  width: 100%;
+  padding: 10rem 0;
+  background-color: var(
+    --color-slate-900
+  ) !important; /* Dark background color to match dark mode */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+.benefits-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box; /* Ensure padding does not cause overflow */
+}
+
+.benefits-content h2 {
+  padding-top: 10rem;
+  font-size: 2.5rem;
+}
+
+.benefits-content p {
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  font-weight: 400;
+  color: var(--color-slate-300); /* Softer light text color */
+  line-height: 150%;
+  margin-bottom: 5rem;
+}
+
+.benefits-grid-cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Three columns for desktop */
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px; /* Optional: Set a max width for desktop */
+  margin: 0 auto; /* Center the grid container */
+}
+
+/* Benefits Section */
+.benefits-grid-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between; /* Distribute space between items */
+  background: var(
+    --color-slate-950
+  ); /* Slightly lighter dark background for contrast */
+  border-radius: 1.25rem;
+  padding: 2.5rem 3rem;
+  backdrop-filter: blur(10px);
+  border: 2px solid transparent; /* Initial border style */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease,
+    background-color 0.3s ease;
+  height: 100%; /* Ensure all boxes are the same height */
+  min-height: 280px; /* Increase minimum height for better spacing */
+  width: 100%; /* Full width to fill the container */
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.benefits-grid-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Darker shadow for hover effect */
+  border-radius: 1.25rem; /* Ensures gradient border follows the same radius */
+  border: 2px solid; /* Border width on hover */
+  border-image-slice: 1; /* Ensures the gradient is displayed properly */
+  border-image-source: linear-gradient(
+    to right,
+    var(--color-primary-green),
+    var(--color-primary-purple)
+  ); /* Gradient border */
+  background-color: var(--color-slate-900); /* Darker background on hover */
+}
+
+.benefits-grid-box h5 {
+  font-size: 2.5rem;
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 150%;
+  background: linear-gradient(
+    to bottom,
+    var(--color-primary-green),
+    var(--color-primary-blue)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1rem;
+}
+
+.benefits-grid-box p {
+  font-size: 1.6rem;
+  font-family: "Lato";
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--color-slate-200); /* Light text color for readability */
+  flex-grow: 1; /* Ensure the paragraph takes up available space */
+}
+
+/* Swiper Navigation Button Adjustments for Mobile */
+.swiper-button-prev,
+.swiper-button-next {
+  color: var(--color-primary-green);
+  width: 40px;
+  height: 40px;
+  top: 50%; /* Center vertically */
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: -10px; /* Position on the left side */
+}
+
+.swiper-button-next {
+  right: -10px; /* Position on the right side */
+}
+
+@media screen and (max-width: 768px) {
+  .benefits-grid-cont {
+    display: none; /* Hide grid on mobile */
+  }
+
+  .swiper-container {
+    display: block; /* Show Swiper on mobile */
+  }
+
+  .swiper-slide {
+    width: calc(
+      100% - 4rem
+    ); /* Ensure Swiper slide fits within screen with padding */
+    box-sizing: border-box;
+    padding: 0 2rem; /* Ensure padding within the slide */
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .swiper-container {
+    display: none; /* Hide Swiper on larger screens */
+  }
+
+  .benefits-grid-cont {
+    display: grid; /* Show grid on larger screens */
+  }
+}
+
+.isMobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px !important;
+  padding-left: 40px !important;
+  min-width: 100% !important;
+  min-height: 300px !important;
+}
+.isMobile h5 {
+  padding-bottom: 20px;
 }
 
 /* Team Section  */
@@ -1192,12 +1362,12 @@ header {
   position: fixed;
   width: 600px;
   max-width: 90%;
-  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%); /* Center horizontally and vertically */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1001; /* Ensure it's above other content */
-  margin-bottom: 42rem; /* Adjust as necessary */
+  top: 50%; /* Vertically center */
+  transition: all 0.3s ease; /* Smooth transition for opening */
 }
 
 .book-a-call-overlay {
@@ -1209,14 +1379,14 @@ header {
   background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Align items to the bottom */
+  align-items: center; /* Center items both vertically and horizontally */
   z-index: 1000;
 }
 
 .book-a-call-container .close-btn {
   position: absolute;
-  top: 40px;
-  right: 45px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   font-size: 1.7rem;
@@ -1321,7 +1491,12 @@ header {
   .book-a-call-container {
     padding: 2rem;
     width: 90%;
-    height: 80%;
+    height: auto;
+    top: 50%; /* Center vertically */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Center both horizontally and vertically */
     overflow-y: auto;
   }
 
@@ -1827,6 +2002,7 @@ footer h6 {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  justify-content: center;
   flex-direction: column;
   padding: 3rem;
   border-radius: 1rem;
@@ -1835,6 +2011,7 @@ footer h6 {
   backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
+  min-height: 250px;
 }
 .ag-circle-1 {
   background: var(--color-primary-green);
@@ -2511,7 +2688,7 @@ footer h6 {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 5rem;
+  grid-gap: 3rem;
 }
 .contact-circle {
   width: 303px;
@@ -2784,6 +2961,16 @@ footer h6 {
   .about-c-top h1 {
     font-size: 4.5rem;
   }
+  .about-c-top h2 {
+    font-size: 3.5rem;
+    font-family: "Lato";
+    font-weight: 400;
+
+    line-height: 150%;
+    text-align: center;
+    width: 80%;
+  }
+
   .about-section.contact-section {
     padding: 10rem 0 0 0;
   }
@@ -2918,7 +3105,8 @@ footer h6 {
     width: 90px;
   }
   .footer-content img {
-    width: 90px;
+    width: 100%;
+    height: auto;
   }
   .hero-cont-left {
     text-align: center;
@@ -3187,10 +3375,25 @@ footer h6 {
   .cg-left {
     padding: 2rem;
     gap: 2.5rem;
+    order: 2;
   }
   .cg-left-form input,
   .cg-left-form textarea {
     padding: 1.25rem 1.65rem;
+  }
+
+  .contact-info-box {
+    order: 4;
+    padding-bottom: 0;
+  }
+
+  .cg-right img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem !important;
+    object-fit: contain;
+    margin: 0 !important;
+    order: 1;
   }
   .casestudy-cont.main-cs-page {
     padding-top: 7.5rem;
@@ -3344,7 +3547,9 @@ footer h6 {
   .about-flex-box h3 {
     font-size: 2rem;
   }
+
   .technologies-content h3 {
+    padding-top: 10rem;
     font-size: 2.5rem;
   }
   .technologies-tabContent {

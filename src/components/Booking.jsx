@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Book from "../assets/img/booking.png";
 import GIT1 from "../assets/img/Capa_1.svg";
 import GIT2 from "../assets/img/asssvg.svg";
@@ -8,13 +8,35 @@ import BookACall from "./BookACall";
 const Booking = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Check if the device is mobile
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768); // You can adjust the breakpoint as needed
+    };
+
+    handleResize(); // Call on mount
+    window.addEventListener("resize", handleResize); // Add event listener
+
+    return () => window.removeEventListener("resize", handleResize); // Cleanup
+  }, []);
 
   const handleOpenBooking = (e) => {
-    const rect = e.target.getBoundingClientRect();
-    setPosition({
-      top: rect.top + window.scrollY,
-      left: rect.left + window.scrollX,
-    });
+    if (!isMobile) {
+      // For desktop, calculate the position based on button
+      const rect = e.target.getBoundingClientRect();
+      setPosition({
+        top: rect.top + window.scrollY,
+        left: rect.left + window.scrollX,
+      });
+    } else {
+      // For mobile, center the form
+      setPosition({
+        top: window.scrollY + window.innerHeight / 2,
+        left: window.scrollX + window.innerWidth / 2,
+      });
+    }
     setIsBookingOpen(true);
   };
 
@@ -71,7 +93,18 @@ const Booking = () => {
           </button>
         </div>
       </div>
-      {isBookingOpen && <BookACall onClose={handleCloseBooking} />}
+      {isBookingOpen && (
+        <BookACall
+          onClose={handleCloseBooking}
+          style={{
+            position: "absolute",
+            top: isMobile ? "50%" : position.top,
+            left: isMobile ? "50%" : position.left,
+            transform: isMobile ? "translate(-50%, -50%)" : "none",
+            zIndex: 1000,
+          }}
+        />
+      )}
     </section>
   );
 };

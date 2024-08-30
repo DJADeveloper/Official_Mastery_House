@@ -3,7 +3,12 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
-import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Navigation,
+  Autoplay,
+  Pagination,
+} from "swiper/modules";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 
 import "../home.css";
@@ -34,16 +39,10 @@ const Testimonials = () => {
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
-          modules={[Navigation, EffectCoverflow, Autoplay]} // Ensure Autoplay module is included
-          effect={"coverflow"}
-          speed={800}
-          autoplay={{
-            delay: 3000, // Time delay in milliseconds
-            disableOnInteraction: false, // Continue autoplay after user interaction
-          }}
-          loop={true}
+          modules={[Navigation, EffectCoverflow, Pagination]} // Add Pagination module for swipe gestures
+          effect={"coverflow"} // Use the Coverflow effect for sliding animation
           coverflowEffect={{
-            rotate: 30, // Tilt the slide
+            rotate: 50, // Tilt the slide
             stretch: 0,
             depth: 100, // Depth between slides
             modifier: 1,
@@ -52,6 +51,10 @@ const Testimonials = () => {
           navigation={{
             nextEl: ".team-next",
             prevEl: ".team-prev",
+          }}
+          pagination={{
+            el: ".swiper-pagination",
+            clickable: true, // Enable pagination dots to be clickable
           }}
           breakpoints={{
             750: {
@@ -67,6 +70,10 @@ const Testimonials = () => {
               spaceBetween: 40,
             },
           }}
+          // Enable swipe gestures for touch devices
+          touchRatio={1} // Sensitivity of touch gestures
+          touchAngle={45} // Angle range to consider a swipe gesture
+          grabCursor={true} // Changes cursor to grab icon on hover
         >
           <SwiperSlide>
             <div className="testimonial-cs-box-component">
@@ -74,17 +81,15 @@ const Testimonials = () => {
               <img src={SemiColon} alt="" />
               <p>
                 I can’t even put into words how much I love the website The
-                MasteryHouse has put together for me. They listened to all my
+                Mastery House has put together for me. They listened to all my
                 concerns, paid special attention to the detail I had to have,
-                and executed my desired website better than I imagined. The
-                Mastery House was patient when I was not. LOL They were helpful
-                & kind and I would tell anyone to use their services. Thank you
-                again!
+                and executed my desired website better than I imagined. Highly
+                recommend their services!
               </p>
               <div className="test-cs-profile">
                 {/* <img src={csProfile} alt="" /> */}
                 <h6>
-                  Dylan Reback <span>CEO - KIND OF A BIG DYL</span>
+                  Dylan <span>CEO - KIND OF A BIG DYL</span>
                 </h6>
               </div>
             </div>
@@ -95,15 +100,16 @@ const Testimonials = () => {
               <div className="testi-circle"></div>
               <img src={SemiColon} alt="" />
               <p>
-                It’s always exciting to see a project come to fruition and
-                having a skilled professional like The Mastery House handle It,
-                can make a big difference in the quality and outcome of your
-                website. Exceptional!
+                It's always exciting to see a project come to fruition. Having
+                The Mastery House handle it made a big difference in the quality
+                and outcome of our website. Their team is professional and
+                innovative, delivering exceptional results!
               </p>
               <div className="test-cs-profile">
                 {/* <img src={csProfile} alt="" /> */}
                 <h6>
-                  Ann Marie <span>Operations Manager - The French Chateau</span>
+                  Ann Marie{" "}
+                  <span>Manager of Operations - The French Chateau</span>
                 </h6>
               </div>
             </div>
@@ -114,10 +120,10 @@ const Testimonials = () => {
               <div className="testi-circle"></div>
               <img src={SemiColon} alt="" />
               <p>
-                The Mastery House has not only provided an excellent touch to
-                all that they've done for my business but they continually
-                monitor and comes up with new ideas and strategies as well as
-                adding to the suggestions of the clients... Superb Service.
+                The Mastery House consistently provides superb service. They not
+                only execute flawlessly but also bring new ideas and strategies,
+                adding immense value to our business. Truly a pleasure to work
+                with such a dedicated team!
               </p>
               <div className="test-cs-profile">
                 {/* <img src={csProfile} alt="" /> */}
@@ -133,18 +139,15 @@ const Testimonials = () => {
               <div className="testi-circle"></div>
               <img src={SemiColon} alt="" />
               <p>
-                The Mastery House was pivotal in building our MVP app for
-                UniFit. Their team quickly understood our needs and delivered a
-                sleek, user-friendly app that perfectly matches our eco-friendly
-                fitness brand. Their expertise and responsiveness have been
-                invaluable in helping us enhance customer experience and drive
-                growth. Highly recommended for any business looking to scale
-                with innovative tech solutions!
+                Building our MVP app with The Mastery House was a game-changer
+                for UniFit. They delivered a sleek, user-friendly app that
+                aligns perfectly with our brand. Their team's expertise and
+                responsiveness have been crucial to our growth.
               </p>
               <div className="test-cs-profile">
                 {/* <img src={csProfile} alt="" /> */}
                 <h6>
-                  James <span>CTO - UniFit</span>
+                  Rachel <span>CTO - UniFit</span>
                 </h6>
               </div>
             </div>
@@ -155,18 +158,35 @@ const Testimonials = () => {
               <div className="testi-circle"></div>
               <img src={SemiColon} alt="" />
               <p>
-                The Mastery House has been an incredible partner for Toria
-                Support Care Services. They expertly handled our marketing, web
-                maintenance, and built an internal app for resident records and
-                employee logins. Their solutions have streamlined our operations
-                and enhanced our efficiency as an assisted living facility.
-                Their team is professional, responsive, and truly understands
-                our needs. We highly recommend them!
+                Our partnership with The Mastery House has been invaluable. They
+                streamlined our marketing, maintained our website, and developed
+                an internal app that has greatly improved our operations. A
+                professional team that truly understands our needs!
               </p>
               <div className="test-cs-profile">
                 {/* <img src={csProfile} alt="" /> */}
                 <h6>
-                  Victoria <span>CEO - Toria Support Care Services</span>
+                  Victoria
+                  <span>Director - Toria Support Care Services</span>
+                </h6>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="testimonial-cs-box-component">
+              <div className="testi-circle"></div>
+              <img src={SemiColon} alt="" />
+              <p>
+                Partnering with The Mastery House was transformative for
+                Northwood Manor. They automated our digital marketing and social
+                media, saving us time and money. The improvements have enhanced
+                our outreach and efficiency.
+              </p>
+              <div className="test-cs-profile">
+                {/* <img src={csProfile} alt="" /> */}
+                <h6>
+                  Shereve <span>Administrator - Northwood Manor</span>
                 </h6>
               </div>
             </div>
