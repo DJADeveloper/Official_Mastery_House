@@ -41,14 +41,14 @@ const Testimonials = () => {
         <Swiper
           spaceBetween={30}
           slidesPerView={1}
-          modules={[Navigation, EffectCoverflow, Pagination]} // Add Pagination module for swipe gestures
-          effect={"coverflow"} // Use the Coverflow effect for sliding animation
+          modules={[Navigation, EffectCoverflow, Autoplay, Pagination]} // Add Autoplay module here
+          effect={"coverflow"}
           coverflowEffect={{
-            rotate: 50, // Tilt the slide
+            rotate: 50,
             stretch: 0,
-            depth: 100, // Depth between slides
+            depth: 100,
             modifier: 1,
-            slideShadows: true, // Adds shadow on sides
+            slideShadows: true,
           }}
           navigation={{
             nextEl: ".team-next",
@@ -56,7 +56,7 @@ const Testimonials = () => {
           }}
           pagination={{
             el: ".swiper-pagination",
-            clickable: true, // Enable pagination dots to be clickable
+            clickable: true,
           }}
           breakpoints={{
             750: {
@@ -72,10 +72,14 @@ const Testimonials = () => {
               spaceBetween: 40,
             },
           }}
-          // Enable swipe gestures for touch devices
-          touchRatio={1} // Sensitivity of touch gestures
-          touchAngle={45} // Angle range to consider a swipe gesture
-          grabCursor={true} // Changes cursor to grab icon on hover
+          touchRatio={1}
+          touchAngle={45}
+          grabCursor={true}
+          loop={true} // Enable looping
+          autoplay={{
+            delay: 3000, // Set the delay to 3 seconds (3000 ms)
+            disableOnInteraction: false, // Continue autoplay even after user interaction
+          }}
         >
           <SwiperSlide>
             <div className="testimonial-cs-box-component">

@@ -2734,11 +2734,12 @@ footer h6 {
   gap: 5rem;
 }
 .cg-right img {
-  width: 100%;
-  height: auto;
+  width: 100% !important;
+  height: auto !important;
   border-radius: 1rem;
   object-fit: contain;
   margin: 0 !important;
+  min-width: ;
 }
 .contact-info-box {
   display: flex;
@@ -3353,8 +3354,8 @@ footer h6 {
   }
 
   .cg-right img {
-    width: 100%;
-    height: auto;
+    width: 100% !important;
+    height: auto !important;
     border-radius: 1rem !important;
     object-fit: contain;
     margin: 0 !important;
