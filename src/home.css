@@ -2538,6 +2538,8 @@ footer h6 {
   font-weight: 400;
   line-height: 150%;
 }
+
+/* Testimonial */
 .testi-circle {
   background: var(--color-primary-purple);
   filter: blur(200px);
@@ -2548,82 +2550,6 @@ footer h6 {
   height: 131px;
   z-index: 1;
 }
-.testimonial-cs-box {
-  padding: 3.5rem;
-  background-color: #0f172a;
-  border-radius: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 3rem;
-  width: 865px;
-  margin: 0 auto;
-  position: relative;
-}
-
-.testimonial-cs-box p {
-  color: var(--white);
-  font-size: 1.8rem;
-  font-weight: 400;
-  line-height: 150%;
-  position: relative;
-  z-index: 1;
-  margin: auto;
-}
-.testimonial-cs-box p img {
-  position: absolute;
-  z-index: -2;
-  top: -45%;
-  left: 0%;
-}
-
-.test-cs-profile {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between !important;
-}
-/* for the logo */
-.test-cs-profile img {
-  width: 200px !important;
-  height: auto !important;
-  object-fit: cover !important;
-}
-
-.testimonial-cs-box div {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 2rem;
-}
-.testimonial-cs-box div img {
-  width: 75px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 50%;
-  border-image-source: 2px solid
-    linear-gradient(180deg, #00ff88 0%, #4579f5 53.5%, #9c42f5 100%);
-}
-.testimonial-cs-box div h6 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0.25rem;
-  color: var(--white);
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin: 0;
-}
-.testimonial-cs-box div h6 span {
-  color: var(--color-slate-400);
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-/* TESTIMONIAL PAGE */
 
 .testimonial-section {
   width: 100%;
@@ -2631,6 +2557,7 @@ footer h6 {
   position: relative;
 }
 
+.testimonial-cs-box,
 .testimonial-cs-box-component {
   padding: 3.5rem;
   background-color: #0f172a;
@@ -2638,16 +2565,21 @@ footer h6 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
   gap: 3rem;
-  width: auto;
-  height: 450px; /* Set a fixed height */
+  width: 865px; /* Use max-width if needed to make it responsive */
   margin: 0 auto;
-  padding: auto;
   position: relative;
   overflow: hidden; /* Hide overflow content if needed */
 }
 
+.testimonial-cs-box-component {
+  justify-content: center;
+  width: auto; /* Allows flexibility for width */
+  height: 450px; /* Set a fixed height if required */
+  padding: auto; /* This might need adjustment or removal */
+}
+
+.testimonial-cs-box p,
 .testimonial-cs-box-component p {
   color: var(--white);
   font-size: 1.8rem;
@@ -2656,20 +2588,33 @@ footer h6 {
   position: relative;
   z-index: 1;
 }
+
+.testimonial-cs-box p img,
 .testimonial-cs-box-component p img {
+  position: absolute;
   z-index: -2;
-  top: -55%;
-  bottom: -50px;
+  top: -45%; /* Adjusted to maintain consistency */
   left: 0%;
+  bottom: -50px; /* Specific to component, but aligned similarly */
 }
 
+.test-cs-profile,
+.testimonial-cs-box div,
 .testimonial-cs-box-component div {
+  width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 2rem;
-  padding: 10px;
 }
+
+.test-cs-profile img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+}
+
+.testimonial-cs-box div img,
 .testimonial-cs-box-component div img {
   width: 75px;
   height: auto;
@@ -2678,6 +2623,8 @@ footer h6 {
   border-image-source: 2px solid
     linear-gradient(180deg, #00ff88 0%, #4579f5 53.5%, #9c42f5 100%);
 }
+
+.testimonial-cs-box div h6,
 .testimonial-cs-box-component div h6 {
   display: flex;
   flex-direction: column;
@@ -2689,6 +2636,8 @@ footer h6 {
   font-weight: 400;
   margin: 0;
 }
+
+.testimonial-cs-box div h6 span,
 .testimonial-cs-box-component div h6 span {
   color: var(--color-slate-400);
   font-size: 1.6rem;
