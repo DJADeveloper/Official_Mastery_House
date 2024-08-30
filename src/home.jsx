@@ -26,10 +26,14 @@ import Flask from "./assets/img/flask.svg";
 import Mat from "./assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
-import Case1 from "./assets/projectImages/unifit/unifit-banner.png";
-import Case2 from "./assets/projectImages/nwm/nwm-banner.png";
-import Case3 from "./assets/projectImages/jobskuyy/jobskuyy-banner.png";
-import Case4 from "./assets/projectImages/definitity/definity-banner.png";
+import Case1 from "./assets/projectImages/saim/Extract.png";
+import Case2 from "./assets/projectImages/saim/Musee.png";
+import Case3 from "./assets/projectImages/saim/Unchained Robotics.png";
+import Case4 from "./assets/projectImages/saim/Uptrend Agency.png";
+// import Case1 from "./assets/projectImages/unifit/unifit-banner.png";
+// import Case2 from "./assets/projectImages/nwm/nwm-banner.png";
+// import Case3 from "./assets/projectImages/jobskuyy/jobskuyy-banner.png";
+// import Case4 from "./assets/projectImages/definitity/definity-banner.png";
 import CaseLogo1 from "./assets/projectImages/unifit/unifit-logo.png";
 import CaseLogo2 from "./assets/projectImages/nwm/nwm-logo.png";
 import CaseLogo3 from "./assets/projectImages/jobskuyy/jobskuyy-logo.png";
@@ -56,6 +60,8 @@ import Footer from "./components/Footer";
 import Booking from "./components/Booking";
 import Marque from "./components/Marque";
 import Teamswiper from "./components/Teamswiper";
+import csProfile from "./assets/img/csprofile.png";
+import SemiColon from "./assets/img/semicolon.svg";
 
 import gsap from "gsap";
 import {
@@ -76,6 +82,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
 import NewsletterForm from "./components/NewsLetterForm";
+import Maincasestudy from "./maincasestudy";
+import Testimonials from "./components/Testimonials";
+import Casestudy from "./casestudy";
 // import Chatbot from "./components/Chatbot";
 
 function Home(props) {
@@ -189,7 +198,6 @@ function Home(props) {
               ></circle>
             </svg>
             <Header isActive="home" />
-
             <section className="hero-section">
               <div className="main-home-circle"></div>
               <div className="box">
@@ -197,16 +205,18 @@ function Home(props) {
                   <div className="hero-cont-left">
                     <span>Welcome to The Mastery House</span>
                     <h1 className="gradient-text">
-                      Where Innovation Meets Mastery in Software & AI
-                      Development
+                      Where Innovation Meets Mastery in Technology
                     </h1>
                     <p>
-                      At The Mastery House, we excel in driving digital
-                      transformation through innovative technology solutions.
-                      With expertise in AI, software, mobile development, and
-                      business automation, we help businesses navigate the
-                      complexities of the digital world.
+                      At The Mastery House, we combine the comfort of a
+                      welcoming home with the cutting-edge technology you need
+                      to thrive. As our guest, you’ll experience personalized
+                      service and expert solutions in AI, software development,
+                      mobile innovation, and business automation. Come inside
+                      and see how we turn digital challenges into opportunities
+                      for growth."
                     </p>
+
                     <Link to="/contact">
                       <button className="gradient-btn">
                         Start Your Digital Story
@@ -227,11 +237,19 @@ function Home(props) {
                     <span className="gradient-text">elevate your business</span>{" "}
                     in the digital era
                   </h2>
+                  <p>
+                    At The Mastery House, we combine the comfort of a welcoming
+                    home with the cutting-edge technology you need to thrive. As
+                    our guest, you’ll experience personalized service and expert
+                    solutions in AI, software development, mobile innovation,
+                    and business automation. Come inside and see how we turn
+                    digital challenges into opportunities for growth."
+                  </p>
                   <div className="service-grid-cont">
                     <div className="service-grid-box">
                       <div className="circle-sm circle-sm-1"></div>
-                      {/* <img src={Blockchain} alt="" /> */}
-                      <svg
+                      <img src={Blockchain} alt="" />
+                      {/* <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="75"
                         height="75"
@@ -256,13 +274,13 @@ function Home(props) {
                             <stop offset="1" stopColor="#fff"></stop>
                           </linearGradient>
                         </defs>
-                      </svg>
+                      </svg> */}
                       <h5>AI Development</h5>
                       <p>
-                        Transform your business with cutting-edge AI solutions.
-                        From machine learning and NLP to predictive analytics,
-                        we harness the power of AI to deliver actionable
-                        insights and drive innovation.
+                        Discover the power of AI in our Innovation Lounge. From
+                        machine learning to predictive analytics, we provide
+                        solutions that transform data into actionable insights,
+                        helping you stay ahead of the curve.
                       </p>
 
                       <Link to="/services/ai-Development">
@@ -278,10 +296,10 @@ function Home(props) {
                       <img src={Development} alt="" />
                       <h5>Software Development</h5>
                       <p>
-                        Custom software solutions designed to meet your business
-                        needs. Our expertise ranges from enterprise applications
-                        to system integration, ensuring robust, scalable, and
-                        secure software development.
+                        The Development Workshop is where your digital ideas
+                        come to life. Our team crafts custom software solutions
+                        that are robust, scalable, and secure—built to meet the
+                        specific needs of your business.
                       </p>
                       <Link to="/services/software-Development">
                         <div className="service-btn">
@@ -296,10 +314,10 @@ function Home(props) {
                       <img src={Software} alt="" />
                       <h5>Mobile Development</h5>
                       <p>
-                        Innovative mobile applications for iOS and Android. We
-                        create user-friendly apps that boost customer engagement
-                        and drive business growth, from consumer-facing apps to
-                        complex enterprise solutions.
+                        In the Mobile Suite, we design intuitive, engaging apps
+                        that enhance user experience and drive business growth.
+                        Whether you need a consumer-facing app or a complex
+                        enterprise solution, we’ve got you covered.
                       </p>
                       <Link to="/services/mobile-development">
                         <div className="service-btn">
@@ -356,250 +374,17 @@ function Home(props) {
                 </div>
               </div>
             </section>
-            <section className="casestudy-section" id="casestudy">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="774"
-                height="774"
-                fill="none"
-                viewBox="0 0 774 774"
-                className="case-circle1"
-              >
-                <circle
-                  cx="387"
-                  cy="387"
-                  r="386.5"
-                  stroke="rgba(255,255,255,0.25)"
-                ></circle>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="774"
-                height="774"
-                fill="none"
-                viewBox="0 0 774 774"
-                className="case-circle2"
-              >
-                <circle
-                  cx="387"
-                  cy="387"
-                  r="386.5"
-                  stroke="rgba(255,255,255,0.25)"
-                ></circle>
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="774"
-                height="774"
-                fill="none"
-                viewBox="0 0 774 774"
-                className="case-circle3"
-              >
-                <circle
-                  cx="387"
-                  cy="387"
-                  r="386.5"
-                  stroke="rgba(255,255,255,0.25)"
-                ></circle>
-              </svg>
-              <div className="box">
-                <div className="casestudy-cont">
-                  <div className="casestudy-head">
-                    <h3 className="gradient-text">Case Study</h3>
-                  </div>
-                  <div className="casestudy-main">
-                    <div className="cs-main-grid">
-                      <div className="cs-main-right">
-                        <img src={Case1} alt="" />
-                      </div>
-                      <div className="cs-main-left">
-                        <img src={CaseLogo1} alt="" />
-                        <p>
-                          Leveraging cutting-edge AI and automation
-                          technologies, we transformed UniFit into a leading
-                          eco-friendly fitness brand. The Mastery House crafted
-                          the brand's identity, developed a suite of SaaS tools,
-                          and significantly scaled the company's operations,
-                          driving customer engagement and retention through
-                          innovative digital solutions.
-                        </p>
-                        <div className="ind-serv-box">
-                          <span>
-                            Industry <h6>Health & Fitness</h6>
-                          </span>
-                          <span>
-                            Services{" "}
-                            <h6>
-                              Brand Development, SaaS Development, Business
-                              Scaling
-                            </h6>
-                          </span>
-                        </div>
-                        {/* <div className="cs-main-btn">
-                          <div className="service-btn">
-                            <Link to="/casestudy1">
-                              <div className="inner-service-btn">
-                                <span>
-                                  Learn More <BsArrowUpRight />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <Link to="/">
-                            <h5>
-                              Visit Website <BsArrowUpRight />
-                            </h5>
-                          </Link>
-                        </div> */}
-                      </div>
-                    </div>
-                    {/* <div className="cs-main-grid middle-main-grid">
-                      <div className="cs-main-left">
-                        <img src={CaseLogo2} alt="" />
-                        <p>
-                          Deploying IoT-powered kiosks integrated with a custom
-                          ERP solution, we enhanced IKEA’s customer onboarding,
-                          product exploration, and data-driven marketing.{" "}
-                        </p>
-                        <div className="ind-serv-box">
-                          <span>
-                            Industry <h6>Retail</h6>
-                          </span>
-                          <span>
-                            Services <h6>Blockchain Development, Deployment</h6>
-                          </span>
-                        </div>
-                        <div className="cs-main-btn">
-                          <div className="service-btn">
-                            <Link to="/casestudy1">
-                              <div className="inner-service-btn">
-                                <span>
-                                  Learn More <BsArrowUpRight />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <Link to="/">
-                            <h5>
-                              Visit Website <BsArrowUpRight />
-                            </h5>
-                          </Link>
-                        </div>
-                      </div>
-                      <div className="cs-main-right">
-                        <img src={Case2} alt="" />
-                      </div>
-                    </div> */}
-                    <div className="cs-main-grid middle-main-grid">
-                      <div className="cs-main-left">
-                        <img src={CaseLogo4} alt="" />
-                        <p>
-                          By integrating blockchain technology with AI-driven
-                          security protocols, The Mastery House elevated
-                          Definity Exchange's platform, ensuring seamless
-                          cryptocurrency transactions with enhanced reliability
-                          and security. Our comprehensive approach also included
-                          developing a user-friendly interface and optimizing
-                          the platform for low-latency trading, significantly
-                          improving user experience and engagement.
-                        </p>
-                        <div className="ind-serv-box">
-                          <span>
-                            Industry <h6>Fintech</h6>
-                          </span>
-                          <span>
-                            Services{" "}
-                            <h6>
-                              Blockchain Integration, AI Security Enhancement,
-                              UX/UI Design
-                            </h6>
-                          </span>
-                        </div>
-                        {/* <div className="cs-main-btn">
-                          <div className="service-btn">
-                            <Link to="/casestudy1">
-                              <div className="inner-service-btn">
-                                <span>
-                                  Learn More <BsArrowUpRight />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <Link to="/">
-                            <h5>
-                              Visit Website <BsArrowUpRight />
-                            </h5>
-                          </Link>
-                        </div> */}
-                      </div>
-                      <div className="cs-main-right">
-                        <img src={Case4} alt="" />
-                      </div>
-                    </div>
-
-                    <div className="cs-main-grid">
-                      <div className="cs-main-right">
-                        <img src={Case3} alt="" />
-                      </div>
-                      <div className="cs-main-left">
-                        <img src={CaseLogo3} alt="" />
-                        <p>
-                          The Mastery House developed a versatile SaaS template
-                          for JobSkyy, enabling the company to offer a scalable
-                          recruitment platform to its users. This template not
-                          only streamlined the job matching process with
-                          AI-driven recommendations but also allowed JobSkyy to
-                          sell the software as a white-label solution,
-                          empowering other companies to deploy their own branded
-                          recruitment platforms with ease.
-                        </p>
-                        <div className="ind-serv-box">
-                          <span>
-                            Industry <h6>Human Resources</h6>
-                          </span>
-                          <span>
-                            Services{" "}
-                            <h6>
-                              SaaS Development, AI Integration, White-Label
-                              Solutions
-                            </h6>
-                          </span>
-                        </div>
-                        {/* Button area */}
-                        {/* <div className="cs-main-btn">
-                          <div className="service-btn">
-                            <Link to="/casestudy1">
-                              <div className="inner-service-btn">
-                                <span>
-                                  Learn More <BsArrowUpRight />
-                                </span>
-                              </div>
-                            </Link>
-                          </div>
-                          <Link to="/">
-                            <h5>
-                              Visit Website <BsArrowUpRight />
-                            </h5>
-                          </Link>
-                        </div> */}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            {/* <Maincasestudy /> */}
+            {/* <div className="marquee-main-box">
+              <Marque />
+            </div> */}
             {/* <section>
               <NewsletterForm />
-            </section> */}
-            {/* <section className="getintouch-section">
-              <div className="marquee-main-box">
-                <Marque />
-              </div>
             </section> */}
             <section className="technologies-section">
               <div className="box">
                 <div className="technologies-content">
-                  <h3 className="gradient-text">Technologies & Tools We Use</h3>
+                  <h3 className="gradient-text">Our Digital Toolkit</h3>
                   <div className="technologies-tabs">
                     <Tabs
                       defaultActiveKey="Frontend"
@@ -948,18 +733,184 @@ function Home(props) {
                 </div>
               </div>
             </section>
+            <Testimonials />
+
+            {/* <section className="team-section">
+              <div className="team-circle-1"></div>
+              <div className="team-circle-2"></div>
+              <div className="box">
+                <div className="swiper-head">
+                  <div className="swiper-head-right">
+                    <h2 className="gradient-text">Stories from Our Guests</h2>
+                    <p>
+                      Our expertise ensures an exceptional user experience with
+                      cutting-edge technology at the forefront of frontend
+                      development.
+                    </p>
+                  </div>
+
+                  <div className="sh-right">
+                    <span className="team-prev">
+                      <BsChevronLeft />
+                    </span>
+                    <span className="team-next">
+                      <BsChevronRight />
+                    </span>
+                  </div>
+                </div>
+
+                <Swiper
+                  spaceBetween={30}
+                  slidesPerView={1}
+                  modules={[Navigation]}
+                  navigation={{
+                    nextEl: ".team-next",
+                    prevEl: ".team-prev",
+                  }}
+                  breakpoints={{
+                    750: {
+                      slidesPerView: 2,
+                      spaceBetween: 20,
+                    },
+                    1000: {
+                      slidesPerView: 3,
+                      spaceBetween: 30,
+                    },
+                    1300: {
+                      slidesPerView: 1.5,
+                      spaceBetween: 40,
+                    },
+                  }}
+                >
+                  <SwiperSlide>
+                    <div className="testimonial-cs-box-component">
+                      <div className="testi-circle"></div>
+                      <p>
+                        <img src={SemiColon} alt="" />I can’t even put into
+                        words how much I love the website The MasteryHouse has
+                        put together for me. They listened to all my concerns,
+                        paid special attention to the detail I had to have, and
+                        executed my desired website better than I imagined. The
+                        Mastery House was patient when I was not. LOL They were
+                        helpful & kind and I would tell anyone to use their
+                        services. Thank you again!
+                      </p>
+                      <div className="test-cs-profile">
+                        <img src={csProfile} alt="" />
+                        <h6>
+                          Dylan Reback <span>CEO - KIND OF A BIG DYL</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="testimonial-cs-box-component">
+                      <div className="testi-circle"></div>
+                      <p>
+                        <img src={SemiColon} alt="" />
+                        Tackling the Recursion and Dynamic Programming course
+                        was like embarking on an intellectual adventure.
+                        Initially, the concepts seemed daunting, but as I dove
+                        deeper, everything started to click. The course's
+                        practical approach, with its emphasis on problem-solving
+                        and real-world applications, truly demystified these
+                        topics for me. It's not just a course; it's a brain gym
+                        where I strengthened my logical and analytical muscles.
+                      </p>
+                      <div className="test-cs-profile">
+                        <img src={csProfile} alt="" />
+                        <h6>
+                          John Smith <span>CTO - IKEA</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="testimonial-cs-box-component">
+                      <div className="testi-circle"></div>
+                      <p>
+                        <img src={SemiColon} alt="" />
+                        Tackling the Recursion and Dynamic Programming course
+                        was like embarking on an intellectual adventure.
+                        Initially, the concepts seemed daunting, but as I dove
+                        deeper, everything started to click. The course's
+                        practical approach, with its emphasis on problem-solving
+                        and real-world applications, truly demystified these
+                        topics for me. It's not just a course; it's a brain gym
+                        where I strengthened my logical and analytical muscles.
+                      </p>
+                      <div className="test-cs-profile">
+                        <img src={csProfile} alt="" />
+                        <h6>
+                          John Smith <span>CTO - IKEA</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="testimonial-cs-box-component">
+                      <div className="testi-circle"></div>
+                      <p>
+                        <img src={SemiColon} alt="" />
+                        Tackling the Recursion and Dynamic Programming course
+                        was like embarking on an intellectual adventure.
+                        Initially, the concepts seemed daunting, but as I dove
+                        deeper, everything started to click. The course's
+                        practical approach, with its emphasis on problem-solving
+                        and real-world applications, truly demystified these
+                        topics for me. It's not just a course; it's a brain gym
+                        where I strengthened my logical and analytical muscles.
+                      </p>
+                      <div className="test-cs-profile">
+                        <img src={csProfile} alt="" />
+                        <h6>
+                          John Smith <span>CTO - IKEA</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+
+                  <SwiperSlide>
+                    <div className="testimonial-cs-box-component">
+                      <div className="testi-circle"></div>
+                      <p>
+                        <img src={SemiColon} alt="" />
+                        Tackling the Recursion and Dynamic Programming course
+                        was like embarking on an intellectual adventure.
+                        Initially, the concepts seemed daunting, but as I dove
+                        deeper, everything started to click. The course's
+                        practical approach, with its emphasis on problem-solving
+                        and real-world applications, truly demystified these
+                        topics for me. It's not just a course; it's a brain gym
+                        where I strengthened my logical and analytical muscles.
+                      </p>
+                      <div className="test-cs-profile">
+                        <img src={csProfile} alt="" />
+                        <h6>
+                          John Smith <span>CTO - IKEA</span>
+                        </h6>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            </section> */}
 
             {/* <Teamswiper /> */}
-
             <section className="blog-section">
               <div data-speed={0.5} className="blogcircle-1"></div>
               <div className="blogcircle-2"></div>
               <div className="box">
                 <div className="blog-cont">
                   <div className="casestudy-head">
-                    <h3 className="gradient-text">Read Our Blogs</h3>
+                    <h3 className="gradient-text">
+                      The Mastery House Insights
+                    </h3>
                     <Link to="/blogs">
-                      View All <BsArrowRight />
+                      Explore Our Insights <BsArrowRight />
                     </Link>
                   </div>
                   <div className="blog-grid">
@@ -1034,7 +985,6 @@ function Home(props) {
                 </div>
               </div>
             </section>
-
             <section className="faq-section">
               <div data-speed={0.85} className="faqrectangle"></div>
               <div className="faq-circle"></div>

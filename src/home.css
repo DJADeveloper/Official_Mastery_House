@@ -4,11 +4,12 @@
   font-size: 10px;
   --black: #000;
   --white: #fff;
-  --color-dark-primary: #1e1e1e;
-  --color-light-primary: #fbf6ee;
-  --color-primary-green: #00ffaa;
+  --color-dark-primary: #1f2937; /* Dark Blue/Grey (adjusted) */
+  --color-light-primary: #e8fff0; /* Light Green (adjusted) */
+  --color-primary-green: #00ff88; /* Bright Green (adjusted) */
+  --color-primary-blue: #005f5f; /* Teal (adjusted) */
   --color-secondary-green: #e8fff0;
-  --color-primary-blue: #4579f5;
+
   --color-secondary-blue: #e8f0ff;
   --color-primary-purple: #9c42f5;
   --color-slate-50: #f8fafc;
@@ -89,7 +90,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(to bottom right, #00ffaa, #4579f5, #9c42f5);
+  background-image: linear-gradient(to bottom right, #00ff88, #4579f5, #9c42f5);
   border-radius: 0.75rem;
   padding: 1.25rem 3.5rem;
   color: var(--white);
@@ -105,7 +106,7 @@ img {
   filter: hue-rotate(30deg);
 }
 .gradient-text {
-  background: linear-gradient(to right, #00ffaa, #4579f5, #9c42f5);
+  background: linear-gradient(to right, #00ff88, #4579f5, #9c42f5);
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
@@ -229,6 +230,7 @@ header {
   padding: 15rem 0 10rem 0;
   position: relative;
 }
+
 .main-home-circle {
   background: var(--color-slate-900);
   filter: blur(250px);
@@ -302,6 +304,17 @@ header {
   text-align: center;
   width: 80%;
 }
+.service-content p {
+  font-size: 1.8rem;
+  font-family: "Roboto";
+  text-align: center;
+
+  font-style: normal;
+  line-height: 150%;
+  color: var(--white);
+  margin: 5rem 0 0 0;
+}
+
 .service-grid-cont {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -380,7 +393,7 @@ header {
   font-family: "Lato";
   font-weight: 400;
   line-height: 150%;
-  background: linear-gradient(to bottom, #00ffaa, #e8f0ff);
+  background: linear-gradient(to bottom, #00ff88, #e8f0ff);
   -webkit-background-clip: text;
   color: transparent;
   display: inline-block;
@@ -415,7 +428,7 @@ header {
   justify-content: center;
   align-items: center;
   padding: 1.5px;
-  background: linear-gradient(to right, #00ffaa, #e8f0ff, #00ffaa);
+  background: linear-gradient(to right, #00ff88, #e8f0ff, #00ff88);
   border-radius: 0.75rem;
   margin-top: 1rem;
   cursor: pointer;
@@ -552,6 +565,16 @@ header {
   position: relative;
   z-index: 1000;
 }
+
+.swiper-head p {
+  color: var(--white);
+  font-family: "Lato";
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  width: 60%;
+  text-align: flex-start;
+}
 .swiper-head h2 {
   font-size: 3.5rem;
   font-family: "Lato";
@@ -649,9 +672,7 @@ header {
   width: 100%;
   padding: 10rem 0;
 }
-.marquee-main-box {
-  padding: 5rem 0;
-}
+
 .Marquee-Card {
   display: flex;
   justify-content: space-between;
@@ -677,12 +698,12 @@ header {
 /* CASE STUDY SECTION  */
 .casestudy-section {
   width: 100%;
-  padding: 0 0 15rem 0;
+  padding: 0 0 1rem 0;
   z-index: 1;
   position: relative;
 }
 .casestudy-section.casestudy-main-page {
-  padding: 15rem 0;
+  padding: 0px;
 }
 .case-circle1 {
   width: 650px;
@@ -1166,7 +1187,7 @@ header {
 
 .book-a-call-container {
   background-color: var(--color-slate-900);
-  padding: 3.5rem;
+  padding: 5rem;
   border-radius: 1rem;
   position: fixed;
   width: 600px;
@@ -1185,7 +1206,7 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: center;
   align-items: flex-end; /* Align items to the bottom */
@@ -2057,7 +2078,7 @@ footer h6 {
 /* SERVICE PAGE  */
 .technologies-section {
   width: 100%;
-  padding: 10rem 0 30rem 0;
+  padding: 10rem 0 10rem 0;
 }
 .technologies-content {
   display: flex;
@@ -2100,7 +2121,7 @@ footer h6 {
   color: var(--white);
 }
 .technologies-tabs .nav.nav-tabs .nav-link.active {
-  background-image: linear-gradient(to bottom right, #00ffaa, #4579f5, #9c42f5);
+  background-image: linear-gradient(to bottom right, #00ff88, #4579f5, #9c42f5);
   color: var(--white);
 }
 .technologies-tabContent {
@@ -2363,6 +2384,7 @@ footer h6 {
   margin: 0 auto;
   position: relative;
 }
+
 .testimonial-cs-box p {
   color: var(--white);
   font-size: 1.8rem;
@@ -2389,7 +2411,7 @@ footer h6 {
   object-fit: contain;
   border-radius: 50%;
   border-image-source: 2px solid
-    linear-gradient(180deg, #00ffaa 0%, #4579f5 53.5%, #9c42f5 100%);
+    linear-gradient(180deg, #00ff88 0%, #4579f5 53.5%, #9c42f5 100%);
 }
 .testimonial-cs-box div h6 {
   display: flex;
@@ -2403,6 +2425,78 @@ footer h6 {
   margin: 0;
 }
 .testimonial-cs-box div h6 span {
+  color: var(--color-slate-400);
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* TESTIMONIAL PAGE */
+
+.testimonial-section {
+  width: 100%;
+  padding: 15rem 0;
+  position: relative;
+}
+
+.testimonial-cs-box-component {
+  padding: 3.5rem;
+  background-color: #0f172a;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  width: auto;
+  height: 450px; /* Set a fixed height */
+  margin: 0 auto;
+  padding-top: auto;
+  position: relative;
+  overflow: hidden; /* Hide overflow content if needed */
+}
+
+.testimonial-cs-box-component p {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 150%;
+  position: relative;
+  z-index: 1;
+}
+.testimonial-cs-box-component p img {
+  z-index: -2;
+  top: -55%;
+  bottom: -50px;
+  left: 0%;
+}
+
+.testimonial-cs-box-component div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+.testimonial-cs-box-component div img {
+  width: 75px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 50%;
+  border-image-source: 2px solid
+    linear-gradient(180deg, #00ff88 0%, #4579f5 53.5%, #9c42f5 100%);
+}
+.testimonial-cs-box-component div h6 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0.25rem;
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+}
+.testimonial-cs-box-component div h6 span {
   color: var(--color-slate-400);
   font-size: 1.6rem;
   font-weight: 400;
@@ -3159,6 +3253,22 @@ footer h6 {
   .testimonial-cs-box div img {
     width: 60px;
   }
+
+  .testimonial-cs-box-component {
+    padding: 3rem 2.5rem 2.5rem 2.5rem;
+    border-radius: 0.5rem;
+  }
+  .testimonial-cs-box-component p {
+    font-size: 1.6rem;
+  }
+  .testimonial-cs-box-component p img {
+    top: -20%;
+    left: -5%;
+  }
+  .testimonial-cs-box-component div img {
+    width: 60px;
+  }
+
   .casestudy-section.cs-section-2 {
     padding: 0;
   }

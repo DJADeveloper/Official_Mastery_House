@@ -216,9 +216,9 @@ function About() {
             </section>
             {/* <Teamswiper /> */}
             <section className="getintouch-section">
-              <div className="marquee-main-box">
+              {/* <div className="marquee-main-box">
                 <Marque />
-              </div>
+              </div> */}
             </section>
             <Booking />
             <Footer />

@@ -6,6 +6,12 @@ import LaptopMockup from "./assets/img/Mockup.png";
 import csProfile from "./assets/img/csprofile.png";
 import SemiColon from "./assets/img/semicolon.svg";
 
+// fake routes - delete later
+import ReactImg from "./assets/img/reactimg.svg";
+import NextImg from "./assets/img/nextimg.svg";
+import MUIImg from "./assets/img/material-ui-img.svg";
+import TSImg from "./assets/img/typescriptimg.svg";
+
 import { BsArrowUpRight } from "react-icons/bs";
 import Header from "./components/Header";
 import Marque from "./components/Marque";
@@ -29,6 +35,8 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { Link } from "react-router-dom";
+import { Tab, Tabs } from "react-bootstrap";
+import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
 
 const Casestudy = () => {
   gsap.registerPlugin(
@@ -174,6 +182,7 @@ const Casestudy = () => {
               ></circle>
             </svg>
             <Header isActive="casestudy" />
+
             <section className="casestudy-section hero-section cs-section-2">
               <div className="main-home-circle"></div>
               <div className="box">
