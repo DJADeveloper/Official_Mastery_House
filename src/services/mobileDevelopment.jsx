@@ -179,155 +179,73 @@ const MobileDevelopmentService = () => {
                       enjoy:
                     </p>
                   </div>
-                  {/* Conditionally render Swiper or Grid based on screen size */}
-                  {isMobile ? (
-                    <Swiper
-                      spaceBetween={20}
-                      slidesPerView={1} // 1 slide per view on mobile
-                      modules={[Navigation, Thumbs]} // Include Swiper modules
-                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2, // 2 slides per view on tablets
-                        },
-                        1024: {
-                          slidesPerView: 3, // 3 slides per view on desktops
-                        },
-                      }}
-                      style={{
-                        width: "100%",
-                        overflow: "visible",
-                      }}
-                    >
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Cross-Platform Development</h5>
-                        <p>
-                          Develop applications that run smoothly on both iOS and
-                          Android platforms. Our cross-platform approach ensures
-                          consistent performance and reduces development costs
-                          and time to market.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Native App Performance</h5>
-                        <p>
-                          Achieve optimal performance with native app
-                          development. We utilize the latest frameworks and
-                          tools to build high-performance apps that provide a
-                          seamless user experience.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Enhanced User Engagement</h5>
-                        <p>
-                          Our mobile apps are designed with user engagement in
-                          mind. Through intuitive interfaces and interactive
-                          features, we ensure users stay engaged and return
-                          frequently.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Security and Compliance</h5>
-                        <p>
-                          We prioritize security in our mobile applications. Our
-                          development practices adhere to the highest standards,
-                          ensuring your apps are safe, secure, and compliant
-                          with industry regulations.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Scalable Solutions</h5>
-                        <p>
-                          Build mobile apps that grow with your business. Our
-                          scalable development approach ensures your app can
-                          handle increasing traffic and new features without
-                          compromising performance.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Post-Launch Support</h5>
-                        <p>
-                          We provide ongoing support and maintenance services to
-                          ensure your app remains up-to-date, secure, and fully
-                          functional after launch, allowing you to focus on your
-                          core business.
-                        </p>
-                      </SwiperSlide>
-                    </Swiper>
-                  ) : (
-                    <div className="about-grid">
-                      {/* Grid Layout for larger screens */}
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Cross-Platform Development</h5>
-                        <p>
-                          Develop applications that run smoothly on both iOS and
-                          Android platforms. Our cross-platform approach ensures
-                          consistent performance and reduces development costs
-                          and time to market.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Native App Performance</h5>
-                        <p>
-                          Achieve optimal performance with native app
-                          development. We utilize the latest frameworks and
-                          tools to build high-performance apps that provide a
-                          seamless user experience.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Enhanced User Engagement</h5>
-                        <p>
-                          Our mobile apps are designed with user engagement in
-                          mind. Through intuitive interfaces and interactive
-                          features, we ensure users stay engaged and return
-                          frequently.
-                        </p>
-                      </div>
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Security and Compliance</h5>
-                        <p>
-                          We prioritize security in our mobile applications. Our
-                          development practices adhere to the highest standards,
-                          ensuring your apps are safe, secure, and compliant
-                          with industry regulations.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Scalable Solutions</h5>
-                        <p>
-                          Build mobile apps that grow with your business. Our
-                          scalable development approach ensures your app can
-                          handle increasing traffic and new features without
-                          compromising performance.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Post-Launch Support</h5>
-                        <p>
-                          We provide ongoing support and maintenance services to
-                          ensure your app remains up-to-date, secure, and fully
-                          functional after launch, allowing you to focus on your
-                          core business.
-                        </p>
-                      </div>
+                  <div className="about-grid">
+                    {/* Grid Layout for larger screens */}
+                    <div className="about-grid-content">
+                      <div className="ag-circle-1"></div>
+                      <h5>Cross-Platform Development</h5>
+                      <p>
+                        Develop applications that run smoothly on both iOS and
+                        Android platforms. Our cross-platform approach ensures
+                        consistent performance and reduces development costs and
+                        time to market.
+                      </p>
                     </div>
-                  )}
+                    <div className="about-grid-content agc-2">
+                      <div className="ag-circle-2"></div>
+                      <h5>Native App Performance</h5>
+                      <p>
+                        Achieve optimal performance with native app development.
+                        We utilize the latest frameworks and tools to build
+                        high-performance apps that provide a seamless user
+                        experience.
+                      </p>
+                    </div>
+                    <div className="about-grid-content agc-3">
+                      <div className="ag-circle-3"></div>
+                      <h5>Enhanced User Engagement</h5>
+                      <p>
+                        Our mobile apps are designed with user engagement in
+                        mind. Through intuitive interfaces and interactive
+                        features, we ensure users stay engaged and return
+                        frequently.
+                      </p>
+                    </div>
+                    {!isMobile && (
+                      <div>
+                        <div className="about-grid-content">
+                          <div className="ag-circle-1"></div>
+                          <h5>Security and Compliance</h5>
+                          <p>
+                            We prioritize security in our mobile applications.
+                            Our development practices adhere to the highest
+                            standards, ensuring your apps are safe, secure, and
+                            compliant with industry regulations.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-2">
+                          <div className="ag-circle-2"></div>
+                          <h5>Scalable Solutions</h5>
+                          <p>
+                            Build mobile apps that grow with your business. Our
+                            scalable development approach ensures your app can
+                            handle increasing traffic and new features without
+                            compromising performance.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-3">
+                          <div className="ag-circle-3"></div>
+                          <h5>Post-Launch Support</h5>
+                          <p>
+                            We provide ongoing support and maintenance services
+                            to ensure your app remains up-to-date, secure, and
+                            fully functional after launch, allowing you to focus
+                            on your core business.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </section>

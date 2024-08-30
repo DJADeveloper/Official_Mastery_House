@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; // Import Swiper and SwiperSlide
+import { Swiper, div } from "swiper/react"; // Import Swiper and div
 import { Navigation, Thumbs } from "swiper/modules";
 import "../home.css";
 import ServiceImg from "../assets/img/serviceimg.png";
@@ -184,155 +184,73 @@ const AiDevelopment = () => {
                       competitive landscape.
                     </p>
                   </div>
-                  {/* Conditionally render Swiper or Grid based on screen size */}
-                  {isMobile ? (
-                    <Swiper
-                      spaceBetween={20}
-                      slidesPerView={1}
-                      modules={[Navigation, Thumbs]} // Include Swiper modules
-                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2, // 2 slides per view on tablets
-                        },
-                        1024: {
-                          slidesPerView: 3, // 3 slides per view on desktops
-                        },
-                      }}
-                      style={{
-                        width: "100%",
-                        overflow: "visible",
-                      }}
-                    >
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Data-Driven Decision Making</h5>
-                        <p>
-                          Harness the power of data to make informed decisions.
-                          Our AI solutions analyze vast amounts of data to
-                          provide actionable insights, enabling better
-                          decision-making processes.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Enhanced Customer Experience</h5>
-                        <p>
-                          Improve customer satisfaction and loyalty with
-                          personalized AI-driven experiences. Our AI models
-                          analyze customer behavior to deliver customized
-                          interactions and recommendations.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Automated Processes</h5>
-                        <p>
-                          Reduce manual work and increase efficiency by
-                          automating repetitive tasks. Our AI solutions
-                          streamline workflows, reduce errors, and free up
-                          valuable resources for more strategic initiatives.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Predictive Analytics</h5>
-                        <p>
-                          Stay ahead of the curve with predictive analytics. Our
-                          AI solutions forecast trends and customer behaviors,
-                          helping you anticipate market shifts and plan
-                          strategically for the future.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Improved Security</h5>
-                        <p>
-                          Enhance your security measures with AI-powered threat
-                          detection and prevention. Our AI models identify and
-                          respond to potential threats in real-time, keeping
-                          your data safe and secure.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Scalable AI Solutions</h5>
-                        <p>
-                          Develop AI solutions that scale with your business.
-                          Our approach ensures your AI tools can handle
-                          increased data volume and complexity as your business
-                          grows.
-                        </p>
-                      </SwiperSlide>
-                    </Swiper>
-                  ) : (
-                    <div className="about-grid">
-                      {/* Grid Layout for larger screens */}
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Data-Driven Decision Making</h5>
-                        <p>
-                          Harness the power of data to make informed decisions.
-                          Our AI solutions analyze vast amounts of data to
-                          provide actionable insights, enabling better
-                          decision-making processes.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Enhanced Customer Experience</h5>
-                        <p>
-                          Improve customer satisfaction and loyalty with
-                          personalized AI-driven experiences. Our AI models
-                          analyze customer behavior to deliver customized
-                          interactions and recommendations.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Automated Processes</h5>
-                        <p>
-                          Reduce manual work and increase efficiency by
-                          automating repetitive tasks. Our AI solutions
-                          streamline workflows, reduce errors, and free up
-                          valuable resources for more strategic initiatives.
-                        </p>
-                      </div>
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Predictive Analytics</h5>
-                        <p>
-                          Stay ahead of the curve with predictive analytics. Our
-                          AI solutions forecast trends and customer behaviors,
-                          helping you anticipate market shifts and plan
-                          strategically for the future.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Improved Security</h5>
-                        <p>
-                          Enhance your security measures with AI-powered threat
-                          detection and prevention. Our AI models identify and
-                          respond to potential threats in real-time, keeping
-                          your data safe and secure.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Scalable AI Solutions</h5>
-                        <p>
-                          Develop AI solutions that scale with your business.
-                          Our approach ensures your AI tools can handle
-                          increased data volume and complexity as your business
-                          grows.
-                        </p>
-                      </div>
+                  <div className="about-grid">
+                    {/* Grid Layout for larger screens */}
+                    <div className="about-grid-content">
+                      <div className="ag-circle-1"></div>
+                      <h5>Data-Driven Decision Making</h5>
+                      <p>
+                        Harness the power of data to make informed decisions.
+                        Our AI solutions analyze vast amounts of data to provide
+                        actionable insights, enabling better decision-making
+                        processes.
+                      </p>
                     </div>
-                  )}
+                    <div className="about-grid-content agc-2">
+                      <div className="ag-circle-2"></div>
+                      <h5>Enhanced Customer Experience</h5>
+                      <p>
+                        Improve customer satisfaction and loyalty with
+                        personalized AI-driven experiences. Our AI models
+                        analyze customer behavior to deliver customized
+                        interactions and recommendations.
+                      </p>
+                    </div>
+                    <div className="about-grid-content agc-3">
+                      <div className="ag-circle-3"></div>
+                      <h5>Automated Processes</h5>
+                      <p>
+                        Reduce manual work and increase efficiency by automating
+                        repetitive tasks. Our AI solutions streamline workflows,
+                        reduce errors, and free up valuable resources for more
+                        strategic initiatives.
+                      </p>
+                    </div>
+                    {!isMobile && (
+                      <div>
+                        <div className="about-grid-content">
+                          <div className="ag-circle-1"></div>
+                          <h5>Predictive Analytics</h5>
+                          <p>
+                            Stay ahead of the curve with predictive analytics.
+                            Our AI solutions forecast trends and customer
+                            behaviors, helping you anticipate market shifts and
+                            plan strategically for the future.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-2">
+                          <div className="ag-circle-2"></div>
+                          <h5>Improved Security</h5>
+                          <p>
+                            Enhance your security measures with AI-powered
+                            threat detection and prevention. Our AI models
+                            identify and respond to potential threats in
+                            real-time, keeping your data safe and secure.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-3">
+                          <div className="ag-circle-3"></div>
+                          <h5>Scalable AI Solutions</h5>
+                          <p>
+                            Develop AI solutions that scale with your business.
+                            Our approach ensures your AI tools can handle
+                            increased data volume and complexity as your
+                            business grows.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </section>

@@ -204,163 +204,78 @@ const WebDevelopment = () => {
                       the key benefits you will enjoy:
                     </p>
                   </div>
-                  {/* Conditionally render Swiper or Grid based on screen size */}
-                  {isMobile ? (
-                    <Swiper
-                      spaceBetween={20}
-                      slidesPerView={1} // 1 slide per view on mobile
-                      modules={[Navigation, Thumbs]} // Include Swiper modules
-                      thumbs={{ swiper: thumbsSwiper }} // Link to thumbs swiper
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 1,
-                        },
-                        768: {
-                          slidesPerView: 2, // 2 slides per view on tablets
-                        },
-                        1024: {
-                          slidesPerView: 3, // 3 slides per view on desktops
-                        },
-                      }}
-                      style={{
-                        width: "100%",
-                        overflow: "visible",
-                      }}
-                    >
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Custom Solutions for Unique Challenges</h5>
-                        <p>
-                          At The Mastery House, we recognize that each business
-                          is unique. Our web development services are tailored
-                          to meet your specific needs, ensuring innovative,
-                          efficient, and scalable solutions that directly
-                          address your challenges.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Reduce Costs</h5>
-                        <p>
-                          By optimizing your web development processes, we help
-                          reduce waste and improve productivity. Our efficient
-                          development practices ensure that you get more out of
-                          your existing resources, driving down costs while
-                          delivering quality.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Drive Business Growth</h5>
-                        <p>
-                          Our focus is on building resilient, outcomes-driven
-                          web solutions that attract and retain users. With a
-                          website that effectively converts visitors into
-                          customers, we help you drive sustained business
-                          growth.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Accelerate Innovation</h5>
-                        <p>
-                          Stay ahead of the competition with websites designed
-                          to support rapid innovation. Our development teams
-                          enhance your website's capabilities, improving
-                          efficiency and reducing the time to market for new
-                          features.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-2"></div>
-                        <h5>Enhance User Experience</h5>
-                        <p>
-                          We prioritize creating seamless and intuitive user
-                          experiences that keep visitors engaged. By focusing on
-                          usability and accessibility, we ensure that your
-                          website provides a positive experience for all users.
-                        </p>
-                      </SwiperSlide>
-                      <SwiperSlide className="about-grid-content">
-                        <div className="ag-circle-3"></div>
-                        <h5>Boost SEO Performance</h5>
-                        <p>
-                          Our SEO-optimized web development practices ensure
-                          that your website is easily discoverable by search
-                          engines. Higher rankings lead to increased visibility,
-                          driving more organic traffic to your business.
-                        </p>
-                      </SwiperSlide>
-                    </Swiper>
-                  ) : (
-                    <div className="about-grid">
-                      {/* Grid Layout for larger screens */}
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Custom Solutions for Unique Challenges</h5>
-                        <p>
-                          At The Mastery House, we recognize that each business
-                          is unique. Our web development services are tailored
-                          to meet your specific needs, ensuring innovative,
-                          efficient, and scalable solutions that directly
-                          address your challenges.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Reduce Costs</h5>
-                        <p>
-                          By optimizing your web development processes, we help
-                          reduce waste and improve productivity. Our efficient
-                          development practices ensure that you get more out of
-                          your existing resources, driving down costs while
-                          delivering quality.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Drive Business Growth</h5>
-                        <p>
-                          Our focus is on building resilient, outcomes-driven
-                          web solutions that attract and retain users. With a
-                          website that effectively converts visitors into
-                          customers, we help you drive sustained business
-                          growth.
-                        </p>
-                      </div>
-                      <div className="about-grid-content">
-                        <div className="ag-circle-1"></div>
-                        <h5>Accelerate Innovation</h5>
-                        <p>
-                          Stay ahead of the competition with websites designed
-                          to support rapid innovation. Our development teams
-                          enhance your website's capabilities, improving
-                          efficiency and reducing the time to market for new
-                          features.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-2">
-                        <div className="ag-circle-2"></div>
-                        <h5>Enhance User Experience</h5>
-                        <p>
-                          We prioritize creating seamless and intuitive user
-                          experiences that keep visitors engaged. By focusing on
-                          usability and accessibility, we ensure that your
-                          website provides a positive experience for all users.
-                        </p>
-                      </div>
-                      <div className="about-grid-content agc-3">
-                        <div className="ag-circle-3"></div>
-                        <h5>Boost SEO Performance</h5>
-                        <p>
-                          Our SEO-optimized web development practices ensure
-                          that your website is easily discoverable by search
-                          engines. Higher rankings lead to increased visibility,
-                          driving more organic traffic to your business.
-                        </p>
-                      </div>
+                  <div className="about-grid">
+                    {/* Grid Layout for larger screens */}
+                    <div className="about-grid-content">
+                      <div className="ag-circle-1"></div>
+                      <h5>Custom Solutions for Unique Challenges</h5>
+                      <p>
+                        At The Mastery House, we recognize that each business is
+                        unique. Our web development services are tailored to
+                        meet your specific needs, ensuring innovative,
+                        efficient, and scalable solutions that directly address
+                        your challenges.
+                      </p>
                     </div>
-                  )}
+                    <div className="about-grid-content agc-2">
+                      <div className="ag-circle-2"></div>
+                      <h5>Reduce Costs</h5>
+                      <p>
+                        By optimizing your web development processes, we help
+                        reduce waste and improve productivity. Our efficient
+                        development practices ensure that you get more out of
+                        your existing resources, driving down costs while
+                        delivering quality.
+                      </p>
+                    </div>
+                    <div className="about-grid-content agc-3">
+                      <div className="ag-circle-3"></div>
+                      <h5>Drive Business Growth</h5>
+                      <p>
+                        Our focus is on building resilient, outcomes-driven web
+                        solutions that attract and retain users. With a website
+                        that effectively converts visitors into customers, we
+                        help you drive sustained business growth.
+                      </p>
+                    </div>
+                    {!isMobile && (
+                      <div>
+                        <div className="about-grid-content">
+                          <div className="ag-circle-1"></div>
+                          <h5>Accelerate Innovation</h5>
+                          <p>
+                            Stay ahead of the competition with websites designed
+                            to support rapid innovation. Our development teams
+                            enhance your website's capabilities, improving
+                            efficiency and reducing the time to market for new
+                            features.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-2">
+                          <div className="ag-circle-2"></div>
+                          <h5>Enhance User Experience</h5>
+                          <p>
+                            We prioritize creating seamless and intuitive user
+                            experiences that keep visitors engaged. By focusing
+                            on usability and accessibility, we ensure that your
+                            website provides a positive experience for all
+                            users.
+                          </p>
+                        </div>
+                        <div className="about-grid-content agc-3">
+                          <div className="ag-circle-3"></div>
+                          <h5>Boost SEO Performance</h5>
+                          <p>
+                            Our SEO-optimized web development practices ensure
+                            that your website is easily discoverable by search
+                            engines. Higher rankings lead to increased
+                            visibility, driving more organic traffic to your
+                            business.
+                          </p>
+                        </div>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </section>
