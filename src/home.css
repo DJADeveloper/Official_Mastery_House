@@ -2569,6 +2569,7 @@ footer h6 {
   line-height: 150%;
   position: relative;
   z-index: 1;
+  margin: auto;
 }
 .testimonial-cs-box p img {
   position: absolute;
@@ -2576,6 +2577,20 @@ footer h6 {
   top: -45%;
   left: 0%;
 }
+
+.test-cs-profile {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between !important;
+}
+/* for the logo */
+.test-cs-profile img {
+  width: 200px !important;
+  height: auto !important;
+  object-fit: cover !important;
+}
+
 .testimonial-cs-box div {
   display: flex;
   justify-content: flex-start;
@@ -2628,7 +2643,7 @@ footer h6 {
   width: auto;
   height: 450px; /* Set a fixed height */
   margin: 0 auto;
-  padding-top: auto;
+  padding: auto;
   position: relative;
   overflow: hidden; /* Hide overflow content if needed */
 }
@@ -2653,6 +2668,7 @@ footer h6 {
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  padding: 10px;
 }
 .testimonial-cs-box-component div img {
   width: 75px;

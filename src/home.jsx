@@ -72,6 +72,7 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
 
 import Testimonials from "./components/Testimonials";
+import Maincasestudy from "./maincasestudy";
 
 // import Chatbot from "./components/Chatbot";
 

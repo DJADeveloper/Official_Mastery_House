@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
+import CaseLogo1 from "../assets/projectImages/unifit/unifit-logo.png";
+import CaseLogo2 from "../assets/projectImages/fco/fco-logo.png";
 import {
   EffectCoverflow,
   Navigation,
@@ -87,10 +89,10 @@ const Testimonials = () => {
                 recommend their services!
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Dylan <span>CEO - KIND OF A BIG DYL</span>
                 </h6>
+                {/* <img src={CaseLogo1} alt="" /> */}
               </div>
             </div>
           </SwiperSlide>
@@ -106,11 +108,11 @@ const Testimonials = () => {
                 innovative, delivering exceptional results!
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Ann Marie{" "}
                   <span>Manager of Operations - The French Chateau</span>
                 </h6>
+                {/* <img src={CaseLogo2} alt="" /> */}
               </div>
             </div>
           </SwiperSlide>
@@ -126,10 +128,10 @@ const Testimonials = () => {
                 with such a dedicated team!
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Lydel <span>Technologist - DigiDex</span>
                 </h6>
+                {/* <img src={CaseLogo1} alt="" /> */}
               </div>
             </div>
           </SwiperSlide>
@@ -145,10 +147,10 @@ const Testimonials = () => {
                 responsiveness have been crucial to our growth.
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Rachel <span>CTO - UniFit</span>
                 </h6>
+                {/* <img src={CaseLogo1} alt="" /> */}
               </div>
             </div>
           </SwiperSlide>
@@ -164,10 +166,10 @@ const Testimonials = () => {
                 professional team that truly understands our needs!
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Victoria
                   <span>Director - Toria Support Care Services</span>
+                  {/* <img src={CaseLogo1} alt="" /> */}
                 </h6>
               </div>
             </div>
@@ -184,10 +186,10 @@ const Testimonials = () => {
                 our outreach and efficiency.
               </p>
               <div className="test-cs-profile">
-                {/* <img src={csProfile} alt="" /> */}
                 <h6>
                   Shereve <span>Administrator - Northwood Manor</span>
                 </h6>
+                {/* <img src={CaseLogo1} alt="" /> */}
               </div>
             </div>
           </SwiperSlide>

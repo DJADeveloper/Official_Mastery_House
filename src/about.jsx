@@ -188,6 +188,7 @@ function About() {
                 </div>
               </div>
             </section>
+
             {/* <Teamswiper /> */}
             <section className="getintouch-section"></section>
             <Booking />
