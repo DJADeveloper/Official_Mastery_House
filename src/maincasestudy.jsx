@@ -26,34 +26,6 @@ import Footer from "./components/Footer";
 import { Link } from "react-router-dom";
 import { Tab, Tabs } from "react-bootstrap";
 
-// SOFTWARE PROJECTS
-import softwareProject1 from "../src/assets/projectImages/saim/Extract.png";
-import softwareProject2 from "../src/assets/projectImages/saim/Musee.png";
-import softwareProject3 from "../src/assets/projectImages/saim/Ovili nest.png";
-import softwareProject5 from "../src/assets/largerProjectImages/Outkast.png";
-import softwareProject6 from "../src/assets/projectImages/saim/outkast2.png";
-
-import softwareProject8 from "../src/assets/largerProjectImages/uptrend-agency-1.png";
-import softwareProject9 from "../src/assets/projectImages/saim/Sleek Geek.png";
-
-// AI PROJECTS
-import aiProject1 from "../src/assets/largerProjectImages/unchained-robotics.png";
-import aiProject2 from "../src/assets/projectImages/saim/maester ai.png";
-
-// Blockchain Projects
-
-// Mobile Projects
-import mobileProject1 from "../src/assets/projectImages/saim/SweetSpot.png";
-import mobileProject2 from "../src/assets/projectImages/saim/hitpikr.png";
-import mobileProject3 from "../src/assets/projectImages/jobskuyy/jobskuyy-banner.png";
-
-// Web Development
-
-import webDevProject1 from "../src/assets/projectImages/unifit/unifit-banner.png";
-import webDevProject2 from "../src/assets/projectImages/nwm/nwm-banner.png";
-import webDevProject3 from "../src/assets/projectImages/definitity/definity-banner.png";
-// import webDevProject4 from "../src/assets/projectImages/.png";
-
 // Business Automation
 
 import ReactImg from "./assets/img/reactimg.svg";
@@ -167,7 +139,7 @@ const Maincasestudy = () => {
                             <div className="casestudy-main">
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={softwareProject1} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 {/*  */}
                                 <div className="cs-main-left">
@@ -246,13 +218,13 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={softwareProject2} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               {/*  */}
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={softwareProject3} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -330,13 +302,13 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={softwareProject9} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               {/*  */}
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={softwareProject5} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -383,7 +355,7 @@ const Maincasestudy = () => {
                             <div className="casestudy-main">
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={webDevProject1} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -460,12 +432,12 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={webDevProject2} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={webDevProject3} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -811,7 +783,7 @@ const Maincasestudy = () => {
                             <div className="casestudy-main">
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={mobileProject1} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -888,12 +860,12 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={mobileProject2} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={mobileProject3} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -1022,7 +994,7 @@ const Maincasestudy = () => {
                             <div className="casestudy-main">
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={aiProject1} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -1099,7 +1071,7 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={aiProject2} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               {/* <div className="cs-main-grid">
@@ -1236,7 +1208,7 @@ const Maincasestudy = () => {
                             <div className="casestudy-main">
                               <div className="cs-main-grid">
                                 <div className="cs-main-right">
-                                  <img src={softwareProject1} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                                 <div className="cs-main-left">
                                   <img src={CaseLogo1} alt="" />
@@ -1313,7 +1285,7 @@ const Maincasestudy = () => {
                                   </div>
                                 </div>
                                 <div className="cs-main-right">
-                                  <img src={softwareProject2} alt="" />
+                                  <img src="#" alt="" />
                                 </div>
                               </div>
                               {/* <div className="cs-main-grid">

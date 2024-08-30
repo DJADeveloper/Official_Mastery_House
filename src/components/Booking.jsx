@@ -4,7 +4,6 @@ import GIT1 from "../assets/img/Capa_1.svg";
 import GIT2 from "../assets/img/asssvg.svg";
 import GIT3 from "../assets/img/epmsvg.svg";
 import BookACall from "./BookACall";
-import { Link } from "react-router-dom";
 
 const Booking = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);

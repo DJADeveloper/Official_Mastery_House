@@ -1,45 +1,19 @@
 import React, { useEffect } from "react";
 import "./home.css";
-import Logo from "./assets/img/logo-tms.png";
-import Team1 from "./assets/img/team-1.png";
-import LinkedIn from "./assets/img/linkedin.png";
-import Twitter from "./assets/img/twitter.png";
-import Blog1 from "./assets/img/blog1.png";
-import Case1 from "./assets/img/case1.png";
-import CaseLogo1 from "./assets/img/ikea.png";
+
 import AboutImg from "./assets/img/aboutimg.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation } from "swiper/modules";
 
-import {
-  BsChevronRight,
-  BsChevronLeft,
-  BsArrowRight,
-  BsArrowUpRight,
-  BsList,
-  BsXLg,
-} from "react-icons/bs";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import Header from "./components/Header";
-import Teamswiper from "./components/Teamswiper";
-import Marque from "./components/Marque";
+
 import Booking from "./components/Booking";
 import Footer from "./components/Footer";
 
 import gsap from "gsap";
-import {
-  Back,
-  Power3,
-  Power1,
-  Power2,
-  Power4,
-  Linear,
-  Expo,
-  Circ,
-} from "gsap/dist/gsap";
+
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { Draggable } from "gsap/Draggable";
 import { InertiaPlugin } from "gsap/InertiaPlugin";

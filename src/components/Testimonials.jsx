@@ -5,11 +5,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
-import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import "../home.css";
-import { Link } from "react-router-dom";
 
-import csProfile from "../assets/img/csprofile.png";
+import "../home.css";
+
 import SemiColon from "../assets/img/semicolon.svg";
 
 const Testimonials = () => {

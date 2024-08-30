@@ -26,18 +26,7 @@ import Flask from "./assets/img/flask.svg";
 import Mat from "./assets/img/matlab.svg";
 import Tabs from "react-bootstrap/Tabs";
 import { FaNodeJs, FaPython, FaSwift } from "react-icons/fa6";
-import Case1 from "./assets/projectImages/saim/Extract.png";
-import Case2 from "./assets/projectImages/saim/Musee.png";
-import Case3 from "./assets/projectImages/saim/Unchained Robotics.png";
-import Case4 from "./assets/projectImages/saim/Uptrend Agency.png";
-// import Case1 from "./assets/projectImages/unifit/unifit-banner.png";
-// import Case2 from "./assets/projectImages/nwm/nwm-banner.png";
-// import Case3 from "./assets/projectImages/jobskuyy/jobskuyy-banner.png";
-// import Case4 from "./assets/projectImages/definitity/definity-banner.png";
-import CaseLogo1 from "./assets/projectImages/unifit/unifit-logo.png";
-import CaseLogo2 from "./assets/projectImages/nwm/nwm-logo.png";
-import CaseLogo3 from "./assets/projectImages/jobskuyy/jobskuyy-logo.png";
-import CaseLogo4 from "./assets/projectImages/definitity/definity-logo.png";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -81,10 +70,9 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import HeroImg from "./components/HeroImg";
-import NewsletterForm from "./components/NewsLetterForm";
-import Maincasestudy from "./maincasestudy";
+
 import Testimonials from "./components/Testimonials";
-import Casestudy from "./casestudy";
+
 // import Chatbot from "./components/Chatbot";
 
 function Home(props) {
