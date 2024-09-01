@@ -7,6 +7,7 @@ import Blog3 from "../assets/img/blog3.png";
 import Blog4 from "../assets/img/blog4.png";
 import Blog5 from "../assets/img/blog5.png";
 import Blog7 from "../assets/img/blog7.png";
+import Blog8 from "../assets/img/blog8.png";
 
 import {
   BsChevronRight,
@@ -187,14 +188,16 @@ function Sustainabletech() {
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <Link to="/blogs/seo" className="blog-main-cont">
-                        <img src={Blog2} alt="" />
+                      <Link
+                        to="/blogs/automation-business"
+                        className="blog-main-cont bm-r-cont"
+                      >
+                        <img src={Blog8} alt="" />
                         <div>
                           <h4>
-                            SEO in the Age of AI: Navigating New Horizons in
-                            Search Engine Optimization
+                            How AI and Automation Can Transform Small Businesses
                           </h4>
-                          <a href="/blogs/seo">
+                          <a href="/blogs/automation-business">
                             Read More <BsArrowRight />
                           </a>
                         </div>

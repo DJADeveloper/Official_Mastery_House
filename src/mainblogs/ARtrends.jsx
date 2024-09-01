@@ -6,6 +6,7 @@ import Blog2 from "../assets/img/blog2.png";
 import Blog3 from "../assets/img/blog3.png";
 import Blog4 from "../assets/img/blog4.png";
 import Blog5 from "../assets/img/blog5.png";
+import Blog8 from "../assets/img/blog8.png";
 
 import {
   BsChevronRight,
@@ -203,6 +204,7 @@ function ARtrends() {
                 </div>
               </div>
             </section>
+
             <section className="blog-section">
               <div data-speed={0.5} className="blogcircle-1"></div>
               <div className="blogcircle-2"></div>
@@ -216,97 +218,16 @@ function ARtrends() {
                   </div>
                   <div className="blog-grid">
                     <div className="blog-grid-left">
-                      <Link to="/blogs/seo" className="blog-main-cont">
-                        <img src={Blog2} alt="" />
-                        <div>
-                          <h4>
-                            SEO in the Age of AI: Navigating New Horizons in
-                            Search Engine Optimization
-                          </h4>
-                          <a href="/blogs/seo">
-                            Read More <BsArrowRight />
-                          </a>
-                        </div>
-                      </Link>
-                    </div>
-                    <div className="blog-grid-right bgr-home">
-                      <Link to="/blogs/ai" className="blog-main-cont bm-r-cont">
-                        <img src={Blog1} alt="" />
-                        <div>
-                          <h4>The Rise of AI: Transforming Business in 2025</h4>
-                          <a href="/blogs/ai">
-                            Read More <BsArrowRight />
-                          </a>
-                        </div>
-                      </Link>
                       <Link
-                        to="/blogs/decoding"
+                        to="/blogs/automation-business"
                         className="blog-main-cont bm-r-cont"
                       >
-                        <img src={Blog3} alt="" />
+                        <img src={Blog8} alt="" />
                         <div>
                           <h4>
-                            Decoding the Success DNA: The Digital Landscape in
-                            2025
+                            How AI and Automation Can Transform Small Businesses
                           </h4>
-                          <a href="/blogs/decoding">
-                            Read More <BsArrowRight />
-                          </a>
-                        </div>
-                      </Link>
-                      <Link
-                        to="/blogs/quantum"
-                        className="blog-main-cont bm-r-cont"
-                      >
-                        <img src={Blog4} alt="" />
-                        <div>
-                          <h4>Quantum Computing: The Next Frontier in 2025</h4>
-                          <a href="/blogs/quantum">
-                            Read More <BsArrowRight />
-                          </a>
-                        </div>
-                      </Link>
-                      <Link
-                        to="/blogs/ar-trends"
-                        className="blog-main-cont bm-r-cont"
-                      >
-                        <img src={Blog5} alt="" />
-                        <div>
-                          <h4>
-                            Augmented Reality: Merging Digital and Physical
-                            Realms
-                          </h4>
-                          <a href="/blogs/ar-trends">
-                            Read More <BsArrowRight />
-                          </a>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            <section className="blog-section">
-              <div data-speed={0.5} className="blogcircle-1"></div>
-              <div className="blogcircle-2"></div>
-              <div className="box">
-                <div className="blog-cont">
-                  <div className="casestudy-head">
-                    <h3 className="gradient-text">Read Our Blogs</h3>
-                    <Link to="/blogs">
-                      View All <BsArrowRight />
-                    </Link>
-                  </div>
-                  <div className="blog-grid">
-                    <div className="blog-grid-left">
-                      <Link to="/blogs/seo" className="blog-main-cont">
-                        <img src={Blog2} alt="" />
-                        <div>
-                          <h4>
-                            SEO in the Age of AI: Navigating New Horizons in
-                            Search Engine Optimization
-                          </h4>
-                          <a href="/blogs/seo">
+                          <a href="/blogs/automation-business">
                             Read More <BsArrowRight />
                           </a>
                         </div>
