@@ -1081,6 +1081,7 @@ header {
   position: relative;
   z-index: 1;
 }
+
 .blogcircle-1 {
   width: 104px;
   height: 104px;
@@ -1159,7 +1160,7 @@ header {
   width: 100%;
   height: 100%;
 }
-.blog-main-cont div h4 {
+.blog-main-cont div h4 h2 {
   color: var(--white);
   font-family: "Lato";
   font-size: 2.4rem;
@@ -2186,6 +2187,7 @@ footer h6 {
   object-fit: cover;
   border-radius: 1.5rem;
 }
+
 .blog-page-cont a {
   display: flex;
   justify-content: flex-start;
@@ -2206,6 +2208,14 @@ footer h6 {
   font-weight: 400;
   line-height: 140%;
 }
+.blog-page-cont h2 {
+  color: var(--white);
+  font-family: "Lato";
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 140%;
+}
+
 .blog-page-cont h3 {
   color: var(--white);
   font-family: "Lato";

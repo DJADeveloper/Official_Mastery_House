@@ -7,6 +7,7 @@ import Blog4 from "./assets/img/blog4.png";
 import Blog5 from "./assets/img/blog5.png";
 import Blog6 from "./assets/img/blog6.png";
 import Blog7 from "./assets/img/blog7.png";
+import Blog8 from "./assets/img/blog8.png";
 
 import { BsArrowRight } from "react-icons/bs";
 import Header from "./components/Header";
@@ -191,6 +192,20 @@ const Blogs = () => {
                           Revolution
                         </h4>
                         <a href="/blogs/sustainable-tech">
+                          Read More <BsArrowRight />
+                        </a>
+                      </div>
+                    </Link>
+                    <Link
+                      to="/blogs/automation-business"
+                      className="blog-main-cont bm-r-cont"
+                    >
+                      <img src={Blog8} alt="" />
+                      <div>
+                        <h4>
+                          How AI and Automation Can Transform Small Businesses
+                        </h4>
+                        <a href="/blogs/automation-business">
                           Read More <BsArrowRight />
                         </a>
                       </div>

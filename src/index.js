@@ -19,6 +19,7 @@ import Blog4 from "./mainblogs/Quantum";
 import Blog5 from "./mainblogs/ARtrends";
 import Blog6 from "./mainblogs/Cybersecurity";
 import Blog7 from "./mainblogs/SustainableTech";
+import Blog8 from "./mainblogs/AIAutomationSmallBusinesses";
 import CaseStudy from "./maincasestudy";
 import DynamicBlog from "./components/DynamicBlog";
 
@@ -57,6 +58,7 @@ const App = () => {
           <Route path="/blogs/ar-trends" element={<Blog5 />} />
           <Route path="/blogs/cybersecurity" element={<Blog6 />} />
           <Route path="/blogs/sustainable-tech" element={<Blog7 />} />
+          <Route path="/blogs/automation-business" element={<Blog8 />} />
         </Routes>
       </BrowserRouter>
       {/* <ChatButton onClick={handleOpenChat} />

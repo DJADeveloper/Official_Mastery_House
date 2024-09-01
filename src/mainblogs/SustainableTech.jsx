@@ -86,7 +86,10 @@ function Sustainabletech() {
               <div className="main-blog-circle"></div>
               <div className="box">
                 <div className="blog-page-cont">
-                  <img src={Blog7} alt="" />
+                  <img
+                    src={Blog7}
+                    alt="Harnessing Green Innovation: The Sustainable Tech Revolution"
+                  />
                   <Link to="/blogs">
                     <BsArrowLeft />
                     Blogs
@@ -96,50 +99,77 @@ function Sustainabletech() {
                     Tech Revolution
                   </h1>
                   <p>
-                    The year 2023 marks a pivotal moment in the realm of
-                    technology, where green innovation is not just a trend but a
-                    necessity. As the world grapples with climate change,
-                    sustainable technology is emerging as the beacon of hope.
+                    In 2025, green innovation is no longer a mere trend—it's an
+                    imperative. As the urgency to combat climate change
+                    intensifies, the integration of sustainable technology is
+                    emerging as a vital strategy in our quest for a greener
+                    future. At the forefront of this revolution are technologies
+                    that prioritize efficiency, reduce environmental impact, and
+                    foster a sustainable ecosystem.
                     <br />
                     <br />
-                    This revolution is characterized by a surge in renewable
-                    energy solutions, like solar panels and wind turbines, that
-                    are becoming more efficient and affordable. These
-                    technologies are essential in reducing our carbon footprint
-                    and fostering a sustainable future.
+                    One of the most significant advancements driving this shift
+                    is the proliferation of renewable energy solutions. Solar
+                    panels and wind turbines are not only becoming more
+                    efficient but also increasingly affordable. These
+                    technologies are crucial in reducing global carbon
+                    footprints, enabling both individuals and organizations to
+                    contribute actively to sustainability goals. The rise in
+                    renewable energy adoption is a testament to the growing
+                    recognition of the need for clean, sustainable power
+                    sources.
                     <br />
                     <br />
-                    In the automotive sector, electric vehicles (EVs) are at the
-                    forefront of this change. With advancements in battery
-                    technology, EVs are becoming more accessible, signaling a
-                    significant shift away from fossil fuel dependence.
+                    The automotive sector is undergoing a profound
+                    transformation with the surge in electric vehicles (EVs).
+                    Thanks to significant advancements in battery technology and
+                    charging infrastructure, EVs are becoming more accessible
+                    and practical for everyday use. This shift away from fossil
+                    fuel dependency represents a critical step towards a
+                    sustainable future, reducing greenhouse gas emissions and
+                    promoting environmental stewardship.
                     <br />
                     <br />
-                    Green innovation is also evident in everyday gadgets. From
-                    energy-saving smart home devices to biodegradable
-                    electronics, technology is being reimagined with
-                    sustainability at its core.
+                    Green innovation is not limited to large-scale solutions; it
+                    permeates our daily lives through smart home devices and
+                    sustainable gadgets. From energy-efficient lighting systems
+                    to biodegradable electronics, technology is being reimagined
+                    with sustainability at its core. These advancements not only
+                    reduce energy consumption but also minimize waste, aligning
+                    with global efforts to promote sustainability.
                     <br />
                     <br />
-                    Beyond individual gadgets, the tech industry is also
-                    witnessing a shift in its overall approach. Companies are
-                    increasingly adopting circular economy principles, focusing
-                    on sustainability in manufacturing processes and product
-                    lifecycles.
+                    The tech industry is also witnessing a paradigm shift
+                    towards the circular economy. Leading companies are
+                    increasingly focusing on sustainable manufacturing processes
+                    and product lifecycles, emphasizing recycling, reusability,
+                    and reduced environmental impact. This approach not only
+                    supports sustainability but also drives innovation in
+                    product design and development.
                     <br />
                     <br />
-                    The sustainable tech revolution is not just about creating
-                    greener products; it's about transforming our mindset. It
-                    encourages a holistic view of technology, where
-                    environmental impact is as crucial as functionality and
-                    design.
+                    The sustainable tech revolution is about more than just
+                    creating eco-friendly products; it embodies a transformative
+                    shift in mindset. It calls for a holistic approach to
+                    technology, where environmental impact is considered
+                    alongside functionality and design. This perspective is
+                    vital in driving long-term sustainable development and
+                    fostering a more environmentally conscious tech industry.
                     <br />
                     <br />
-                    As we journey further into 2023, green innovation continues
-                    to inspire and challenge us. It propels us towards a future
-                    where technology and sustainability are inextricably linked,
-                    driving positive change for our planet and generations to
-                    come.
+                    As we navigate through 2025, the momentum of green
+                    innovation continues to build, challenging us to rethink the
+                    relationship between technology and sustainability. It
+                    inspires a future where technological advancement and
+                    environmental responsibility go hand in hand, ensuring a
+                    positive legacy for future generations.
+                    <br />
+                    <br />
+                    At The Mastery House, we are committed to driving this
+                    sustainable revolution by integrating green innovation into
+                    our technology solutions. Join us on this journey towards a
+                    more sustainable future, where technology is a force for
+                    good in preserving our planet.
                   </p>
                 </div>
               </div>
@@ -174,7 +204,7 @@ function Sustainabletech() {
                       <Link to="/blogs/ai" className="blog-main-cont bm-r-cont">
                         <img src={Blog1} alt="" />
                         <div>
-                          <h4>The Rise of AI: Transforming Business in 2023</h4>
+                          <h4>The Rise of AI: Transforming Business in 2025</h4>
                           <a href="/blogs/ai">
                             Read More <BsArrowRight />
                           </a>
@@ -188,7 +218,7 @@ function Sustainabletech() {
                         <div>
                           <h4>
                             Decoding the Success DNA: The Digital Landscape in
-                            2023
+                            2025
                           </h4>
                           <a href="/blogs/decoding">
                             Read More <BsArrowRight />
@@ -201,7 +231,7 @@ function Sustainabletech() {
                       >
                         <img src={Blog4} alt="" />
                         <div>
-                          <h4>Quantum Computing: The Next Frontier in 2023</h4>
+                          <h4>Quantum Computing: The Next Frontier in 2025</h4>
                           <a href="/blogs/quantum">
                             Read More <BsArrowRight />
                           </a>
