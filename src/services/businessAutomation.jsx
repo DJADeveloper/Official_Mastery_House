@@ -222,7 +222,7 @@ const BusinessAutomationService = () => {
                       </p>
                     </div>
                     {!isMobile && (
-                      <div>
+                      <>
                         <div className="about-grid-content">
                           <div className="ag-circle-1"></div>
                           <h5>Accelerate Innovation</h5>
@@ -256,7 +256,7 @@ const BusinessAutomationService = () => {
                             business.
                           </p>
                         </div>
-                      </div>
+                      </>
                     )}
                   </div>
                 </div>

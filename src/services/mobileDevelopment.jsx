@@ -212,7 +212,7 @@ const MobileDevelopmentService = () => {
                       </p>
                     </div>
                     {!isMobile && (
-                      <div>
+                      <>
                         <div className="about-grid-content">
                           <div className="ag-circle-1"></div>
                           <h5>Security and Compliance</h5>
@@ -243,7 +243,7 @@ const MobileDevelopmentService = () => {
                             on your core business.
                           </p>
                         </div>
-                      </div>
+                      </>
                     )}
                   </div>
                 </div>

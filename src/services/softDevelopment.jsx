@@ -221,7 +221,7 @@ const SoftwareDevelopment = () => {
                       </p>
                     </div>
                     {!isMobile && (
-                      <div>
+                      <>
                         <div className="about-grid-content">
                           <div className="ag-circle-1"></div>
                           <h5>Accelerate Innovation</h5>
@@ -255,7 +255,7 @@ const SoftwareDevelopment = () => {
                             business.
                           </p>
                         </div>
-                      </div>
+                      </>
                     )}
                   </div>
                 </div>

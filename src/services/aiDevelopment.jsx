@@ -217,7 +217,7 @@ const AiDevelopment = () => {
                       </p>
                     </div>
                     {!isMobile && (
-                      <div>
+                      <>
                         <div className="about-grid-content">
                           <div className="ag-circle-1"></div>
                           <h5>Predictive Analytics</h5>
@@ -248,7 +248,7 @@ const AiDevelopment = () => {
                             business grows.
                           </p>
                         </div>
-                      </div>
+                      </>
                     )}
                   </div>
                 </div>
