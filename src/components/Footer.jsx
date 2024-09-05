@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../assets/img/tms-logo.png";
+import Logo from "../assets/img/logo-slim.png";
 import { FaFacebookF, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { BsInstagram } from "react-icons/bs";
@@ -10,9 +10,17 @@ const Footer = () => {
       <div className="box">
         <div className="footer-content">
           <Link to="/">
-            <img src={Logo} alt="" style={{ width: "80%", height: "auto" }} />
+            <img
+              src={Logo}
+              alt=""
+              style={{
+                width: "80%",
+                height: "auto",
+                maxHeight: "105px",
+              }}
+            />
           </Link>
-          <h5>© 2023 The Mastery House. All rights reserved</h5>
+          <h5>© 2024 The Mastery House. All rights reserved</h5>
           <div className="tb-social">
             <Link to="http://linkedin.com/in/the-mastery-house-727664204/">
               <FaLinkedinIn />
