@@ -18,6 +18,11 @@ import "../home.css";
 import SemiColon from "../assets/img/semicolon.svg";
 
 const Testimonials = () => {
+  const clientReviews = [
+    { name: "cindy", position: "ceo", company: "apple" },
+    { name: "cindy", position: "ceo", company: "apple" },
+    { name: "cindy", position: "ceo", company: "apple" },
+  ];
   return (
     <section className="testimonial-section">
       <div className="team-circle-1"></div>
@@ -39,8 +44,8 @@ const Testimonials = () => {
         </div>
 
         <Swiper
-          spaceBetween={30}
-          slidesPerView={2}
+          spaceBetween={20}
+          slidesPerView={1}
           modules={[Navigation, EffectCoverflow, Autoplay, Pagination]} // Add Autoplay module here
           // effect={"coverflow"}
           coverflowEffect={{
@@ -61,14 +66,14 @@ const Testimonials = () => {
           breakpoints={{
             750: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 5,
             },
             1000: {
               slidesPerView: 2,
               spaceBetween: 30,
             },
             1300: {
-              slidesPerView: 1.5,
+              slidesPerView: 2.5,
               spaceBetween: 40,
             },
           }}
