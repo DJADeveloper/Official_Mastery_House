@@ -2855,7 +2855,7 @@ footer h6 {
 
 /* Testimonial */
 .testi-circle {
-  background: var(--color-primary-purple);
+  background: var(--color-slate-500);
   filter: blur(200px);
   position: absolute;
   right: -52.333px;
