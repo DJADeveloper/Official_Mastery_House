@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
+import { useMediaQuery } from "react-responsive";
 
 import { useLocation } from "react-router-dom";
 
 const CustomCalendlyButton = () => {
   const location = useLocation();
   const currentPath = location.pathname;
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   // Check if the current path ends with '/contact' or '/landing/business-automation/contact'
   const isContactPage =
@@ -36,7 +38,7 @@ const CustomCalendlyButton = () => {
     }
   };
 
-  return (
+  return !isMobile ? (
     <button
       onClick={openCalendly}
       className="gradient-btn"
@@ -44,7 +46,7 @@ const CustomCalendlyButton = () => {
     >
       {isContactPage ? "Let's Connect" : "Get Started"}
     </button>
-  );
+  ) : null;
 };
 
 export default CustomCalendlyButton;
