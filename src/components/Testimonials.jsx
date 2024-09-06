@@ -40,9 +40,9 @@ const Testimonials = () => {
 
         <Swiper
           spaceBetween={30}
-          slidesPerView={1}
+          slidesPerView={2}
           modules={[Navigation, EffectCoverflow, Autoplay, Pagination]} // Add Autoplay module here
-          effect={"coverflow"}
+          // effect={"coverflow"}
           coverflowEffect={{
             rotate: 50,
             stretch: 0,
@@ -75,11 +75,6 @@ const Testimonials = () => {
           touchRatio={1}
           touchAngle={45}
           grabCursor={true}
-          loop={true} // Enable looping
-          autoplay={{
-            delay: 3000, // Set the delay to 3 seconds (3000 ms)
-            disableOnInteraction: false, // Continue autoplay even after user interaction
-          }}
         >
           <SwiperSlide>
             <div className="testimonial-cs-box-component">

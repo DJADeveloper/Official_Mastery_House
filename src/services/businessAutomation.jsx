@@ -177,13 +177,15 @@ const BusinessAutomationService = () => {
                 <div className="about-content">
                   <div className="about-c-top">
                     <h2 className="custom-h2 gradient-text">
-                      Benefits of Choosing Our Web Development Services
+                      Transform Your Business with Our Business Automation
+                      Solutions
                     </h2>
                     <p>
-                      At The Mastery House, we deliver exceptional web
-                      development services that not only meet your business
-                      needs but also drive growth and success. Here are some of
-                      the key benefits you will enjoy:
+                      At The Mastery House, we specialize in empowering
+                      businesses through smart automation strategies that
+                      streamline operations, reduce costs, and drive growth.
+                      Discover the unparalleled benefits of partnering with us
+                      for your business automation needs:
                     </p>
                   </div>
 
@@ -191,69 +193,67 @@ const BusinessAutomationService = () => {
                     {/* Grid Layout for larger screens */}
                     <div className="about-grid-content">
                       <div className="ag-circle-1"></div>
-                      <h5>Custom Solutions for Unique Challenges</h5>
+                      <h5>Boost Efficiency and Productivity</h5>
                       <p>
-                        At The Mastery House, we recognize that each business is
-                        unique. Our web development services are tailored to
-                        meet your specific needs, ensuring innovative,
-                        efficient, and scalable solutions that directly address
-                        your challenges.
+                        Our automation solutions are designed to eliminate
+                        repetitive tasks and optimize workflows, enabling your
+                        team to focus on strategic initiatives. Experience
+                        significant time savings and improved productivity,
+                        giving your business a competitive edge.
                       </p>
                     </div>
                     <div className="about-grid-content agc-2">
                       <div className="ag-circle-2"></div>
-                      <h5>Reduce Costs</h5>
+                      <h5>Reduce Operational Costs</h5>
                       <p>
-                        By optimizing your web development processes, we help
-                        reduce waste and improve productivity. Our efficient
-                        development practices ensure that you get more out of
-                        your existing resources, driving down costs while
-                        delivering quality.
+                        By automating key processes, we help reduce manual
+                        errors and operational costs. Our solutions are tailored
+                        to streamline your operations, maximize resource
+                        utilization, and enhance your bottom line.
                       </p>
                     </div>
                     <div className="about-grid-content agc-3">
                       <div className="ag-circle-3"></div>
-                      <h5>Drive Business Growth</h5>
+                      <h5>Scalable Solutions for Sustainable Growth</h5>
                       <p>
-                        Our focus is on building resilient, outcomes-driven web
-                        solutions that attract and retain users. With a website
-                        that effectively converts visitors into customers, we
-                        help you drive sustained business growth.
+                        Our automation tools are built to scale with your
+                        business. Whether you are a startup or an established
+                        enterprise, we provide flexible solutions that adapt to
+                        your evolving needs, driving sustainable growth and
+                        innovation.
                       </p>
                     </div>
                     {!isMobile && (
                       <>
                         <div className="about-grid-content">
                           <div className="ag-circle-1"></div>
-                          <h5>Accelerate Innovation</h5>
+                          <h5>Enhance Data Accuracy and Compliance</h5>
                           <p>
-                            Stay ahead of the competition with websites designed
-                            to support rapid innovation. Our development teams
-                            enhance your website's capabilities, improving
-                            efficiency and reducing the time to market for new
-                            features.
+                            Automating your business processes not only
+                            increases efficiency but also improves data accuracy
+                            and compliance. Stay ahead of regulatory
+                            requirements while ensuring your business data is
+                            reliable and secure.
                           </p>
                         </div>
                         <div className="about-grid-content agc-2">
                           <div className="ag-circle-2"></div>
-                          <h5>Enhance User Experience</h5>
+                          <h5>Accelerate Decision-Making</h5>
                           <p>
-                            We prioritize creating seamless and intuitive user
-                            experiences that keep visitors engaged. By focusing
-                            on usability and accessibility, we ensure that your
-                            website provides a positive experience for all
-                            users.
+                            With real-time data insights and analytics, our
+                            automation solutions empower you to make faster,
+                            more informed decisions. Drive your business forward
+                            with actionable intelligence at your fingertips.
                           </p>
                         </div>
                         <div className="about-grid-content agc-3">
                           <div className="ag-circle-3"></div>
-                          <h5>Boost SEO Performance</h5>
+                          <h5>Future-Proof Your Business</h5>
                           <p>
-                            Our SEO-optimized web development practices ensure
-                            that your website is easily discoverable by search
-                            engines. Higher rankings lead to increased
-                            visibility, driving more organic traffic to your
-                            business.
+                            Embrace the future with our cutting-edge automation
+                            technology. Stay ahead of the competition and be
+                            prepared for whatever comes next with solutions that
+                            evolve alongside technological advancements.
                           </p>
                         </div>
                       </>

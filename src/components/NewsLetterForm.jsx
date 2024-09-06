@@ -9,6 +9,9 @@ import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { Oval } from "react-loader-spinner";
+import ChatPDFImg from "../assets/img/chatPdf.png";
+import { useMediaQuery } from "react-responsive";
+import { Link } from "react-router-dom";
 
 const NewsletterForm = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +21,10 @@ const NewsletterForm = () => {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   const Google_Form_URL = "https://forms.gle/dSCaVfNS31pYjiUZ8";
+  const chatPDFLink = "https://chat-with-pdf-ai-saas-challenge-app.vercel.app";
 
   gsap.registerPlugin(
     Draggable,
@@ -85,18 +91,14 @@ const NewsletterForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Add user to Klaviyo
       await addToKlaviyo(formData);
-      // Send email with link to Google Form
       await sendEmailWithFormLink(formData.email);
 
-      console.log("SUCCESS!");
       setIsSubmitted(true);
       setFormData({
         fullName: "",
         email: "",
       });
-      setTimeout(() => setIsSubmitted(false), 5000); // Hide confirmation after 5 seconds
     } catch (error) {
       console.error("FAILED...", error);
       alert("Failed to send the message. Please try again later.");
@@ -106,7 +108,6 @@ const NewsletterForm = () => {
   };
 
   const addToKlaviyo = async (data) => {
-    console.log(data);
     return fetch("http://localhost:5001/add-to-klaviyo", {
       method: "POST",
       headers: {
@@ -120,7 +121,6 @@ const NewsletterForm = () => {
   };
 
   const sendEmailWithFormLink = async (email) => {
-    // Replace with your backend API or service for sending emails
     return fetch("http://localhost:5001/send-email", {
       method: "POST",
       headers: {
@@ -129,7 +129,7 @@ const NewsletterForm = () => {
       body: JSON.stringify({
         to: email,
         subject: "Complete Your Subscription",
-        body: `Thank you for signing up! Please complete your subscription by filling out this form: ${Google_Form_URL}`,
+        body: `Thank you for signing up! Please complete your subscription by filling out this form: ${Google_Form_URL}. Here is your access to chatPDF: ${chatPDFLink}`,
       }),
     });
   };
@@ -138,7 +138,7 @@ const NewsletterForm = () => {
     <div className="masteryhouse">
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <main className="homepage" id="home_page">
+          <main id="home_page">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="774"
@@ -154,151 +154,346 @@ const NewsletterForm = () => {
                 stroke="rgba(255,255,255,0.25)"
               ></circle>
             </svg>
-            <section className="">
+            <section className="team-section">
               <div className="main-about-circle"></div>
               <div className="about-circle-2"></div>
               <div className="about-circle-3"></div>
               <div className="box">
-                <div className="about-content service-content newsletter-section">
+                <div>
                   <div className="about-c-top">
                     <h4>Subscribe to Our Newsletter</h4>
-                    <h1 className="gradient-text">
+                    <h3 className="gradient-text custom-h3">
                       Stay Updated with The Mastery House
-                    </h1>
+                    </h3>
+                    <p
+                      style={{
+                        color: "var(--color-slate-300)",
+                        fontSize: "1.8rem",
+                        fontWeight: "300",
+                      }}
+                    >
+                      Sign up now to receive ChatPDF, the innovative tool that
+                      turns documents into actionable insights, and stay updated
+                      with the latest trends in AI and business automation.
+                    </p>
+                    <div>
+                      <img
+                        className="chatpdfImg"
+                        src={ChatPDFImg}
+                        alt="ChatPDF"
+                        style={{ maxHeight: "700px", paddingBottom: "20px" }}
+                      />
+                    </div>
                   </div>
                   <div className="contact-grid">
-                    <div className="cg-left">
-                      <div className="contact-circle"></div>
-                      <form className="cg-left-form" onSubmit={handleSubmit}>
-                        <h4
-                          style={{
-                            color: "var(--color-slate-300)",
-                            marginBottom: "10px",
-                            fontWeight: "400",
-                            lineHeight: "150%",
-                          }}
-                        >
-                          Subscribe to Our Newsletter for Exclusive
-                          AI/Automation Insights
-                        </h4>
-
-                        <input
-                          type="text"
-                          name="fullName"
-                          placeholder="Full Name"
-                          value={formData.fullName}
-                          onChange={handleChange}
-                          required
-                        />
-                        {errors.fullName && (
-                          <span className="error">{errors.fullName}</span>
-                        )}
-                        <input
-                          type="email"
-                          name="email"
-                          placeholder="Email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                        />
-                        {errors.email && (
-                          <span className="error">{errors.email}</span>
-                        )}
-                        <button
-                          type="submit"
-                          className="gradient-btn"
-                          disabled={isSubmitting}
-                        >
-                          {isSubmitting ? (
-                            <Oval
-                              height={20}
-                              width={20}
-                              color="#fff"
-                              wrapperStyle={{}}
-                              wrapperClass=""
-                              visible={true}
-                              ariaLabel="oval-loading"
-                              secondaryColor="#f3f4f6"
-                              strokeWidth={2}
-                              strokeWidthSecondary={2}
-                            />
-                          ) : (
-                            "Submit"
-                          )}
-                        </button>
-                      </form>
-                      {/* <div className="privacy-policy">
-                        By signing up, you agree to our Privacy Policy ,
-                        including the use of cookies and transfer of your
-                        personal information.
-                      </div> */}
-                      {isSubmitted && (
-                        <p className="success-message">
-                          Thank you for signing up! Please check your email for
-                          further instructions.
-                        </p>
-                      )}
-                    </div>
-                    <div>
-                      {/* <h2
-                        style={{
-                          color: "var(--color-slate-300)",
-                          marginBottom: "10px",
-                          fontWeight: "400",
-                          lineHeight: "150%",
-                        }}
-                      >
-                        Unlock Your Business’s Potential with a Free
-                        AI/Automation Audit
-                      </h2> */}
-                      <p
-                        style={{
-                          color: "var(--color-slate-300)",
-                          fontSize: "1.8rem",
-                          fontWeight: "300",
-                          marginTop: "5px",
-                          marginBottom: "25px",
-                        }}
-                      >
-                        Discover how automation can streamline your operations
-                        and boost your efficiency. Sign up for our newsletter
-                        and receive:
-                      </p>
+                    <div
+                      className="cg-right"
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-end",
+                      }}
+                    >
                       <ul
                         style={{
                           color: "var(--color-slate-300)",
                           fontSize: "1.8rem",
                           fontWeight: "400",
                           lineHeight: "150%",
+                          marginTop: "40px",
                         }}
                       >
-                        <li style={{ marginBottom: "10px" }}>
-                          <strong>Free AI/Automation Audit:</strong> Receive a
-                          personalized audit to identify areas for improvement
-                          and optimization.
+                        <li style={{ marginBottom: "15px", maxWidth: "500px" }}>
+                          <strong>
+                            <span style={{ color: "#857dff" }}>
+                              Instant Access to ChatPDF
+                            </span>{" "}
+                            <br />
+                          </strong>
+                          Unlock the potential of your documents with smart,
+                          AI-driven insights and data extraction tools.
                         </li>
-                        <li style={{ marginBottom: "10px" }}>
-                          <strong>Exclusive Industry Insights:</strong> Stay
-                          informed with the latest trends and developments in AI
-                          and automation.
+                        <li style={{ marginBottom: "15px", maxWidth: "500px" }}>
+                          <strong>
+                            <span style={{ color: "#857dff" }}>
+                              Exclusive AI/Automation Tips
+                            </span>
+                            <br />
+                          </strong>
+                          Learn best practices and strategies to automate and
+                          optimize your business operations.
                         </li>
-                        <li style={{ marginBottom: "10px" }}>
-                          <strong>Updates on Latest Trends:</strong> Get updates
-                          on the latest AI and automation trends to stay ahead
-                          of the competition.
+                        <li style={{ marginBottom: "15px", maxWidth: "500px" }}>
+                          <strong>
+                            <span style={{ color: "#857dff" }}>
+                              Latest Industry Trends
+                            </span>{" "}
+                            <br />
+                          </strong>
+                          Stay up-to-date with the newest trends and
+                          advancements in AI and automation technology.
                         </li>
-                        <li style={{ marginBottom: "10px" }}>
-                          <strong>Case Studies and Success Stories:</strong>{" "}
-                          Learn from real-world examples of how AI and
-                          automation are transforming businesses.
-                        </li>
-                        <li style={{ marginBottom: "10px" }}>
-                          <strong>Special Offers and Promotions:</strong> Enjoy
-                          exclusive offers and promotions tailored for your
-                          business needs.
+                        <li style={{ marginBottom: "15px", maxWidth: "500px" }}>
+                          <strong>
+                            <span style={{ color: "#857dff" }}>
+                              Case Studies and Insights
+                            </span>{" "}
+                            <br />
+                          </strong>
+                          Discover real-life applications of AI and automation
+                          that are driving business success.
                         </li>
                       </ul>
                     </div>
+                    <div
+                      className="cg-left"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        // paddingInline: "80px",
+                        // backgroundColor: "transparent",
+                      }}
+                    >
+                      <div className="contact-circle"></div>
+                      {!isMobile && (
+                        <form
+                          className={`cg-left-form`}
+                          onSubmit={handleSubmit}
+                        >
+                          {isSubmitted ? (
+                            <div className="chatpdf-container ">
+                              <h2
+                                className="custom-h3"
+                                style={{
+                                  paddingTop: "20px",
+                                  paddingBottom: "20px",
+                                }}
+                              >
+                                Success!
+                              </h2>
+                              <div className="check-circle">
+                                <svg
+                                  xmlns="http://www.w3.org/2000/svg"
+                                  width="48"
+                                  height="48"
+                                  fill="none"
+                                  viewBox="0 0 24 24"
+                                  stroke="currentColor"
+                                  strokeWidth="2"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  className="green-check"
+                                >
+                                  <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                              </div>
+                              <p
+                                style={{
+                                  padding: "20px",
+                                }}
+                              >
+                                Thank you for signing up! Please check your
+                                email for further instructions and your access
+                                to ChatPDF.
+                              </p>
+
+                              <Link
+                                to={chatPDFLink}
+                                style={{
+                                  paddingLeft: "20px",
+                                  paddingRight: "20px",
+                                }}
+                              >
+                                <button
+                                  type="button"
+                                  className="gradient-border-btn"
+                                  // disabled={isSubmitting}
+                                  style={{ width: "100%" }}
+                                >
+                                  Go to ChatPDF
+                                </button>
+                              </Link>
+                            </div>
+                          ) : (
+                            <div className="cg-left-form">
+                              <h3
+                                className="custom-h3"
+                                style={{
+                                  color: "var(--color-slate-300)",
+                                  fontWeight: "400",
+                                  lineHeight: "150%",
+                                }}
+                              >
+                                Unlock Instant Access to Game-Changing Insights!
+                              </h3>
+
+                              <input
+                                type="text"
+                                name="fullName"
+                                placeholder="Full Name"
+                                value={formData.fullName}
+                                onChange={handleChange}
+                                required
+                              />
+                              {errors.fullName && (
+                                <span className="error">{errors.fullName}</span>
+                              )}
+                              <input
+                                type="email"
+                                name="email"
+                                placeholder="Email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                              />
+                              {errors.email && (
+                                <span className="error">{errors.email}</span>
+                              )}
+                              <button
+                                type="submit"
+                                className="gradient-btn"
+                                disabled={isSubmitting}
+                                style={{ width: "100%" }}
+                              >
+                                {isSubmitting ? (
+                                  <Oval
+                                    height={20}
+                                    width={20}
+                                    color="#fff"
+                                    wrapperStyle={{}}
+                                    wrapperClass=""
+                                    visible={true}
+                                    ariaLabel="oval-loading"
+                                    secondaryColor="#f3f4f6"
+                                    strokeWidth={2}
+                                    strokeWidthSecondary={2}
+                                  />
+                                ) : (
+                                  "Get Access Now"
+                                )}
+                              </button>
+                            </div>
+                          )}
+                        </form>
+                      )}
+                    </div>
+                    {isMobile && (
+                      <form className={`cg-left-form`} onSubmit={handleSubmit}>
+                        {isSubmitted ? (
+                          <div className="chatpdf-container about-section">
+                            <h2
+                              className="custom-h3"
+                              style={{
+                                paddingTop: "20px",
+                                paddingBottom: "20px",
+                              }}
+                            >
+                              Success!
+                            </h2>
+                            <div className="check-circle">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="48"
+                                height="48"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                strokeWidth="2"
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                className="green-check"
+                              >
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                              </svg>
+                            </div>
+                            <p
+                              style={{
+                                padding: "20px",
+                              }}
+                            >
+                              Thank you for signing up! Please check your email
+                              for further instructions and your access to
+                              ChatPDF.
+                            </p>
+
+                            <Link
+                              to={chatPDFLink}
+                              style={{
+                                paddingLeft: "20px",
+                                paddingRight: "20px",
+                              }}
+                            >
+                              <button
+                                type="button"
+                                className="gradient-border-btn"
+                                // disabled={isSubmitting}
+                                style={{ width: "100%" }}
+                              >
+                                Go to ChatPDF
+                              </button>
+                            </Link>
+                          </div>
+                        ) : (
+                          <div className="cg-left-form">
+                            <h3
+                              className="custom-h3"
+                              style={{
+                                color: "var(--color-slate-300)",
+                                fontWeight: "400",
+                                lineHeight: "150%",
+                              }}
+                            >
+                              Unlock Instant Access to Game-Changing Insights!
+                            </h3>
+
+                            <input
+                              type="text"
+                              name="fullName"
+                              placeholder="Full Name"
+                              value={formData.fullName}
+                              onChange={handleChange}
+                              required
+                            />
+                            {errors.fullName && (
+                              <span className="error">{errors.fullName}</span>
+                            )}
+                            <input
+                              type="email"
+                              name="email"
+                              placeholder="Email"
+                              value={formData.email}
+                              onChange={handleChange}
+                              required
+                            />
+                            {errors.email && (
+                              <span className="error">{errors.email}</span>
+                            )}
+                            <button
+                              type="submit"
+                              className="gradient-btn"
+                              disabled={isSubmitting}
+                              style={{ width: "100%" }}
+                            >
+                              {isSubmitting ? (
+                                <Oval
+                                  height={20}
+                                  width={20}
+                                  color="#fff"
+                                  wrapperStyle={{}}
+                                  wrapperClass=""
+                                  visible={true}
+                                  ariaLabel="oval-loading"
+                                  secondaryColor="#f3f4f6"
+                                  strokeWidth={2}
+                                  strokeWidthSecondary={2}
+                                />
+                              ) : (
+                                "Get Access Now"
+                              )}
+                            </button>
+                          </div>
+                        )}
+                      </form>
+                    )}
                   </div>
                 </div>
               </div>

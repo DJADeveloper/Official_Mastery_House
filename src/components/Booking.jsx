@@ -4,6 +4,8 @@ import GIT1 from "../assets/img/Capa_1.svg";
 import GIT2 from "../assets/img/asssvg.svg";
 import GIT3 from "../assets/img/epmsvg.svg";
 import BookACall from "./BookACall";
+import CustomCalendlyButton from "./CustomCalendlyButton";
+import { InlineWidget } from "react-calendly";
 
 const Booking = () => {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
@@ -11,27 +13,24 @@ const Booking = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    // Check if the device is mobile
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // You can adjust the breakpoint as needed
+      setIsMobile(window.innerWidth <= 768);
     };
 
-    handleResize(); // Call on mount
-    window.addEventListener("resize", handleResize); // Add event listener
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener("resize", handleResize); // Cleanup
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const handleOpenBooking = (e) => {
     if (!isMobile) {
-      // For desktop, calculate the position based on button
       const rect = e.target.getBoundingClientRect();
       setPosition({
         top: rect.top + window.scrollY,
         left: rect.left + window.scrollX,
       });
     } else {
-      // For mobile, center the form
       setPosition({
         top: window.scrollY + window.innerHeight / 2,
         left: window.scrollX + window.innerWidth / 2,
@@ -48,49 +47,53 @@ const Booking = () => {
     <section className="booking-section">
       <div className="booking-cont">
         <div className="booking-img">
-          <img src={Book} alt="" />
+          <img src={Book} alt="Booking" />
         </div>
         <div className="git-box">
           <div className="git-circle-1"></div>
           <div className="git-circle-2"></div>
           <div className="git-b-top">
-            <h3 className="gradient-text">Book a Call with Us</h3>
+            <h3 className="gradient-text">Let's Connect</h3>
             <p>
-              Join us at The Mastery House in Tampa. Let's set the benchmark in
-              digital excellence.
+              We’re here to help you navigate the future of business with
+              innovative solutions. Schedule a call today, and let’s talk about
+              how we can solve your unique challenges and help you thrive.
             </p>
           </div>
           <div className="gitsvg-box">
             <div>
-              <img src={GIT1} alt="" />
+              <img src={GIT1} alt="Initial Consultation" />
               <span>
                 Initial Consultation{" "}
                 <h6>
-                  Let's discuss how we can redefine the digital narrative
-                  together.
+                  Connect with our team to discuss your business goals and how
+                  we can help you achieve them.
                 </h6>
               </span>
             </div>
             <div>
-              <img src={GIT2} alt="" />
+              <img src={GIT2} alt="Advanced Strategy Session" />
               <span>
-                Advanced Strategy Session
+                Strategy Session
                 <h6>
-                  Deep dive into your digital needs and plot the course ahead.
+                  Let’s work together to explore tailored solutions that will
+                  drive your business forward.
                 </h6>
               </span>
             </div>
             <div>
-              <img src={GIT3} alt="" />
+              <img src={GIT3} alt="Exclusive Partnership Meeting" />
               <span>
-                Exclusive Partnership Meeting
-                <h6>Let's collaborate and create digital excellence.</h6>
+                Partnership Meeting
+                <h6>
+                  Discover how we can partner to deliver transformative results
+                  that push the boundaries of what's possible.
+                </h6>
               </span>
             </div>
           </div>
-          <button onClick={handleOpenBooking} className="gradient-btn">
-            Book a Call
-          </button>
+          {/* Replacing the original button with the CustomCalendlyButton */}
+          <CustomCalendlyButton />
         </div>
       </div>
       {isBookingOpen && (

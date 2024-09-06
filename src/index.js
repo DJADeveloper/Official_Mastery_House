@@ -22,6 +22,8 @@ import Blog7 from "./mainblogs/SustainableTech";
 import Blog8 from "./mainblogs/AIAutomationSmallBusinesses";
 import CaseStudy from "./maincasestudy";
 import DynamicBlog from "./components/DynamicBlog";
+import Landing1 from "./landing/BusinessAutomationLanding";
+import LandingContactUs from "./landing/BusinessAutomation/ContactBusinessAutomation";
 
 // import Chatbot from "./components/Chatbot";
 // import ChatButton from "./components/ChatButton";
@@ -59,6 +61,12 @@ const App = () => {
           <Route path="/blogs/cybersecurity" element={<Blog6 />} />
           <Route path="/blogs/sustainable-tech" element={<Blog7 />} />
           <Route path="/blogs/automation-business" element={<Blog8 />} />
+          {/* Landing pages */}
+          <Route path="/landing/business-automation" element={<Landing1 />} />
+          <Route
+            path="/landing/business-automation/contact"
+            element={<LandingContactUs />}
+          />
         </Routes>
       </BrowserRouter>
       {/* <ChatButton onClick={handleOpenChat} />

@@ -203,7 +203,7 @@ function Home(props) {
                       service and expert solutions in AI, software development,
                       mobile innovation, and business automation. Come inside
                       and see how we turn digital challenges into opportunities
-                      for growth."
+                      for growth.
                     </p>
 
                     <Link to="/contact">

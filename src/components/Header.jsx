@@ -11,6 +11,7 @@ import {
   BsXLg,
   BsChevronDown,
 } from "react-icons/bs";
+import CustomCalendlyButton from "./CustomCalendlyButton";
 
 const Header = (props) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -87,7 +88,9 @@ const Header = (props) => {
             >
               Contact
             </Link>
+            {/* Updated Call to Action Button */}
           </div>
+          <CustomCalendlyButton />
 
           {/* Mobile Menu Icon */}
           <div className="hr-mob-icon" onClick={toggleMobileMenu}>
