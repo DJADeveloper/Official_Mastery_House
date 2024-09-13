@@ -34,7 +34,7 @@ const Header = (props) => {
       <div className="box">
         <div className="header_cont">
           <Link to="/">
-            <img src={Logo} alt="tmh-logo" style={{ width: "250px" }} />
+            <img src={Logo} alt="tmh-logo" style={{ width: "200px" }} />
           </Link>
 
           <div className="header_right">
@@ -107,7 +107,7 @@ const Header = (props) => {
                   <img
                     src={Logo}
                     alt="tmh-logo"
-                    style={{ width: "80%", height: "auto" }}
+                    style={{ width: "50%", height: "auto" }}
                   />
                 </Link>
                 <BsXLg onClick={closeMobileMenu} />
