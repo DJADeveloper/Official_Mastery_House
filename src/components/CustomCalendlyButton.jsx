@@ -38,15 +38,18 @@ const CustomCalendlyButton = () => {
     }
   };
 
-  return !isMobile ? (
-    <button
-      onClick={openCalendly}
-      className="gradient-btn"
-      style={{ minWidth: "125px" }}
-    >
-      {isContactPage ? "Let's Connect" : "Get Started"}
-    </button>
-  ) : null;
+  return (
+    <div>
+      <button
+        onClick={openCalendly}
+        className="gradient-btn"
+        style={{ minWidth: "125px" }}
+      >
+        {isContactPage ? "Let's Connect" : "Get Started"}
+      </button>
+      ;
+    </div>
+  );
 };
 
 export default CustomCalendlyButton;
