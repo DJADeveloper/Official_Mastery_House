@@ -30,7 +30,7 @@ const CustomCalendlyButton = () => {
   const openCalendly = () => {
     if (window.Calendly) {
       window.Calendly.initPopupWidget({
-        url: "https://calendly.com/themasteryhouse/30min",
+        url: "https://calendly.com/themasteryhouse/ai-audit-strategy-call",
       });
       return false;
     } else {
