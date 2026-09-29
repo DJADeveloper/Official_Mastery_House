@@ -96,3 +96,13 @@ export function CTA({ title = "Find out where your AI system stands.", body }) {
     </section>
   );
 }
+
+export function Portrait() {
+  return SITE.photo ? (
+    <img className="portrait" src={SITE.photo} alt={SITE.founder} width="120" height="120" />
+  ) : (
+    <div className="monogram" aria-hidden="true">
+      DA
+    </div>
+  );
+}

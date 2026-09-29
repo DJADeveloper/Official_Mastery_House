@@ -1,13 +1,12 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { BookButton, CTA } from "../Layout";
+import { BookButton, CTA, Portrait } from "../Layout";
 import {
   SITE,
   GAP_LAYERS,
   TRIGGERS,
   REVIEW_AREAS,
   DELIVERABLES,
-  NEXT_STEPS,
   CAIR,
 } from "../content";
 
@@ -124,21 +123,6 @@ export default function Home() {
       </section>
 
       <section className="section section-alt">
-        <div className="wrap">
-          <p className="eyebrow">After the review</p>
-          <h2>Fix it, then keep it fixed</h2>
-          <div className="two-cards">
-            {NEXT_STEPS.map((s) => (
-              <article className="card" key={s.title}>
-                <h4>{s.title}</h4>
-                <p>{s.body}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
         <div className="wrap two-col">
           <div>
             <p className="eyebrow">Case study</p>
@@ -160,10 +144,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-alt">
+      <section className="section">
         <div className="wrap two-col">
           <div>
             <p className="eyebrow">Who you work with</p>
+            <Portrait />
             <h2>{SITE.founder}</h2>
             <p className="muted">{SITE.founderTitle}</p>
           </div>

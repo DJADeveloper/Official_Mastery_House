@@ -11,6 +11,8 @@ export const SITE = {
   // TODO: switch to a domain address (e.g. darryl@themasteryhouse.com) once it exists.
   email: "themasteryhouse@gmail.com",
   github: "https://github.com/DJADeveloper",
+  // Headshot: drop a square photo at public/darryl.jpg, then set this to "/darryl.jpg".
+  photo: null,
 };
 
 export const GAP_LAYERS = [

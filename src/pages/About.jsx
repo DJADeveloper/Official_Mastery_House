@@ -1,4 +1,4 @@
-import { CTA } from "../Layout";
+import { CTA, Portrait } from "../Layout";
 import { usePageTitle } from "./Home";
 import { SITE, OTHER_WORK } from "../content";
 
@@ -20,7 +20,7 @@ export default function About() {
       <section className="section">
         <div className="wrap two-col">
           <div>
-            <div className="monogram" aria-hidden="true">DA</div>
+            <Portrait />
             <h2>{SITE.founder}</h2>
             <p className="muted">{SITE.founderTitle}</p>
             <p>

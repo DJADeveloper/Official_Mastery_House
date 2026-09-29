@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CTA } from "../Layout";
 import { usePageTitle } from "./Home";
-import { CHECKLIST } from "../content";
+import { CHECKLIST, SITE } from "../content";
 
 const TOTAL = CHECKLIST.reduce((n, g) => n + g.items.length, 0);
 
@@ -17,6 +17,16 @@ export default function Checklist() {
   const [checked, setChecked] = useState({});
   const score = Object.values(checked).filter(Boolean).length;
   const toggle = (id) => setChecked((c) => ({ ...c, [id]: !c[id] }));
+
+  const gaps = CHECKLIST.flatMap((g, gi) =>
+    g.items.filter((_, ii) => !checked[`q-${gi}-${ii}`]).map((item) => `- ${item}`)
+  );
+  const mailto =
+    `mailto:${SITE.email}?subject=${encodeURIComponent(`Readiness checklist: ${score}/${TOTAL}`)}` +
+    `&body=${encodeURIComponent(
+      `Hi Darryl,\n\nI scored ${score}/${TOTAL} on the Production AI Readiness Checklist. ` +
+        `The gaps I'd like to talk through:\n\n${gaps.join("\n")}\n\nAbout our system:\n`
+    )}`;
 
   return (
     <>
@@ -55,9 +65,17 @@ export default function Checklist() {
               {score} / {TOTAL}
             </p>
             <p>{verdict(score)}</p>
-            <button className="btn btn-secondary" type="button" onClick={() => window.print()}>
-              Print or save as PDF
-            </button>
+            <div className="score-actions">
+              <a className="btn btn-primary" href={mailto}>
+                Get Darryl's read on your gaps
+              </a>
+              <button className="btn btn-secondary" type="button" onClick={() => window.print()}>
+                Print or save as PDF
+              </button>
+            </div>
+            <p className="muted small">
+              Opens an email with your score and unchecked items. Darryl replies personally.
+            </p>
           </aside>
         </div>
       </section>
