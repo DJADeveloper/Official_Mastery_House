@@ -33,7 +33,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import { FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
-import { Link, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   BsChevronRight,
   BsChevronLeft,

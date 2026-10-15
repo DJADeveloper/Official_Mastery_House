@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Swiper, div } from "swiper/react"; // Import Swiper and div
+import { Swiper } from "swiper/react";
 import { Navigation, Thumbs } from "swiper/modules";
 import "../home.css";
 import ServiceImg from "../assets/img/serviceimg.png";
