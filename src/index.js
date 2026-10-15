@@ -23,6 +23,7 @@ import Blog8 from "./mainblogs/AIAutomationSmallBusinesses";
 import CaseStudy from "./maincasestudy";
 import DynamicBlog from "./components/DynamicBlog";
 import Landing1 from "./landing/BusinessAutomationLanding";
+import ProductionAI from "./production-ai/ProductionAI";
 import LandingContactUs from "./landing/BusinessAutomation/ContactBusinessAutomation";
 
 // import Chatbot from "./components/Chatbot";
@@ -40,7 +41,9 @@ const App = () => {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<ProductionAI />} />
+          <Route path="/insurance-agencies" element={<ProductionAI />} />
+          <Route path="/legacy-home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:id" element={<DynamicBlog />} />{" "}
